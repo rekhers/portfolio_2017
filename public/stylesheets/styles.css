@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+html {
+  margin: 0px;
+}
+html body {
+  margin: 0px;
+}
+html body #container .subway {
+  width: 100%;
+  z-index: 0;
+}
+html body #container .name {
+  z-index: 1;
+  font-family: 'Roboto', sans-serif;
+  font-size: 90px;
+  position: absolute;
+  left: 395;
+  top: 30;
+}
+html body #container .name #firstName {
+  background-color: yellow;
+  font-weight: 500;
+  padding: 5px;
+  text-align: center;
+  letter-spacing: 7px;
+}
+html body #container .name #lastName {
+  margin-left: 12%;
+  font-style: italic;
+  font-weight: 300;
+  color: white;
+}
+html body #container .links {
+  cursor: pointer;
+  color: purple;
+  font-size: 50px;
+  position: absolute;
+  left: 865px;
+  font-family: 'Roboto', sans-serif;
+  top: 460px;
+  font-weight: 300s;
+  font-style: italic;
+}
+html body #container .links div {
+  padding: 5px;
+  margin-bottom: 6%;
+  background-color: white;
+}
+html body #container .links div:hover {
+  color: white;
+  background-color: purple;
+}
