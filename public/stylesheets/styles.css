@@ -18,7 +18,7 @@ html body #container .name {
   top: 30;
 }
 html body #container .name #firstName {
-  background-color: yellow;
+  background-color: F0F465;
   font-weight: 500;
   padding: 5px;
   text-align: center;
@@ -32,8 +32,8 @@ html body #container .name #lastName {
 }
 html body #container .links {
   cursor: pointer;
-  color: purple;
-  font-size: 50px;
+  color: white;
+  font-size: 45px;
   position: absolute;
   left: 865px;
   font-family: 'Roboto', sans-serif;
@@ -42,11 +42,11 @@ html body #container .links {
   font-style: italic;
 }
 html body #container .links div {
+  background-color: #3E2F5B;
   padding: 5px;
   margin-bottom: 6%;
-  background-color: white;
 }
 html body #container .links div:hover {
-  color: white;
-  background-color: purple;
+  color: #3E2F5B;
+  background-color: gainsboro;
 }
