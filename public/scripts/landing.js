@@ -27,6 +27,17 @@ class DownArrow extends React.Component{
 }
 
 
+var titleStyle = {
+  position: 'absolute',
+  left: '19%',
+  top: '25%',
+  fontFamily: 'Work Sans',
+  color: '#FFF',
+  fontSize: '8em',
+  fontWeight: '400',
+  opacity: '.9'
+
+};
 
 
 
@@ -38,7 +49,7 @@ class DownArrow extends React.Component{
 
 class HeaderText extends React.Component{
   render(){
-    return <div className="name"> REKHA TENJARLA </div>;
+    return <div style={titleStyle}> rekha tenjarla </div>;
   }
 
 };
@@ -50,49 +61,55 @@ class About extends React.Component{
 
 };
 
+class Particles extends React.Component{
+  render(){
+    return <div id="default"></div>;
+  }
+}
+
 
 var pageOne = (<div>
+               <Particles/>
                <HeaderText/>
                <DotNavigation/>
-               <DownArrow />
                </div>
   );
 
 var pageTwo = (<div>
+                 <Particles/>
                <About/>
                <DotNavigation/>
-                <DownArrow />
                </div>
   )
 
 
 
-    ReactDOM.render(
-    	pageOne
-,    	destination);
+
+
+$(document).ready(function(){
 
 
 
-$("#container").on("click", function(){
+      ReactDOM.render(
+      pageOne,     
+      destination);
 
-    ReactDOM.render(
-        pageTwo,
-        destination
-      );
+particleground(document.getElementById('default'), {
+    dotColor: 'rgba(255,255,255, 0.4)',
+    lineColor: 'rgba(255,255,255, 0.4)',
+    parallaxMultiplier: 6.5,
+    maxSpeedY: .1,
+    maxSpeedX: .01
 
-$("body").css("background", "-webkit-linear-gradient(130deg, #db4a74 10%, #ac4adc 90%)"); 
 
- // $( "body" ).animate({
- //     background: "-webkit-linear-gradient(30deg, #6441A5 10%, #2a0845 90%)"
-
- //  }, 5000, function() {
- //    // Animation complete.
- //  });
 
 });
 
 
 
+
+
+});
 
 
 

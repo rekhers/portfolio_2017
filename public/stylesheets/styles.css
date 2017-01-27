@@ -1,28 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
 @import url('https://fonts.googleapis.com/css?family=Rubik:500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900');
 html {
   margin: 0px;
 }
 html body {
-  background: -webkit-linear-gradient(45deg, #FD6F46 10%, #FB9832 90%);
-  /* Chrome 10+, Saf5.1+ */
-  font-family: 'Rubik', sans-serif;
-  color: #FFF;
+  margin: 0px;
 }
-html body #container svg {
+html body #container {
+  margin: 0;
+}
+html body #container #default {
+  margin: 0;
+  height: 100%;
+  background: linear-gradient(to right, #6819e8 0%, #7437d0 35%, #615fde 68%, #6980f2 100%);
+  background: -moz-linear-gradient(left, #6819e8 0%, #7437d0 35%, #615fde 68%, #6980f2 100%);
+  background: -webkit-linear-gradient(left, #6819e8 0%, #7437d0 35%, #615fde 68%, #6980f2 100%);
+}
+html body #container #dots {
   position: fixed;
   left: 95%;
   top: 30%;
 }
-html body #container svg circle {
+html body #container #dots circle {
   stroke-width: 1.5;
   cursor: pointer;
-}
-html body #container .name {
-  margin-left: 30%;
-  margin-top: 17%;
-  font-size: 75px;
-  font-weight: 800;
 }
 html body .arrow-down {
   width: 0;
