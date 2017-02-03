@@ -1,28 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik:500');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+@import url('http://fonts.googleapis.com/css?family=Raleway:400,800,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i,900,900i');
 html {
   margin: 0px;
 }
 html body {
   margin: 0px;
+  overflow-x: hidden;
 }
-html body #container {
-  margin: 0;
+html body .section {
+  height: 100%;
 }
-html body #container #default {
-  margin: 0;
+html body #landing {
+  margin: 0px;
+}
+html body #landing #particle-container {
+  margin: 0px;
   height: 100%;
   background: linear-gradient(to right, #6819e8 0%, #7437d0 35%, #615fde 68%, #6980f2 100%);
   background: -moz-linear-gradient(left, #6819e8 0%, #7437d0 35%, #615fde 68%, #6980f2 100%);
   background: -webkit-linear-gradient(left, #6819e8 0%, #7437d0 35%, #615fde 68%, #6980f2 100%);
 }
-html body #container #dots {
+html body #landing #dots {
   position: fixed;
   left: 95%;
   top: 30%;
 }
-html body #container #dots circle {
+html body #landing #dots circle {
   stroke-width: 1.5;
   cursor: pointer;
 }
