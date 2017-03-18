@@ -11,22 +11,22 @@ html body {
 html body .section {
   height: 100%;
 }
-html body #landing {
+html body #container {
   margin: 0px;
 }
-html body #landing #particle-container {
+html body #container #particle-container {
   margin: 0px;
   height: 100%;
   background: linear-gradient(to right, #6819e8 0%, #7437d0 35%, #615fde 68%, #6980f2 100%);
   background: -moz-linear-gradient(left, #6819e8 0%, #7437d0 35%, #615fde 68%, #6980f2 100%);
   background: -webkit-linear-gradient(left, #6819e8 0%, #7437d0 35%, #615fde 68%, #6980f2 100%);
 }
-html body #landing #dots {
+html body #container #dots {
   position: fixed;
   left: 95%;
   top: 30%;
 }
-html body #landing #dots circle {
+html body #container #dots circle {
   stroke-width: 1.5;
   cursor: pointer;
 }
