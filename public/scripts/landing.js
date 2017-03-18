@@ -5,13 +5,12 @@ import m from '/Users/Rekha/Dev/react_project/public/scripts/main.js';
 import styles from '/Users/Rekha/Dev/react_project/public/scripts/styles.css.js';
 
 console.log(styles.particles);
-var container = document.getElementById("container");
 /*
 *
 * Shared Elements
 *
 */
-function DotNavigation(){
+const DotNavigation = () =>{
     return (
       <svg id="dots" height="140" width="50">
         <circle className="selected" cx="20" cy="10" r="7" stroke="white" fill="white"/>
@@ -23,7 +22,7 @@ function DotNavigation(){
   );
 }
 
-function DownArrow(){
+const DownArrow = () => {
     return <div className="arrow-down"></div> 
 }
 
@@ -33,7 +32,7 @@ function DownArrow(){
 *
 */
 
-function HeaderText(){
+const HeaderText = () => {
     return  (
       <div style={styles.header}> 
           <div style={styles.titleStyle}> rekha tenjarla </div>
@@ -48,7 +47,7 @@ function HeaderText(){
 * particle background, container
 *
 */
-function Particles(){
+const Particles = () =>{
     return <div className="section" style={styles.particles} id="particle-container"></div>;
 }
 
@@ -58,7 +57,7 @@ function Particles(){
 * about me -- add text differntiation
 *
 */
-function About(){
+const About = () =>{
     return (
       <div style={styles.aboutText}> 
 
@@ -78,7 +77,7 @@ function About(){
 * white spacer, with the triangle
 *
 */
-function Spacer() {
+const Spacer = () => {
   return(
      <div>
         <div style={styles.spacer}> </div>
@@ -92,7 +91,7 @@ function Spacer() {
 * my background
 *
 */
-function Background(){
+const Background = () => {
     return <div className="section" style={styles.background}> </div>;
 }
 
@@ -109,6 +108,8 @@ var pageOne = ( <div>
                 </div>
   );
 
+
+let container = document.getElementById("container");
 
 ReactDOM.render(pageOne,container);
 

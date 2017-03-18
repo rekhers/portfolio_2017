@@ -32372,13 +32372,12 @@ var _stylesCss2 = _interopRequireDefault(_stylesCss);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 console.log(_stylesCss2.default.particles);
-var container = document.getElementById("container");
 /*
 *
 * Shared Elements
 *
 */
-function DotNavigation() {
+var DotNavigation = function DotNavigation() {
     return _react2.default.createElement(
         'svg',
         { id: 'dots', height: '140', width: '50' },
@@ -32388,11 +32387,11 @@ function DotNavigation() {
         _react2.default.createElement('circle', { cx: '20', cy: '100', r: '6', fill: 'none', stroke: 'black' }),
         _react2.default.createElement('circle', { cx: '20', cy: '130', r: '6', fill: 'none', stroke: 'black' })
     );
-}
+};
 
-function DownArrow() {
+var DownArrow = function DownArrow() {
     return _react2.default.createElement('div', { className: 'arrow-down' });
-}
+};
 
 /*
 *
@@ -32400,7 +32399,7 @@ function DownArrow() {
 *
 */
 
-function HeaderText() {
+var HeaderText = function HeaderText() {
     return _react2.default.createElement(
         'div',
         { style: _stylesCss2.default.header },
@@ -32433,16 +32432,16 @@ function HeaderText() {
 * particle background, container
 *
 */
-function Particles() {
+var Particles = function Particles() {
     return _react2.default.createElement('div', { className: 'section', style: _stylesCss2.default.particles, id: 'particle-container' });
-}
+};
 
 /*
 *
 * about me -- add text differntiation
 *
 */
-function About() {
+var About = function About() {
     return _react2.default.createElement(
         'div',
         { style: _stylesCss2.default.aboutText },
@@ -32455,7 +32454,7 @@ function About() {
 * white spacer, with the triangle
 *
 */
-function Spacer() {
+var Spacer = function Spacer() {
     return _react2.default.createElement(
         'div',
         null,
@@ -32466,20 +32465,20 @@ function Spacer() {
         ),
         _react2.default.createElement('div', { style: _stylesCss2.default.triangle })
     );
-}
+};
 
 /*
 *
 * my background
 *
 */
-function Background() {
+var Background = function Background() {
     return _react2.default.createElement(
         'div',
         { className: 'section', style: _stylesCss2.default.background },
         ' '
     );
-}
+};
 
 var pageOne = _react2.default.createElement(
     'div',
@@ -32490,6 +32489,8 @@ var pageOne = _react2.default.createElement(
     _react2.default.createElement(Spacer, null),
     _react2.default.createElement(Background, null)
 );
+
+var container = document.getElementById("container");
 
 _reactDom2.default.render(pageOne, container);
 
