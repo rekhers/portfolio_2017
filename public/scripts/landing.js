@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+
+//lets figure out how we can use relative paths for this?
 import m from '/Users/Rekha/Dev/react_project/public/scripts/main.js';
 import styles from '/Users/Rekha/Dev/react_project/public/scripts/styles.css.js';
+import cities from '/Users/Rekha/Dev/react_project/public/scripts/cities.js';
 
-console.log(styles.particles);
+
 /*
 *
 * Shared Elements
@@ -31,6 +34,8 @@ const DownArrow = () => {
 * SECTIONS
 *
 */
+
+
 
 const HeaderText = () => {
     return  (
@@ -61,12 +66,7 @@ const About = () =>{
     return (
       <div style={styles.aboutText}> 
 
-      I'm a javascript programmer who loves 
-
-      
-      I'm a javascript programmer who loves translating high level concepts into code and building pixel-perfect user interfaces. 
-      React lets me do that by utilizing some of my favorite concepts from both web development and linguistics like compositionality 
-      functional programming. 
+      hello! i'm a javascript programmer who is driven by social justice, language, and music 
 
     </div> )
 };
@@ -95,23 +95,46 @@ const Background = () => {
     return <div className="section" style={styles.background}> </div>;
 }
 
+/*
+*
+* my background
+*
+*/
+const SpotifyPlaylist = () => {
+    return <iframe src="https://open.spotify.com/embed/track/41eiwHEX8iegmqmS2cf7oX" style={styles.spotify}> </iframe>;
+}
 
 
 
+const Cities = () => {
 
-var pageOne = ( <div>
+console.log("cities:");
+console.log(cities);
+
+
+  return(
+    <div>
+    <cities.Austin/>
+    <cities.SouthCollege/>
+    <cities.London/>
+    </div>)
+}
+
+
+var page = ( <div>
                 <Particles/>
                 <HeaderText/>
-                <About name="Rekha"/>
+                <About />
                 <Spacer/>
                 <Background/>
+                <Cities/>
                 </div>
   );
 
 
 let container = document.getElementById("container");
 
-ReactDOM.render(pageOne,container);
+ReactDOM.render(page,container);
 
 particleground(document.getElementById('particle-container'), {
     dotColor: 'rgba(255,255,255, 0.3)',

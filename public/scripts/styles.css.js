@@ -3,7 +3,6 @@
 * header styles
 *
 */ 
-
 import React from 'react';
 
 export default{
@@ -41,31 +40,32 @@ italic:{
   letterSpacing: '2px',
   fontWeight: '300'
 },
+
+
   
 
 arrowStyle:{
   WebkitTextStroke: '2px #FFF',
   WebkitTextFillColor: 'transparent',
   fontFamily: 'Raleway'
-
 },
 
 
 aboutText:{
   fontFamily: 'Roboto',
-  fontSize: '1.5vw',
+  fontSize: '2vw',
   fontWeight: '300',
   color: '#848484',
   backgroundColor: '#f5f5f5',
   paddingLeft:'10%',
-    paddingRight:'10%',
+  paddingRight:'10%',
   paddingTop:'2%',
   paddingBottom:'2%'
 },
 
 spacer:{
   backgroundColor: "#FFF",
-  height: "5%"
+  height: "2%"
 },
 
 triangle:{
@@ -74,8 +74,8 @@ triangle:{
   borderLeft: '25px solid transparent',
   borderRight: '25px solid transparent',
   borderTop: '25px solid #FFF',
-  'marginLeft': '48%',
-  'position':'absolute'
+  marginLeft: '45%',
+  position:'absolute'
 
 },
 
@@ -88,6 +88,29 @@ particles:{
     height: '100%',
     background: 'WebkitLinearGradient(left, #6819e8 0%,#7437d0 35%,#615fde 68%,#6980f2 100%)',
     zIndex: '-1'
+},
+
+spotify:{
+  width: '300px',
+  height:'300px'
+},
+
+city:{
+  width: '50%',
+  height: '50%',
+  fill: '#6819e8'
+},
+
+
+austin: {
+  marginLeft: "20px"
+},
+
+soCo: {
+  stroke: 'black',
 }
+
+
+
 }
 

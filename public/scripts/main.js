@@ -1,3 +1,8 @@
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import $ from 'jquery';
 
 
-console.log("we're in main11");
+
+//lets figure out how we can use relative paths for this?
+import landing from '/Users/Rekha/Dev/react_project/public/scripts/landing.js';
