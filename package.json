@@ -93,10 +93,13 @@
     "jquery": "*",
     "less": "^2.7.2",
     "less-loader": "^4.0.2",
+    "mapbox-gl": "^0.34.0",
     "react": "*",
     "react-dom": "*"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "image-webpack-loader": "^3.3.0"
+  },
   "scripts": {
     "start": "node server.js"
   },

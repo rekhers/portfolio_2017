@@ -42,8 +42,6 @@ italic:{
 },
 
 
-  
-
 arrowStyle:{
   WebkitTextStroke: '2px #FFF',
   WebkitTextFillColor: 'transparent',
@@ -64,8 +62,9 @@ aboutText:{
 },
 
 spacer:{
-  backgroundColor: "#FFF",
-  height: "2%"
+  background: "WebkitLinearGradient(left, red, blue)",
+  height: "auto",
+  width: "100%"
 },
 
 triangle:{
@@ -76,6 +75,13 @@ triangle:{
   borderTop: '25px solid #FFF',
   marginLeft: '45%',
   position:'absolute'
+},
+
+cutout:{
+   zIndex:"9999",
+   position: "relative",
+   left: "30%",
+   top: "-25%"
 
 },
 
@@ -84,10 +90,10 @@ background:{
 },
 
 particles:{
-    margin: '0px',
-    height: '100%',
-    background: 'WebkitLinearGradient(left, #6819e8 0%,#7437d0 35%,#615fde 68%,#6980f2 100%)',
-    zIndex: '-1'
+  margin: '0px',
+  height: '100%',
+  background: 'WebkitLinearGradient(left, #6819e8 0%,#7437d0 35%,#615fde 68%,#6980f2 100%)',
+  zIndex: '-1'
 },
 
 spotify:{
@@ -101,15 +107,56 @@ city:{
   fill: '#6819e8'
 },
 
+london: {
+  width: "420px",
+  height: "320px",
+  fill: "white",
+  stroke: "black",
+  strokeWidth: "1"
+},
 
 austin: {
-  marginLeft: "20px"
+  marginLeft: "20px",
+  fill: "#FFF",
+  stroke: "black",
+  strokeWidth: "2",
+  width: "300px",
+  height: "300px"
 },
 
 soCo: {
-  stroke: 'black',
-}
+  shapeRendering:"crispEdges",
+  stroke: "black",
+  strokeWidth: ".5",
+  width: "300px",
+  height: "300px"
+},
 
+graypanel:{
+  background: "gray",
+  height: "50%"
+},
+
+placeTitle:{
+  fontFamily: 'Raleway',
+  fontSize: '3vw',
+  fontWeight: '300',
+  color: '#848484',
+  marginLeft: "2%",
+  marginTop: "2%"
+}, 
+
+seattle: {
+  width: "300px",
+  height: "300px"
+},
+
+map: {
+  position: "absolute",
+  top:"0",
+  bottom:"0",
+  width:"100%"
+}
 
 
 }

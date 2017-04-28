@@ -11,13 +11,22 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 })
 
 module.exports = {
-  entry: './public/scripts/landing.js',
+  entry: {main: './public/scripts/main.js', 
+          landing: './public/scripts/landing.js', 
+          about: './public/scripts/about.js'},
   output: {
     path: './public/scripts/',
     filename: 'bundle.js'
   },
   module: {
     loaders: [
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+            'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+           'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        ]
+    },
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
     ]
