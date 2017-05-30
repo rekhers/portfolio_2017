@@ -13,7 +13,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 module.exports = {
   entry: './public/scripts/main.js', 
   output: {
-    path: './public/scripts/',
+    path: './public/build/',
     filename: 'bundle.js'
   },
   module: {

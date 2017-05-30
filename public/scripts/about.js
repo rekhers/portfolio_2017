@@ -17,7 +17,7 @@ const AboutText = () =>{
 };
 
 const RekhaCutout = () =>{
-  return <img style={styles.cutout} src="./public/scripts/final_cutout.png" />;
+  return <img style={styles.cutout} src="./public/assets/final_cutout.png" />;
 
 }
 
