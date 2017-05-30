@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-
 import styles from '/Users/Rekha/Dev/react_project/public/scripts/styles.css.js';
 
 
@@ -10,7 +9,7 @@ import styles from '/Users/Rekha/Dev/react_project/public/scripts/styles.css.js'
 * about me -- add text differentiation
 *
 */
-const About = () =>{
+const AboutText = () =>{
     return (
       <div style={styles.aboutText}> 
       hello! i'm a javascript programmer who is driven by social justice, language, and music 
@@ -30,7 +29,7 @@ const RekhaCutout = () =>{
 const Spacer = () => {
   return(
      <div id="spacer">
-        <About />
+        <AboutText/>
         <div style={styles.spacer}> 
               <div id="graypanel"></div>
               <div id="whitepanel"></div>
@@ -48,5 +47,17 @@ const Spacer = () => {
 *
 */
 const Background = () => {
-    return <div className="section" style={styles.background}> </div>;
+    return (<div className="section" style={styles.background}> 
+              <Spacer/>
+    </div>);
+}
+
+
+export default{
+  aboutDiv: function(){
+    return (<div className="about_section"> 
+            <Background/> 
+            </div>
+            )
+  }
 }

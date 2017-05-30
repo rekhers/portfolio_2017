@@ -86,7 +86,7 @@ cutout:{
 },
 
 background:{
-  backgroundColor: "#f5f5f5",
+  backgroundColor: "#fff",
 },
 
 particles:{

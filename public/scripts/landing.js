@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
 //lets figure out how we can use relative paths for this?
-import m from '/Users/Rekha/Dev/react_project/public/scripts/main.js';
 import styles from '/Users/Rekha/Dev/react_project/public/scripts/styles.css.js';
-
 
 export default{
 
@@ -56,7 +54,6 @@ Particles: function(){
 
 
 
-
 /*
 *
 * embed spotify playlist 
@@ -67,8 +64,9 @@ SpotifyPlaylist: function(){
 }
 
 
-}
 
+
+};
 
 
 

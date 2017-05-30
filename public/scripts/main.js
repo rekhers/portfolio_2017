@@ -5,14 +5,12 @@ import landing from '/Users/Rekha/Dev/react_project/public/scripts/landing.js';
 import about from '/Users/Rekha/Dev/react_project/public/scripts/about.js';
 
 
-
 var page = ( <div>
                 <landing.Particles/>
                 <landing.HeaderText/>
-                <about.Background/>
+                <about.aboutDiv/>
                 </div>
   );
-
 
 
 let container = document.getElementById("container");

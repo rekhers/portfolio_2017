@@ -11,9 +11,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 })
 
 module.exports = {
-  entry: {main: './public/scripts/main.js', 
-          landing: './public/scripts/landing.js', 
-          about: './public/scripts/about.js'},
+  entry: './public/scripts/main.js', 
   output: {
     path: './public/scripts/',
     filename: 'bundle.js'
