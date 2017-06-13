@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
 //lets figure out how we can use relative paths for this?
-import styles from '/Users/Rekha/Dev/react_project/public/scripts/styles.css.js';
+import styles from '/Users/Rekha/Dev/react_project/public/stylesheets/landingStyles.css.js';
 
 export default{
 

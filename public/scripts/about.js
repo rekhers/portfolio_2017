@@ -1,24 +1,31 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import styles from '/Users/Rekha/Dev/react_project/public/scripts/styles.css.js';
+import styles from '/Users/Rekha/Dev/react_project/public/stylesheets/aboutStyles.css.js';
 
 
 /*
 *
-* about me -- add text differentiation
+* about me -- need to potentially download a library to handle small screens.
 *
 */
 const AboutText = () =>{
     return (
+      <div> 
+      <span style={styles.bold}> Hi there! </span>
       <div style={styles.aboutText}> 
-      hello! i'm a javascript programmer who is driven by social justice, language, and music 
+      I'm a self-taught web developer who arrived at programming through my study of language. 
+      In the past couple of years, I have worked mostly on the front-end of data driven applications across various stacks, 
+      which has left me with a passion for translating relationships among data into code while creating fun and intuitive user interfaces.    
+      </div>
+
     </div> )
 };
 
+
+
 const RekhaCutout = () =>{
   return <img style={styles.cutout} src="./public/assets/final_cutout.png" />;
-
 }
 
 /*
@@ -26,37 +33,22 @@ const RekhaCutout = () =>{
 * white spacer, with the triangle
 *
 */
-const Spacer = () => {
+const Section = () => {
   return(
-     <div id="spacer">
+     <div style={styles.aboutContent} id="about_content">
+        <RekhaCutout/>
         <AboutText/>
-        <div style={styles.spacer}> 
-              <div id="graypanel"></div>
-              <div id="whitepanel"></div>
-              <RekhaCutout/>
-        </div>
-        <div style={styles.triangle}></div> 
       </div>
     )
 }
 
 
-/*
-*
-* my background
-*
-*/
-const Background = () => {
-    return (<div className="section" style={styles.background}> 
-              <Spacer/>
-    </div>);
-}
 
 
 export default{
   aboutDiv: function(){
     return (<div className="about_section"> 
-            <Background/> 
+            <Section/> 
             </div>
             )
   }
