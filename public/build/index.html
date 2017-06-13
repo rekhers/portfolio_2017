@@ -1,16 +1,70 @@
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-<link href="../../public/stylesheets/styles.css" type="text/css" rel="stylesheet" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="../../public/jquery.particleground.min.js"></script>
-<body>
-
-  <div id="container">
-  </div>
+Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module not found: Error: Can't resolve 'file-loader' in '/Users/Rekha/Dev/react_project':
+  Error: Can't resolve 'file-loader' in '/Users/Rekha/Dev/react_project'
   
-<script type="text/javascript" src="bundle.js"></script></body> 
-
-<script type="text/javascript" src="./public/build/bundle.js"> </script>
-
+  - compiler.js:76 
+    [react_project]/[html-webpack-plugin]/lib/compiler.js:76:16
+  
+  - Compiler.js:280 Compiler.<anonymous>
+    [react_project]/[webpack]/lib/Compiler.js:280:10
+  
+  - Compiler.js:480 
+    [react_project]/[webpack]/lib/Compiler.js:480:13
+  
+  - Tapable.js:138 next
+    [react_project]/[webpack]/[tapable]/lib/Tapable.js:138:11
+  
+  - CachePlugin.js:62 Compiler.<anonymous>
+    [react_project]/[webpack]/lib/CachePlugin.js:62:5
+  
+  - Tapable.js:142 Compiler.applyPluginsAsyncSeries
+    [react_project]/[webpack]/[tapable]/lib/Tapable.js:142:13
+  
+  - Compiler.js:477 
+    [react_project]/[webpack]/lib/Compiler.js:477:10
+  
+  - Tapable.js:131 Compilation.applyPluginsAsyncSeries
+    [react_project]/[webpack]/[tapable]/lib/Tapable.js:131:46
+  
+  - Compilation.js:640 
+    [react_project]/[webpack]/lib/Compilation.js:640:19
+  
+  - Tapable.js:131 Compilation.applyPluginsAsyncSeries
+    [react_project]/[webpack]/[tapable]/lib/Tapable.js:131:46
+  
+  - Compilation.js:631 
+    [react_project]/[webpack]/lib/Compilation.js:631:11
+  
+  - Tapable.js:131 Compilation.applyPluginsAsyncSeries
+    [react_project]/[webpack]/[tapable]/lib/Tapable.js:131:46
+  
+  - Compilation.js:626 
+    [react_project]/[webpack]/lib/Compilation.js:626:10
+  
+  - Tapable.js:131 Compilation.applyPluginsAsyncSeries
+    [react_project]/[webpack]/[tapable]/lib/Tapable.js:131:46
+  
+  - Compilation.js:622 sealPart2
+    [react_project]/[webpack]/lib/Compilation.js:622:9
+  
+  - Tapable.js:131 Compilation.applyPluginsAsyncSeries
+    [react_project]/[webpack]/[tapable]/lib/Tapable.js:131:46
+  
+  - Compilation.js:570 Compilation.seal
+    [react_project]/[webpack]/lib/Compilation.js:570:8
+  
+  - Compiler.js:474 
+    [react_project]/[webpack]/lib/Compiler.js:474:16
+  
+  - Tapable.js:225 
+    [react_project]/[webpack]/[tapable]/lib/Tapable.js:225:11
+  
+  - Compilation.js:472 
+    [react_project]/[webpack]/lib/Compilation.js:472:11
+  
+  - Compilation.js:443 
+    [react_project]/[webpack]/lib/Compilation.js:443:13
+  
+</pre>

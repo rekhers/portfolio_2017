@@ -13,20 +13,30 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 module.exports = {
   entry: './public/scripts/main.js', 
   output: {
-    path: './public/build/',
+    path: './public/scripts/',
     filename: 'bundle.js'
   },
-  module: {
+module: {
     loaders: [
       {
+        test: /.js?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          presets: ['es2015', 'react']
+        }
+      },
+      {
+        test: /\.json$/,
+        loader: "json"
+      },
+     {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
-            'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
-           'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
+            'file?hash=sha512&digest=hex&name=[hash].[ext]',
+            'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
-    },
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
+      }
     ]
   },
   plugins: [HtmlWebpackPluginConfig]
