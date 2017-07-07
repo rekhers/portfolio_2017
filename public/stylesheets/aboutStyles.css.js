@@ -3,23 +3,28 @@ import React from 'react';
 export default{
 
   aboutText:{
-  fontFamily: 'Roboto',
+  fontFamily: 'Space Mono',
   fontSize: '2vw',
   fontWeight: '200',
-  color: 'black',
+  color: '#2b313d',
   marginRight: "25%",
   marginLeft: "5%"
 },
 
 bold: {
- fontFamily: 'Roboto Slab',
+ fontFamily: 'Space Mono',
   fontSize: '5vw',
   fontWeight: '300',
-  color: 'black',
+  color: '#2b313d',
   marginRight: "15%",
   marginLeft: "5%"
 
 
+  },
+
+icons:{
+    fontSize: '5vw',
+      color: '#2b313d'
   },
 
 aboutContent:{

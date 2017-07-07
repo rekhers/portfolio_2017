@@ -1,87 +1,86 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
-@import url('http://fonts.googleapis.com/css?family=Raleway:400,800,900');
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i|Space+Mono:400,700,700i');
 
 html{
-	margin: 0px;
-	
-    body{
-    // background: -webkit-linear-gradient(130deg, #FD6F46 10%, #FB9832 90%); /* Chrome 10+, Saf5.1+ */ 
 
-      margin: 0px;
-      overflow-x: hidden;
 
-.section{
-  height: 100%;
-}
+	margin: 0;
+body{ 
 
-#container{
-  margin: 0px;
+	margin: 0;
+	background-color: #222;
 
-   
-#particle-container {
 
-    margin: 0px;
-    height: 100%;
-    background: linear-gradient(to right, #6819e8 0%,#7437d0 35%,#615fde 68%,#6980f2 100%);
-    background: -moz-linear-gradient(left, #6819e8 0%, #7437d0 35%, #615fde 68%, #6980f2 100%);
-    background: -webkit-linear-gradient(left, #6819e8 0%,#7437d0 35%,#615fde 68%,#6980f2 100%);
-   
+.text{
 
-}
+    color: #FFF;
+    margin-left: 35%;
+    margin-top: 15%;
 
-  #dots{
-       position: fixed;
-        left: 95%;
-        top: 30%;
-    circle{
-        stroke-width: 1.5;
-        cursor: pointer;
-     
-    }
+	    #title{
+	    	font-family: 'Space Mono';
+  			font-size: 3.5vw;
+  			font-weight: 200;
+  			
+  		   &::selection{
+	    	background-color: #29FCA5;
+	    	color: #222;
+	   		}
+
+
+	    }
+
+
+
+	    #byline{
+
+	    cursor:pointer;
+
+	    #mostly{
+	    	color: #FD5AE8;
+	    	width: auto;
+	    	display: inline-block;
+
+	    }
+	    	 font-family: 'Anonymous Pro';
+			  font-size: 1.975vw;
+			  font-weight: 300;
+			  color:#5AE8FD;
+			  user-select: none;
+
+	    }
+
+	    text-align: left;
+	    width: 35vw;
+	    padding-bottom: 3em;
+	    border-bottom: .1em solid #FFF;
+
+
+
+	}
+
+  #description{
+    margin-top: 1%;
+    width: 35vw;
+    color: #FFF;
+    margin-left: 35%;
+      font-family: 'Space Mono';
+        font-size: 1.1vw;
+        font-weight: 200;
+
+        .links{
+          font-size: 1.2vw;
+
+          display: inline-block;
+        background-color: #29FCA5;
+        color: #222;
+        font-weight: 300;
+        }
+
+        border-left: .5em solid #FFF;
+        padding-left: 2%;
   }
-    
- 
-}
-
-.arrow-down {
-  width: 0; 
-  height: 0; 
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  
-  border-top: 40px solid #FFF;
-
-  position: fixed; 
-  left: 45%;
-  top: 75%;
-  cursor:pointer;
-
--webkit-animation: bounce 2s;
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-}
 
 
+	}
 
-
-
-
-
-
-
-}
-
-
-
-}
 }
