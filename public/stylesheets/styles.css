@@ -8,8 +8,9 @@ html body {
 }
 html body .text {
   color: #FFF;
-  margin-left: 35%;
-  margin-top: 15%;
+  position: absolute;
+  left: 35vw;
+  top: 15vw;
   text-align: left;
   width: 35vw;
   padding-bottom: 3em;
@@ -19,10 +20,62 @@ html body .text #title {
   font-family: 'Space Mono';
   font-size: 3.5vw;
   font-weight: 200;
+  padding-left: 1px;
+  cursor: pointer;
+}
+html body .text #title:before {
+  content: 'rekha tenjarla';
+  position: absolute;
+  opacity: .8;
+  color: #0ff;
+  z-index: -5;
+}
+html body .text #title:after {
+  top: 0;
+  display: block;
+  content: 'rekha tenjarla';
+  position: absolute;
+  opacity: .8;
+  color: #f0f;
+  z-index: -2;
+}
+html body .text #title:hover:before {
+  animation: glitch-left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+html body .text #title:hover:after {
+  animation: glitch-left-2 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
 }
 html body .text #title::selection {
   background-color: #29FCA5;
   color: #222;
+}
+@keyframes glitch-left {
+  0% {
+    transform: translate(0);
+  }
+  33% {
+    transform: translate(-5px, 3px);
+  }
+  66% {
+    transform: translate(5px, -3px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+@keyframes glitch-left-2 {
+  0% {
+    transform: translate(0);
+  }
+  33% {
+    transform: translate(-5px, -3px);
+  }
+  66% {
+    transform: translate(5px, 2px);
+  }
+  to {
+    transform: translate(0);
+  }
 }
 html body .text #byline {
   cursor: pointer;
@@ -38,20 +91,31 @@ html body .text #byline #mostly {
   display: inline-block;
 }
 html body #description {
+  line-height: 2em;
   margin-top: 1%;
   width: 35vw;
   color: #FFF;
-  margin-left: 35%;
+  position: absolute;
+  left: 35vw;
+  top: 25vw;
   font-family: 'Space Mono';
   font-size: 1.1vw;
   font-weight: 200;
-  border-left: .5em solid #FFF;
+  border-left: .4em solid #FFF;
   padding-left: 2%;
 }
 html body #description .links {
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   display: inline-block;
   background-color: #29FCA5;
   color: #222;
   font-weight: 300;
+}
+@media (min-width: 1000px) {
+  .text {
+    width: 35vw;
+  }
+  #description {
+    width: 35vw;
+  }
 }

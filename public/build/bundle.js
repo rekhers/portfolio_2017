@@ -20027,11 +20027,9 @@ var _jquery = __webpack_require__(34);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _landingStylesCss = __webpack_require__(94);
-
-var _landingStylesCss2 = _interopRequireDefault(_landingStylesCss);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var colorToggle = function colorToggle() {};
 
 var Container = function Container() {
   return _react2.default.createElement(
@@ -20043,7 +20041,7 @@ var Container = function Container() {
       _react2.default.createElement(
         'div',
         { id: 'title' },
-        ' rekha tenjarla '
+        'rekha tenjarla'
       ),
       _react2.default.createElement(
         'div',
@@ -20066,11 +20064,11 @@ var Container = function Container() {
         { className: 'links' },
         ' old portfolio '
       ),
-      ', ',
+      ', my ',
       _react2.default.createElement(
         'div',
         { className: 'links' },
-        ' my code '
+        ' code '
       ),
       ', and my ',
       _react2.default.createElement(
@@ -20078,12 +20076,11 @@ var Container = function Container() {
         { className: 'links' },
         ' linkedin '
       ),
-      ' '
+      '. '
     )
   );
 };
 
-//lets figure out how we can use relative paths for this?
 exports.default = {
   landingDiv: function landingDiv() {
     return _react2.default.createElement(
@@ -20097,80 +20094,7 @@ exports.default = {
 
 /***/ }),
 /* 93 */,
-/* 94 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(19);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = {
-
-  topSection: {
-    paddingLeft: "2%",
-    // background: '#f06457',
-    background: "#222",
-    height: '60%',
-    color: "#FFF"
-  },
-
-  nav: {
-    color: "#29FCA5",
-    fontSize: "2vw",
-    fontFamily: 'Space Mono',
-    width: "50%"
-  },
-
-  triangle: {
-    content: "",
-    position: "fixed",
-    width: "0",
-    height: "0",
-    marginTop: "54.4%",
-    marginLeft: "-0.5em",
-    left: "50%",
-    boxSizing: "borderBox",
-    border: "3em solid black",
-    borderColor: "transparent transparent #f06457 #f06457",
-    transformOrigin: "0 0,",
-    transform: "rotate(-45deg)",
-    boxShadow: "-2px 2px 2px 0 rgba(0, 0, 0, 0.4)"
-  },
-
-  titleStyle: {
-    fontFamily: 'Space Mono',
-    fontSize: '3.5vw',
-    fontWeight: '200'
-
-  },
-
-  italic: {
-    fontStyle: 'italic'
-  },
-
-  byline: {
-    fontFamily: 'Anonymous Pro',
-    fontSize: '1.975vw',
-    fontWeight: '300'
-
-  }
-
-}; /*
-   *
-   * landing styles
-   *
-   */
-
-/***/ }),
+/* 94 */,
 /* 95 */,
 /* 96 */,
 /* 97 */,
