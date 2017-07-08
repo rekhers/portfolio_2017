@@ -1,30 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i|Space+Mono:400,700,700i');
 
 html{
-
-
 	margin: 0;
 body{ 
 
 	margin: 0;
 	background-color: #222;
 
+#col{
+    float: none;
+    margin: 0 auto;
+}
+
 #text{
-  position: absolute;
-  left: 35%;
-  top: 25%;
-  display: flex;
-  flex-direction: column;
+
+ margin: 5% auto;
 
 .headline{
-
     color: #FFF;
 
-
    #title {	
-   		    
+        white-space: nowrap;
    	 		font-family: 'Space Mono';
-  			font-size: 3.5vw;
   			font-weight: 200;
   			padding-left: 1px;
   			cursor: pointer;
@@ -34,7 +31,7 @@ body{
 	    content: 'rekha tenjarla';
 	   	position: absolute;
 	    opacity: .6;
-	     color: #0ff;
+	    color: #0ff;
 	    z-index: -5;
       animation: glitch-left .3s cubic-bezier(.25, .46, .45, .94) both 3;
 
@@ -43,7 +40,7 @@ body{
 	  	top: 0;
 	  	display:block;
 	    content: 'rekha tenjarla';
-	 	position: absolute;
+	 	 position: absolute;
 	    opacity: .6;
 	    color: #f0f;
 	    z-index: -2;
@@ -104,8 +101,8 @@ body{
 
 
 	    #byline{
-
-	    cursor:pointer;
+        white-space: nowrap;
+        cursor:pointer;
 
 	    #mostly{
 	    	color: #FD5AE8;
@@ -113,62 +110,102 @@ body{
 	    	display: inline-block;
 
 	    }
-	    	 font-family: 'Anonymous Pro';
-			  font-size: 1.975vw;
+	    	font-family: 'Anonymous Pro';
 			  font-weight: 300;
 			  color:#5AE8FD;
 			  user-select: none;
 
 	    }
-
-	    text-align: left;
-	    width: 35vw;
 	    padding-bottom: 3em;
 	    border-bottom: .1em solid #FFF;
-
-
-
 	}
 
   #description{
-    position: relative;
-    line-height: 2em;
-    margin-top: 1%;
-    width: 35vw;
-    color: #FFF;
-    margin-top: 2%;
-    display:block;
-      font-family: 'Space Mono';
-        font-size: 1.1vw;
+        line-height: 2em;
+        margin-top: 1%;
+        color: #FFF;
+        margin-top: 2%;
+        display:block;
+        font-family: 'Space Mono';
         font-weight: 200;
+        user-select: none;
 
         .links{
-          font-size: 1.1vw;
           display: inline-block;
           background-color: #29FCA5;
           color: #222;
           font-weight: 300;
-
+          cursor:pointer;
           &:hover{
             text-decoration: none;
           }
         }
 
-        border-left: .4em solid #FFF;
-        padding-left: 2%;
+       
+      padding-left: 2%;
   }
 
   //text
   }
 
+
     //body
  }
 
+
+@media only screen and (min-width: 800px){
+   
+  #text{
+    //controls the divider horizontal line
+    .headline{
+        width: 70%;
+
+          #title{ 
+              font-size: 62px; 
+              }
+          #byline{
+            font-size: 35px;
+          }
+
+    }
+    #description{
+      font-size: 25px;
+       border-left: .4em solid #FFF;
+        width: 70%;
+
+    }
+
+  }
+
+    
+}
+@media only screen and (max-width: 800px){
+
+#text{
+    margin-left: 2%;
+
+    .headline{
+       width: 85%;
+
+        #title{ 
+          font-size: 40px; 
+          }
+        #byline{
+          font-size:25px;
+          }
+     }
+   
+    #description{
+        font-size: 17px;
+        border-left: 7px solid #FFF;
+         width: 85%;
+    }
+ 
+  }
+}
+
 }
 
 
 
-@media(min-width: 1000px){
-  .text{ width: 35vw}
-  #description{width: 35vw;}
-}
+
