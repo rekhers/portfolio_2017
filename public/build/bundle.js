@@ -20029,15 +20029,13 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var colorToggle = function colorToggle() {};
-
 var Container = function Container() {
   return _react2.default.createElement(
     'div',
-    null,
+    { id: 'text' },
     _react2.default.createElement(
       'div',
-      { className: 'text' },
+      { className: 'headline' },
       _react2.default.createElement(
         'div',
         { id: 'title' },

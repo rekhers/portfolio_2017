@@ -6,24 +6,28 @@ html body {
   margin: 0;
   background-color: #222;
 }
-html body .text {
-  color: #FFF;
+html body #text {
   position: absolute;
-  left: 35vw;
-  top: 15vw;
+  left: 35%;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+}
+html body #text .headline {
+  color: #FFF;
   text-align: left;
   width: 35vw;
   padding-bottom: 3em;
   border-bottom: .1em solid #FFF;
 }
-html body .text #title {
+html body #text .headline #title {
   font-family: 'Space Mono';
   font-size: 3.5vw;
   font-weight: 200;
   padding-left: 1px;
   cursor: pointer;
 }
-html body .text #title:before {
+html body #text .headline #title:before {
   content: 'rekha tenjarla';
   position: absolute;
   opacity: .6;
@@ -31,7 +35,7 @@ html body .text #title:before {
   z-index: -5;
   animation: glitch-left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 3;
 }
-html body .text #title:after {
+html body #text .headline #title:after {
   top: 0;
   display: block;
   content: 'rekha tenjarla';
@@ -41,13 +45,13 @@ html body .text #title:after {
   z-index: -2;
   animation: glitch-left-2 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both 3;
 }
-html body .text #title:hover:before {
+html body #text .headline #title:hover:before {
   animation: glitch-left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
 }
-html body .text #title:hover:after {
+html body #text .headline #title:hover:after {
   animation: glitch-left-2 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
 }
-html body .text #title::selection {
+html body #text .headline #title::selection {
   background-color: #29FCA5;
   color: #222;
 }
@@ -79,7 +83,7 @@ html body .text #title::selection {
     transform: translate(0);
   }
 }
-html body .text #byline {
+html body #text .headline #byline {
   cursor: pointer;
   font-family: 'Anonymous Pro';
   font-size: 1.975vw;
@@ -87,33 +91,33 @@ html body .text #byline {
   color: #5AE8FD;
   user-select: none;
 }
-html body .text #byline #mostly {
+html body #text .headline #byline #mostly {
   color: #FD5AE8;
   width: auto;
   display: inline-block;
 }
-html body #description {
+html body #text #description {
+  position: relative;
   line-height: 2em;
   margin-top: 1%;
   width: 35vw;
   color: #FFF;
-  position: absolute;
-  left: 35vw;
-  top: 25vw;
+  margin-top: 2%;
+  display: block;
   font-family: 'Space Mono';
   font-size: 1.1vw;
   font-weight: 200;
   border-left: .4em solid #FFF;
   padding-left: 2%;
 }
-html body #description .links {
+html body #text #description .links {
   font-size: 1.1vw;
   display: inline-block;
   background-color: #29FCA5;
   color: #222;
   font-weight: 300;
 }
-html body #description .links:hover {
+html body #text #description .links:hover {
   text-decoration: none;
 }
 @media (min-width: 1000px) {
