@@ -111,7 +111,6 @@ html body #text #description .links:hover {
     margin-top: 15%;
   }
   #text .headline {
-    text-float: left;
     width: 80%;
     padding-bottom: 2em;
   }
