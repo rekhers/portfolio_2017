@@ -9836,7 +9836,7 @@ var Container = function Container() {
       { className: 'row' },
       _react2.default.createElement(
         'div',
-        { className: 'col-md-10', id: 'col' },
+        { id: 'col', className: 'col-xs-12' },
         _react2.default.createElement(
           'div',
           { className: 'headline' },
@@ -9864,13 +9864,13 @@ var Container = function Container() {
           _react2.default.createElement(
             'a',
             { className: 'links', href: 'http://rekha-site-316.herokuapp.com/' },
-            ' old portfolio '
+            'old portfolio'
           ),
           ', my ',
           _react2.default.createElement(
             'a',
             { href: 'https://github.com/rekhers', className: 'links' },
-            ' code '
+            ' code'
           ),
           ', and my ',
           _react2.default.createElement(
@@ -9878,7 +9878,7 @@ var Container = function Container() {
             { href: 'https://www.linkedin.com/in/rekha-tenjarla-588a19112', className: 'links' },
             ' linkedin '
           ),
-          '. '
+          ' '
         )
       )
     )

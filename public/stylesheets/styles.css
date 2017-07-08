@@ -1,21 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i|Space+Mono:400,700,700i');
-html {
-  margin: 0;
-}
 html body {
-  margin: 0;
   background-color: #222;
 }
-html body #col {
-  float: none;
-  margin: 0 auto;
-}
 html body #text {
-  margin: 5% auto;
+  padding-top: 5%;
 }
 html body #text .headline {
   color: #FFF;
-  padding-bottom: 3em;
   border-bottom: .1em solid #FFF;
 }
 html body #text .headline #title {
@@ -53,6 +44,116 @@ html body #text .headline #title::selection {
   background-color: #29FCA5;
   color: #222;
 }
+html body #text .headline #byline {
+  white-space: nowrap;
+  cursor: pointer;
+  font-family: 'Anonymous Pro';
+  font-weight: 300;
+  color: #5AE8FD;
+  user-select: none;
+}
+html body #text .headline #byline #mostly {
+  color: #FD5AE8;
+  width: auto;
+  display: inline-block;
+}
+html body #text #description {
+  margin-top: 1%;
+  color: #FFF;
+  margin-top: 2%;
+  display: block;
+  font-family: 'Space Mono';
+  font-weight: 200;
+  user-select: none;
+  padding-left: 2%;
+}
+html body #text #description .links {
+  display: inline-block;
+  background-color: #29FCA5;
+  color: #222;
+  font-weight: 300;
+  cursor: pointer;
+}
+html body #text #description .links:hover {
+  text-decoration: none;
+}
+/*
+*
+* Media Queries
+*
+*/
+@media only screen and (min-width: 800px) {
+  #text {
+    margin-top: 5%;
+    padding-left: 15%;
+    padding-top: 5%;
+  }
+  #text .headline {
+    width: 70%;
+    padding-bottom: 3em;
+  }
+  #text .headline #title {
+    font-size: 62px;
+  }
+  #text .headline #byline {
+    font-size: 35px;
+  }
+  #text #description {
+    font-size: 25px;
+    border-left: .4em solid #FFF;
+    width: 70%;
+    line-height: 2em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #text {
+    padding-left: 15%;
+    margin-top: 15%;
+  }
+  #text .headline {
+    text-float: left;
+    width: 80%;
+    padding-bottom: 2em;
+  }
+  #text .headline #title {
+    font-size: 40px;
+  }
+  #text .headline #byline {
+    font-size: 23px;
+  }
+  #text #description {
+    font-size: 17px;
+    border-left: 7px solid #FFF;
+    width: 85%;
+    line-height: 1.5em;
+  }
+}
+@media only screen and (max-width: 1000px) and (min-width: 800px) {
+  #text {
+    margin-top: 10%;
+  }
+  #text .headline {
+    width: 75%;
+    padding-bottom: 2em;
+  }
+  #text .headline #title {
+    font-size: 50px;
+  }
+  #text .headline #byline {
+    font-size: 30px;
+  }
+  #text #description {
+    font-size: 20px;
+    border-left: 7px solid #FFF;
+    width: 75%;
+    line-height: 2em;
+  }
+}
+/*
+*
+* Glitch animations
+*
+*/
 @keyframes glitch-left {
   0% {
     transform: translate(0);
@@ -79,74 +180,5 @@ html body #text .headline #title::selection {
   }
   to {
     transform: translate(0);
-  }
-}
-html body #text .headline #byline {
-  white-space: nowrap;
-  cursor: pointer;
-  font-family: 'Anonymous Pro';
-  font-weight: 300;
-  color: #5AE8FD;
-  user-select: none;
-}
-html body #text .headline #byline #mostly {
-  color: #FD5AE8;
-  width: auto;
-  display: inline-block;
-}
-html body #text #description {
-  line-height: 2em;
-  margin-top: 1%;
-  color: #FFF;
-  margin-top: 2%;
-  display: block;
-  font-family: 'Space Mono';
-  font-weight: 200;
-  user-select: none;
-  padding-left: 2%;
-}
-html body #text #description .links {
-  display: inline-block;
-  background-color: #29FCA5;
-  color: #222;
-  font-weight: 300;
-  cursor: pointer;
-}
-html body #text #description .links:hover {
-  text-decoration: none;
-}
-@media only screen and (min-width: 800px) {
-  html #text .headline {
-    width: 70%;
-  }
-  html #text .headline #title {
-    font-size: 62px;
-  }
-  html #text .headline #byline {
-    font-size: 35px;
-  }
-  html #text #description {
-    font-size: 25px;
-    border-left: .4em solid #FFF;
-    width: 70%;
-  }
-}
-@media only screen and (max-width: 800px) {
-  html #text {
-    margin-left: 2%;
-  }
-  html #text .headline {
-    width: 85%;
-  }
-  html #text .headline #title {
-    font-size: 40px;
-  }
-  html #text .headline #byline {
-    font-size: 25px;
-  }
-  html #text #description {
-    font-size: 17px;
-    border-left: 7px solid #FFF;
-    width: 85%;
   }
 }
