@@ -17,7 +17,7 @@ const Container = () => {
       </div>
    
 
-          <div id="description"> I'm currently building a new site with react, but check out my <a className="links" href="http://rekha-site-316.herokuapp.com/">old portfolio</a>, my <a href="https://github.com/rekhers" className="links"> code</a>, or my <a href="https://www.linkedin.com/in/rekha-tenjarla-588a19112" className="links"> linkedin </a> </div>
+          <div id="description"> I'm currently building a new site with react but check out my <a className="links" href="http://rekha-site-316.herokuapp.com/">old portfolio</a>, my <a href="https://github.com/rekhers" className="links"> code</a>, or my <a href="https://www.linkedin.com/in/rekha-tenjarla-588a19112" className="links"> linkedin </a> </div>
             
     
           </div>

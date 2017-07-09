@@ -20061,7 +20061,7 @@ var Container = function Container() {
         _react2.default.createElement(
           'div',
           { id: 'description' },
-          ' I\'m currently building a new site with react, but check out my ',
+          ' I\'m currently building a new site with react but check out my ',
           _react2.default.createElement(
             'a',
             { className: 'links', href: 'http://rekha-site-316.herokuapp.com/' },
