@@ -34037,6 +34037,8 @@ var _landing2 = _interopRequireDefault(_landing);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+document.title = "rekha tenjarla";
+
 var page = _react2.default.createElement(
                 'div',
                 null,

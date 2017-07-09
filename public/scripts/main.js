@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import landing from '/Users/Rekha/Dev/react_project/public/scripts/landing.js';
 
+document.title = "rekha tenjarla";
+
 
 var page = (    <div>
                 <landing.landingDiv/>
