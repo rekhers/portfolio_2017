@@ -116,10 +116,10 @@ html body #text #description .links:hover {
     padding-bottom: 2em;
   }
   #text .headline #title {
-    font-size: 7.2vw;
+    font-size: 3.1rem;
   }
   #text .headline #byline {
-    font-size: 4.15vw;
+    font-size: 1.75rem;
   }
   #text #description {
     font-size: 1.4rem;
