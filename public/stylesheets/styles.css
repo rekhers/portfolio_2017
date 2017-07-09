@@ -108,6 +108,27 @@ html body #text #description .links:hover {
     line-height: 2em;
   }
 }
+@media only screen and (max-width: 300px) {
+  padding-left: 15%;
+  margin-top: 15%;
+  .headline {
+    text-float: left;
+    width: 80%;
+    padding-bottom: 2em;
+  }
+  .headline #title {
+    font-size: 5rem;
+  }
+  .headline #byline {
+    font-size: 3rem;
+  }
+  #description {
+    font-size: 2.5rem;
+    border-left: 7px solid #FFF;
+    width: 85%;
+    line-height: 1.8em;
+  }
+}
 @media only screen and (max-width: 800px) {
   #text {
     padding-left: 15%;
