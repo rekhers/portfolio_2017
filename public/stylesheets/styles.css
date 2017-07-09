@@ -85,7 +85,7 @@ html body #text #description .links:hover {
 @media only screen and (min-width: 800px) {
   #text {
     margin-top: 5%;
-    padding-left: 15%;
+    padding-left: 20%;
     padding-top: 5%;
   }
   #text .headline {
@@ -93,15 +93,15 @@ html body #text #description .links:hover {
     padding-bottom: 3em;
   }
   #text .headline #title {
-    font-size: 62px;
+    font-size: 4.5rem;
   }
   #text .headline #byline {
-    font-size: 35px;
+    font-size: 2.55rem;
   }
   #text #description {
-    font-size: 25px;
+    font-size: 1.8rem;
     border-left: .4em solid #FFF;
-    width: 70%;
+    width: 65%;
     line-height: 2em;
   }
 }
@@ -116,13 +116,13 @@ html body #text #description .links:hover {
     padding-bottom: 2em;
   }
   #text .headline #title {
-    font-size: 4rem;
+    font-size: 3.1rem;
   }
   #text .headline #byline {
-    font-size: 2.3rem;
+    font-size: 1.75rem;
   }
   #text #description {
-    font-size: 2rem;
+    font-size: 1.4rem;
     border-left: 7px solid #FFF;
     width: 85%;
     line-height: 1.8em;
@@ -137,13 +137,13 @@ html body #text #description .links:hover {
     padding-bottom: 2em;
   }
   #text .headline #title {
-    font-size: 50px;
+    font-size: 4rem;
   }
   #text .headline #byline {
-    font-size: 30px;
+    font-size: 2.25rem;
   }
   #text #description {
-    font-size: 20px;
+    font-size: 1.5rem;
     border-left: 7px solid #FFF;
     width: 75%;
     line-height: 2em;
