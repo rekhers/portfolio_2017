@@ -4,7 +4,6 @@ import $ from 'jquery';
 import landing from '/Users/Rekha/Dev/react_project/public/scripts/landing.js';
 
 
-
 var page = (    <div>
                 <landing.landingDiv/>
                 </div>

@@ -6,6 +6,8 @@ import MediaQuery from 'react-responsive';
 
 const Container = () => {
     return (
+
+  
     <div id="text" className="container">
     <div className="row">
       <div id="col" className="col-xs-12">
@@ -23,6 +25,10 @@ const Container = () => {
           </div>
 
     </div> 
+
+    
+
+  
 
       );
 }

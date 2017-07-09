@@ -2,7 +2,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         // running `grunt less` will compile once
         less: {
-            production: {
+            development: {
                 options: {
                     paths: ["./public/stylesheets"],
                     yuicompress: true
