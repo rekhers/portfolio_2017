@@ -20073,7 +20073,7 @@ var Container = function Container() {
             { href: 'https://github.com/rekhers', className: 'links' },
             ' code'
           ),
-          ', and my ',
+          ', or my ',
           _react2.default.createElement(
             'a',
             { href: 'https://www.linkedin.com/in/rekha-tenjarla-588a19112', className: 'links' },

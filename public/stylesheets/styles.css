@@ -68,6 +68,7 @@ html body #text #description {
   padding-left: 2%;
 }
 html body #text #description .links {
+  text-decoration: none;
   display: inline-block;
   background-color: #29FCA5;
   color: #222;
@@ -76,6 +77,8 @@ html body #text #description .links {
 }
 html body #text #description .links:hover {
   text-decoration: none;
+  color: #FD5AE8;
+  background-color: #222;
 }
 /*
 *
