@@ -20174,16 +20174,8 @@ exports.default = {
     width: '30vh',
     height: '30vh',
     borderRadius: "50%",
-    position: 'relative'
-  },
-
-  cont: {
-    width: '30vh',
-    height: '30vh',
-    padding: '5px',
-    borderRadius: "50%",
-    background: '-webkit-linear-gradient(#05f, #7201b2, #f83371'
-
+    position: 'relative',
+    border: "2px solid fuschia"
   }
 
   //14B97D
@@ -34169,10 +34161,6 @@ var _reactDom = __webpack_require__(35);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _jquery = __webpack_require__(34);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
 var _header = __webpack_require__(88);
 
 var _header2 = _interopRequireDefault(_header);
@@ -34181,49 +34169,18 @@ var _about = __webpack_require__(87);
 
 var _about2 = _interopRequireDefault(_about);
 
-var _navbarCss = __webpack_require__(189);
+var _navbar = __webpack_require__(190);
 
-var _navbarCss2 = _interopRequireDefault(_navbarCss);
+var _navbar2 = _interopRequireDefault(_navbar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Navbar = function Navbar() {
-    return _react2.default.createElement(
-        'div',
-        { style: _navbarCss2.default.navbar },
-        _react2.default.createElement(
-            'div',
-            { style: _navbarCss2.default.text },
-            'rekha tenjarla'
-        ),
-        _react2.default.createElement(
-            'div',
-            { style: _navbarCss2.default.navLinks },
-            _react2.default.createElement(
-                'div',
-                null,
-                ' about '
-            ),
-            _react2.default.createElement(
-                'div',
-                null,
-                ' projects '
-            ),
-            _react2.default.createElement(
-                'div',
-                null,
-                ' contact '
-            )
-        )
-    );
-};
-
 var page = _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(Navbar, null),
-    _react2.default.createElement(_header2.default.landingDiv, null),
-    _react2.default.createElement(_about2.default.aboutDiv, null)
+  'div',
+  null,
+  _react2.default.createElement(_navbar2.default.Navbar, null),
+  _react2.default.createElement(_header2.default.landingDiv, null),
+  _react2.default.createElement(_about2.default.aboutDiv, null)
 );
 
 var container = document.getElementById("container");
@@ -34257,12 +34214,11 @@ exports.default = {
 		paddingLeft: "2%",
 		paddingTop: "1%",
 		paddingBottom: "1%",
-		borderBottom: '2px solid -webkit-gradient(linear, right top, left top, from(#05f), color-stop(85%, #7201b2), to(#f83371))',
 		zIndex: 99,
 		display: 'flex',
-		flexDirection: 'row',
-		justifyContent: 'space-around'
-
+		flexFlow: 'row',
+		justifyContent: 'space-between',
+		borderBottom: '1px solid #FFF'
 	},
 
 	navLinks: {
@@ -34270,17 +34226,89 @@ exports.default = {
 		fontFamily: 'Montserrat',
 		fontSize: '1.5em',
 		display: 'flex',
-		flexDirection: 'row',
-		justifyContent: 'flex-end'
+		flexFlow: 'row',
+		justifyContent: 'space-around',
+		paddingRight: '5%'
+	},
+
+	links: {
+		paddingRight: '10%'
 	},
 
 	text: {
 		fontFamily: 'Montserrat',
 		fontSize: '1.8em',
-		background: '-webkit-gradient(linear, right top, left top, from(#05f), color-stop(85%, #7201b2), to(#f83371))',
+		background: '-webkit-gradient(linear, right top, left top, from(#05f), color-stop(50%, #7201b2), to(#f83371))',
 		WebkitBackgroundClip: 'text',
 		WebkitTextFillColor: 'transparent'
 	}
+
+};
+
+/***/ }),
+/* 190 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(19);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(35);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _navbarCss = __webpack_require__(189);
+
+var _navbarCss2 = _interopRequireDefault(_navbarCss);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _Navbar = function _Navbar() {
+    return _react2.default.createElement(
+        'div',
+        { style: _navbarCss2.default.navbar },
+        _react2.default.createElement(
+            'div',
+            { style: _navbarCss2.default.text },
+            'rekha tenjarla'
+        ),
+        _react2.default.createElement(
+            'div',
+            { style: _navbarCss2.default.navLinks },
+            _react2.default.createElement(
+                'div',
+                { style: _navbarCss2.default.links },
+                ' about '
+            ),
+            _react2.default.createElement(
+                'div',
+                { style: _navbarCss2.default.links },
+                ' projects '
+            ),
+            _react2.default.createElement(
+                'div',
+                { style: _navbarCss2.default.links },
+                ' contact '
+            )
+        )
+    );
+};
+
+exports.default = {
+    Navbar: function Navbar() {
+        return _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(_Navbar, null)
+        );
+    }
 
 };
 
