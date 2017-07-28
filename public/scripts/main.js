@@ -1,13 +1,29 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import landing from '/Users/Rekha/Dev/react_project/public/scripts/landing.js';
+import header from '../scripts/header.js';
+import about from '../scripts/about.js';
+import styles from '../stylesheets/navbar.css.js'
 
-document.title = "rekha tenjarla";
+const Navbar = () => {
+    return (<div style={styles.navbar}> 
+    	<div style={styles.text}>
+         rekha tenjarla
+         </div>
 
+         <div style={styles.navLinks}>
+         <div> about </div>
+         <div> projects </div>
+         <div> contact </div>
+         </div>
+     </div>)
+
+}
 
 var page = (    <div>
-                <landing.landingDiv/>
+				<Navbar/>
+                <header.landingDiv/>
+                 <about.aboutDiv/>
                 </div>
 			);
 
