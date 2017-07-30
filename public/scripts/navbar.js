@@ -9,10 +9,11 @@ import styles from '../stylesheets/navbar.css.js'
          </div>
 
          <div style={styles.navLinks}>
-         <div style={styles.links}> about </div>
-         <div style={styles.links}> projects </div>
-         <div style={styles.links}> contact </div>
+             <div style={styles.links}> about </div>
+             <div style={styles.links}> projects </div>
+             <div style={styles.links}> contact </div>
          </div>
+
      </div>)
 
 }

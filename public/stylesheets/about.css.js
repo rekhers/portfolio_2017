@@ -8,20 +8,32 @@ container:{
   backgroundColor: "#FFF",
   height: "100%",
   color: "black",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-around",
+  alignItems:"center"
 },
 
 bio:{
-  fontFamily: 'Roboto',
-  fontSize: '3em'
+  fontFamily: 'Montserrat',
+  fontSize: '2em'
 },
 
-
 pic:{
-  width: '30vh',
-  height: '30vh',
   borderRadius: "50%",
-  position: 'relative',
-  border: "2px solid fuschia"
+  width: "12rem",
+  height: "12rem"
+},
+
+cont:{
+    marginTop: "3%",
+    width: "12rem",
+    height: "12rem",
+    padding: ".5rem",
+   //  background: 'linear-gradient(to right, #0865F1 0%, #C704F6 100%)',
+   // borderRadius: "50%"
+
+
 }
 
 

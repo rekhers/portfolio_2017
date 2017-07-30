@@ -14,7 +14,7 @@ navbar:{
   	display: 'flex',
   	flexFlow: 'row',
   	justifyContent:'space-between',
-  	borderBottom: '1px solid #FFF'
+  	// borderBottom: '1px solid #FFF'
 },
 
 navLinks:{
@@ -34,7 +34,8 @@ links:{
 text:{
 fontFamily: 'Montserrat',
   fontSize: '1.8em',
-  background: '-webkit-gradient(linear, right top, left top, from(#05f), color-stop(50%, #7201b2), to(#f83371))',
+  background: 'linear-gradient(216deg, #ff8a40, #fd5068, #dc4588)',
+  // background: '-webkit-gradient(linear, right top, left top, from(#05f), color-stop(30%, #7201b2), to(#f83371))',
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent'
 }
