@@ -16,10 +16,10 @@ container:{
 text:{
   color: '#FFF',
   fontFamily: 'Montserrat',
-  fontSize: '3em',
+  fontSize: '3rem',
   float: 'left',
   paddingTop: '12%',
-  paddingLeft:'2%'
+  paddingLeft:'5%'
 
 },
 

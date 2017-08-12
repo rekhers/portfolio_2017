@@ -20032,7 +20032,13 @@ var Bio = function Bio() {
   return _react2.default.createElement(
     'div',
     { style: _aboutCss2.default.bio },
-    ' I\'m a self-taught developer passionate about leveraging the Open Web to   '
+    ' I\'m a javascript developer excited about visualizing data and building inuititive web apps that make the world a better and/or funner place. ',
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('br', null),
+    'I currently work at the Atlas Project in Washington, D.C., where I contribute to a propietary toolkit of political data for high-profile clients affiliated with the Democratic party.',
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('br', null),
+    'Outside of work, I enjoy building apps that integrate social media APIs and allow me to explore things that I\'m passionate about -- music, language, and social justice.'
   );
 };
 
@@ -20072,8 +20078,9 @@ exports.default = {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
+exports.Contact = undefined;
 
 var _react = __webpack_require__(9);
 
@@ -20093,22 +20100,8 @@ var _contactCss2 = _interopRequireDefault(_contactCss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Container = function Container() {
-  return _react2.default.createElement(
-    'div',
-    { style: _contactCss2.default.background },
-    _react2.default.createElement('img', { style: _contactCss2.default.pic, src: 'public/circle_face.gif' })
-  );
-};
-
-exports.default = {
-  Contact: function Contact() {
-    return _react2.default.createElement(
-      'div',
-      null,
-      _react2.default.createElement(Container, null)
-    );
-  }
+var Contact = exports.Contact = function Contact() {
+	return _react2.default.createElement('div', { style: _contactCss2.default.background });
 };
 
 /***/ }),
@@ -20121,6 +20114,7 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.Header = undefined;
 
 var _react = __webpack_require__(9);
 
@@ -20144,7 +20138,7 @@ var _headerCss2 = _interopRequireDefault(_headerCss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Container = function Container() {
+var Header = exports.Header = function Header() {
   return _react2.default.createElement(
     'div',
     { style: _headerCss2.default.container },
@@ -20175,17 +20169,6 @@ var Container = function Container() {
   );
 };
 
-exports.default = {
-  landingDiv: function landingDiv() {
-    return _react2.default.createElement(
-      'div',
-      null,
-      _react2.default.createElement(Container, null)
-    );
-  }
-
-};
-
 /***/ }),
 /* 90 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -20196,6 +20179,9 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.Navbar = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(9);
 
@@ -20211,47 +20197,66 @@ var _navbarCss2 = _interopRequireDefault(_navbarCss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _Navbar = function _Navbar() {
-    return _react2.default.createElement(
-        'div',
-        { style: _navbarCss2.default.navbar },
-        _react2.default.createElement(
-            'div',
-            { style: _navbarCss2.default.text },
-            'rekha tenjarla'
-        ),
-        _react2.default.createElement(
-            'div',
-            { style: _navbarCss2.default.navLinks },
-            _react2.default.createElement(
-                'div',
-                { style: _navbarCss2.default.links },
-                ' about '
-            ),
-            _react2.default.createElement(
-                'div',
-                { style: _navbarCss2.default.links },
-                ' projects '
-            ),
-            _react2.default.createElement(
-                'div',
-                { style: _navbarCss2.default.links },
-                ' contact '
-            )
-        )
-    );
-};
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-exports.default = {
-    Navbar: function Navbar() {
-        return _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(_Navbar, null)
-        );
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Navbar = exports.Navbar = function (_React$Component) {
+    _inherits(Navbar, _React$Component);
+
+    function Navbar() {
+        _classCallCheck(this, Navbar);
+
+        var _this = _possibleConstructorReturn(this, (Navbar.__proto__ || Object.getPrototypeOf(Navbar)).call(this));
+
+        _this.state = { background: '' };
+        _this.test = _this.test.bind(_this);
+        return _this;
     }
 
-};
+    _createClass(Navbar, [{
+        key: 'test',
+        value: function test() {
+            console.log("scrolllll");
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { style: _navbarCss2.default.navbar, onScroll: this.test },
+                _react2.default.createElement(
+                    'div',
+                    { style: _navbarCss2.default.text },
+                    'rekha tenjarla'
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { style: _navbarCss2.default.navLinks },
+                    _react2.default.createElement(
+                        'div',
+                        { style: _navbarCss2.default.links },
+                        ' about '
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: _navbarCss2.default.links },
+                        ' projects '
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: _navbarCss2.default.links },
+                        ' contact '
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Navbar;
+}(_react2.default.Component);
 
 /***/ }),
 /* 91 */
@@ -20279,19 +20284,23 @@ exports.default = {
     color: "black",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-around",
+    justifyContent: "flex-start",
     alignItems: "center"
   },
 
   bio: {
     fontFamily: 'Montserrat',
-    fontSize: '2em'
+    fontSize: '1.5em',
+    lineHeight: '2em',
+    width: "60%",
+    marginTop: "2%"
   },
 
   pic: {
     borderRadius: "50%",
     width: "12rem",
-    height: "12rem"
+    height: "12rem",
+    marginBottom: '3em'
   },
 
   cont: {
@@ -20366,10 +20375,10 @@ exports.default = {
   text: {
     color: '#FFF',
     fontFamily: 'Montserrat',
-    fontSize: '3em',
+    fontSize: '3rem',
     float: 'left',
     paddingTop: '12%',
-    paddingLeft: '2%'
+    paddingLeft: '5%'
 
   },
 
@@ -20412,7 +20421,7 @@ exports.default = {
 		width: "100%",
 		position: "fixed",
 		height: "auto",
-		paddingLeft: "2%",
+		paddingLeft: "5%",
 		paddingTop: "1%",
 		paddingBottom: "1%",
 		zIndex: 99,
@@ -20428,7 +20437,7 @@ exports.default = {
 		display: 'flex',
 		flexFlow: 'row',
 		justifyContent: 'space-around',
-		paddingRight: '5%'
+		paddingRight: '9%'
 	},
 
 	links: {
@@ -34377,29 +34386,23 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _header = __webpack_require__(89);
 
-var _header2 = _interopRequireDefault(_header);
-
 var _about = __webpack_require__(87);
 
 var _about2 = _interopRequireDefault(_about);
 
 var _navbar = __webpack_require__(90);
 
-var _navbar2 = _interopRequireDefault(_navbar);
-
 var _contact = __webpack_require__(88);
-
-var _contact2 = _interopRequireDefault(_contact);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var page = _react2.default.createElement(
   'div',
   null,
-  _react2.default.createElement(_navbar2.default.Navbar, null),
-  _react2.default.createElement(_header2.default.landingDiv, null),
+  _react2.default.createElement(_navbar.Navbar, null),
+  _react2.default.createElement(_header.Header, null),
   _react2.default.createElement(_about2.default.aboutDiv, null),
-  _react2.default.createElement(_contact2.default.Contact, null)
+  _react2.default.createElement(_contact.Contact, null)
 );
 
 var container = document.getElementById("container");

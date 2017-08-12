@@ -10,19 +10,23 @@ container:{
   color: "black",
   display: "flex",
   flexDirection: "column",
-  justifyContent: "space-around",
+  justifyContent: "flex-start",
   alignItems:"center"
 },
 
 bio:{
   fontFamily: 'Montserrat',
-  fontSize: '2em'
+  fontSize: '1.5em',
+  lineHeight: '2em',
+  width: "60%",
+  marginTop: "2%"
 },
 
 pic:{
   borderRadius: "50%",
   width: "12rem",
-  height: "12rem"
+  height: "12rem",
+  marginBottom: '3em'
 },
 
 cont:{

@@ -7,7 +7,7 @@ navbar:{
 	width: "100%",
 	position: "fixed",
 	height: "auto",
-	paddingLeft: "2%",
+	paddingLeft: "5%",
 	paddingTop: "1%",
 	paddingBottom: "1%",
     zIndex: 99,
@@ -24,7 +24,7 @@ navLinks:{
 	display: 'flex',
 	flexFlow: 'row',
 	justifyContent: 'space-around',
-	paddingRight: '5%'	
+	paddingRight: '9%'	
 },
 
 links:{

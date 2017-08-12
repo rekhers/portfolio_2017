@@ -4,18 +4,13 @@ import $ from 'jquery';
 import MediaQuery from 'react-responsive';
 import styles from '../stylesheets/header.css.js';
 
-
-
-
-
-const Container = () => {
+export const Header = () => {
     return (
     <div style={styles.container}>
 
 
       <div style={styles.text}>
         
-
       <div> hey, i'm rekha. </div>
       <div> linguist,  </div> 
       <div> developer, </div>
@@ -27,15 +22,6 @@ const Container = () => {
 }
 
 
-export default{
-  landingDiv: function(){
-    return (<div> 
-            <Container/> 
-            </div>
-            )
-  }
-
-};
 
 
 

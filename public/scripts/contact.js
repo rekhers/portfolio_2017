@@ -4,17 +4,8 @@ import $ from 'jquery';
 import styles from '../stylesheets/contact.css.js';
 
 
-const Container = () =>{
+export const Contact = () =>{
 	return (<div style={styles.background}> 
-		 <img style={styles.pic} src='public/circle_face.gif'/>
 		</div>)
 }
 
-export default{
-	Contact: function(){
-    return (<div> 
-            <Container/> 
-            </div>
-            )
-  }
-}

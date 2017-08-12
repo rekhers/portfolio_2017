@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import header from '../scripts/header.js';
+import { Header } from '../scripts/header.js';
 import about from '../scripts/about.js';
-import navbar from '../scripts/navbar.js';
-import contact from '../scripts/contact.js';
+import { Navbar } from '../scripts/navbar.js';
+import { Contact } from '../scripts/contact.js';
 
 
 
 var page = (    <div>
-				<navbar.Navbar/>
-                <header.landingDiv/>
+				<Navbar/>
+                <Header/>
                  <about.aboutDiv/>
-                 <contact.Contact />
+                 <Contact />
                 </div>
 			);
 
