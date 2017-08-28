@@ -6,8 +6,7 @@ import styles from '../stylesheets/header.css.js';
 
 export const Header = () => {
     return (
-    <div style={styles.container}>
-
+    <div id="home" style={styles.container}>
 
       <div style={styles.text}>
         

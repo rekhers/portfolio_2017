@@ -13,8 +13,8 @@ const Bio = () => {
                                     contribute to a propietary toolkit of 
                                     political data for high-profile clients affiliated with the Democratic party.<br/><br/>
 
-                                    Outside of work, I enjoy building apps that integrate social media APIs and allow me 
-                                    to explore things that I'm passionate about -- music, language, and social justice. 
+                                    Outside of work, I build apps that integrate social media APIs and allow me 
+                                    to explore things that I'm passionate about &mdash; music, language, and social justice. 
     </div> 
     
 }
@@ -30,9 +30,9 @@ const Pic = () =>{
 
 
 
-const About = () => {
+export const About = () => {
   return (
-      <div style={styles.container}>
+      <div id="about" style={styles.container}>
       <Pic />
           <Bio /> 
       </div>
@@ -41,12 +41,3 @@ const About = () => {
 }
 
 
-export default{
-  aboutDiv: function(){
-    return (<div> 
-            <About/> 
-            </div>
-            )
-  }
-
-};

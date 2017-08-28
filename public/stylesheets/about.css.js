@@ -6,7 +6,6 @@ export default{
 
 container:{
   backgroundColor: "#FFF",
-  height: "100%",
   color: "black",
   display: "flex",
   flexDirection: "column",
@@ -16,10 +15,11 @@ container:{
 
 bio:{
   fontFamily: 'Montserrat',
-  fontSize: '1.5em',
+  fontSize: '10vw',
   lineHeight: '2em',
   width: "60%",
-  marginTop: "2%"
+  marginTop: "2%",
+  marginBottom: "5%"
 },
 
 pic:{

@@ -1,22 +1,36 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Header } from '../scripts/header.js';
-import about from '../scripts/about.js';
+import { About } from '../scripts/about.js';
 import { Navbar } from '../scripts/navbar.js';
 import { Contact } from '../scripts/contact.js';
+const scroll = require('smoothscroll-polyfill').polyfill();
 
 
+class Container extends React.Component{
+	constructor(){
+		super();
+	}
 
-var page = (    <div>
-				<Navbar/>
+	handleClick(event){
+        document.querySelector("#" + event.target.innerText).scrollIntoView({ behavior: 'smooth' });
+    }
+
+
+	render(){
+		return(<div>
+				<Navbar onClick={() => this.handleClick}/>
                 <Header/>
-                 <about.aboutDiv/>
+                 <About/>
                  <Contact />
-                </div>
-			);
+                </div>)
+	}
+
+}
+
 
 
 let container = document.getElementById("container");
 
-ReactDOM.render(page,container);
+ReactDOM.render(<Container/>, container);
 

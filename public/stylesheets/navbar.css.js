@@ -13,9 +13,8 @@ navbar:{
     zIndex: 99,
   	display: 'flex',
   	flexFlow: 'row',
-  	justifyContent:'space-between',
-  	// borderBottom: '1px solid #FFF'
-},
+  	justifyContent:'space-between'
+  },
 
 navLinks:{
 	color: "#fff",
@@ -28,7 +27,9 @@ navLinks:{
 },
 
 links:{
-	paddingRight: '10%'
+	paddingRight: '10%',
+	margin: '3%',
+	cursor: 'pointer'
 },
 
 text:{
