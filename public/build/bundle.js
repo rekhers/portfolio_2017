@@ -20211,11 +20211,14 @@ var Navbar = exports.Navbar = function (_React$Component) {
     _createClass(Navbar, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-
             //TODO: pull this out into its own separate plugin 
-            window.addEventListener("scroll", function () {
-                var divs = (0, _jquery2.default)(".navLink div");
+            var d = (0, _jquery2.default)(".navLink").children();
+
+            var divs = [d[0], d[1], d[2]];
+
+            window.addEventListener("scroll", function (error) {
                 for (var id in divs) {
+                    console.log((0, _jquery2.default)("#" + divs[id].innerText));
                     window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 2 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 2 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
                 }
             });

@@ -15,11 +15,14 @@ export class Navbar extends React.Component {
     }
 
     componentDidMount(){ 
-
         //TODO: pull this out into its own separate plugin 
-        window.addEventListener("scroll", function(){
-        var divs = $(".navLink div");
+        var d = $(".navLink").children();
+
+        var divs = [d[0], d[1], d[2]];
+
+        window.addEventListener("scroll", function(error){
         for(var id in divs){    
+            console.log($("#" + divs[id].innerText));
                 window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/2  && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/2 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
                 }
             })        
