@@ -24,6 +24,9 @@ body {
   -webkit-text-fill-color: transparent;
   cursor: pointer;
 }
+.navbar .nameTitle:hover {
+  -webkit-text-fill-color: #FFF;
+}
 .navbar .navlink {
   color: #fff;
   font-family: 'Montserrat';
@@ -38,6 +41,11 @@ body {
   cursor: pointer;
 }
 .navbar .navlink .links:hover {
+  background: linear-gradient(80deg, #ff8a40, #dc4588);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar .navlink .selected {
   background: linear-gradient(80deg, #ff8a40, #dc4588);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

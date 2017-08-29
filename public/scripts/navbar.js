@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import $ from 'jquery';
 
 
 export class Navbar extends React.Component {
@@ -9,37 +10,21 @@ export class Navbar extends React.Component {
         
         var gradientTheme = 'linear-gradient(216deg, #ff8a40, #fd5068, #dc4588)';
 
-        this.state = {background: '', textStyle:  {
-              fontFamily: 'Montserrat',
-              fontSize: '1.8em',
-              background: gradientTheme,
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              cursor: "pointer"
-            }, gradientTheme: gradientTheme }
+        this.state = {background: ''}
 
     }
 
-    componentDidMount(){
+    componentDidMount(){ 
 
-        var that = this;
-    //     window.addEventListener("scroll", function(){
-    //      that.setState({textStyle: {
-    //         fontFamily: 'Montserrat',
-    //           fontSize: '1.8em',
-    //           background: 'linear-gradient(80deg, #ff8a40, #dc4588)',
-    //           WebkitBackgroundClip: 'text',
-    //           WebkitTextFillColor: 'transparent',
-    //           cursor: "pointer"
-    //         }})
-    //     })
-    // }
+        //TODO: pull this out into its own separate plugin 
+        window.addEventListener("scroll", function(){
+        var divs = $(".navLink div");
+        for(var id in divs){    
+                window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/2  && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/2 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
+                }
+            })        
 
- 
-       
-    }   
-
-
+    }
    
     render(){
         return (<div id="navbar" className="navbar"> 
