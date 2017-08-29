@@ -19,7 +19,8 @@ text:{
   fontSize: '3rem',
   float: 'left',
   paddingTop: '12%',
-  paddingLeft:'5%'
+  paddingLeft:'5%',
+  whiteSpace: "no-wrap"
 
 },
 

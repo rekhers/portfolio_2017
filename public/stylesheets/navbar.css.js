@@ -27,8 +27,7 @@ navLinks:{
 },
 
 links:{
-	paddingRight: '10%',
-	margin: '3%',
+	marginLeft: "10%",
 	cursor: 'pointer'
 },
 
@@ -38,7 +37,8 @@ fontFamily: 'Montserrat',
   background: 'linear-gradient(216deg, #ff8a40, #fd5068, #dc4588)',
   // background: '-webkit-gradient(linear, right top, left top, from(#05f), color-stop(30%, #7201b2), to(#f83371))',
   WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent'
+  WebkitTextFillColor: 'transparent',
+  cursor: "pointer"
 }
 
 }

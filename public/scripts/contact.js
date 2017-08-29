@@ -5,7 +5,7 @@ import styles from '../stylesheets/contact.css.js';
 
 
 export const Contact = () =>{
-	return (<div style={styles.background}> 
+	return (<div id="contact" style={styles.background}> 
 		</div>)
 }
 

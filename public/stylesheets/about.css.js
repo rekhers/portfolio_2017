@@ -10,12 +10,13 @@ container:{
   display: "flex",
   flexDirection: "column",
   justifyContent: "flex-start",
-  alignItems:"center"
+  alignItems:"center",
+  height: "auto"
 },
 
 bio:{
   fontFamily: 'Montserrat',
-  fontSize: '10vw',
+  fontSize: '1.5rem',
   lineHeight: '2em',
   width: "60%",
   marginTop: "2%",
@@ -30,7 +31,7 @@ pic:{
 },
 
 cont:{
-    marginTop: "3%",
+    marginTop: "5%",
     width: "12rem",
     height: "12rem",
     padding: ".5rem",
