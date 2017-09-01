@@ -8,24 +8,30 @@ export class Navbar extends React.Component {
     constructor(){
         super();
         
-        var gradientTheme = 'linear-gradient(216deg, #ff8a40, #fd5068, #dc4588)';
+        this.gradientTheme = 'linear-gradient(216deg, #ff8a40, #fd5068, #dc4588)';
 
-        this.state = {background: ''}
+        }
+
+
+    //TODO: pull this out into its own separate plugin 
+    scrollNavigation(){
+        var that = this;
+
+        var d = $(".navLink").children();
+        var divs = [d[0], d[1], d[2]];
+        window.addEventListener("scroll", function(error){
+
+        for(var id in divs){   
+           var old =  $(divs[id]).css('background')
+                window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/2  && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/2 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
+                }
+            }) 
 
     }
 
     componentDidMount(){ 
-        //TODO: pull this out into its own separate plugin 
-        var d = $(".navLink").children();
+        this.scrollNavigation();
 
-        var divs = [d[0], d[1], d[2]];
-
-        window.addEventListener("scroll", function(error){
-        for(var id in divs){    
-            console.log($("#" + divs[id].innerText));
-                window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/2  && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/2 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
-                }
-            })        
 
     }
    

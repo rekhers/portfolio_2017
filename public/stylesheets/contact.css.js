@@ -5,10 +5,12 @@ import React from 'react';
 export default{
 	
 background:{
-	height: "100%",
-	background: 'linear-gradient(216deg, #ff8a40, #fd5068, #dc4588)',
+	height: "20%",
+	background: '#222',
 	display: 'flex',
-	justifyContent: 'space-around'
+	justifyContent: 'space-around',
+	height: "100%",
+	width: "100%"
 },
 
 pic:{

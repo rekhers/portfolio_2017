@@ -11,12 +11,11 @@ const scroll = require('smoothscroll-polyfill').polyfill();
 
 
 class Container extends React.Component{
+	
 	constructor(){
 		super();
 
 	}
-
-
 
 	handleClick(event){
 		if(event.target.innerText == "rekha tenjarla"){
