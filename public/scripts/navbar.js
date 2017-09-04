@@ -19,28 +19,27 @@ export class Navbar extends React.Component {
 
         var d = $(".navLink").children();
         var divs = [d[0], d[1], d[2]];
+    
         window.addEventListener("scroll", function(error){
 
-        for(var id in divs){   
-           var old =  $(divs[id]).css('background')
-                window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/2  && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/2 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
-                }
-            }) 
-
+            for(var id in divs){   
+               var old =  $(divs[id]).css('background')
+                    window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/2  && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/2 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
+                    }
+                }) 
     }
 
     componentDidMount(){ 
         this.scrollNavigation();
-
-
     }
    
+
     render(){
         return (<div id="navbar" className="navbar"> 
             <div onClick={this.props.onClick()} ref="home" className="nameTitle">
              rekha tenjarla
              </div>
-             <div className="navLink" onClick={this.props.onClick()} >
+             <div className="navLink" onClick={this.props.onClick()}>
                  <div className="links" ref="about" > about </div>
                  <div className="links"> projects </div>
                  <div className="links"> contact </div>

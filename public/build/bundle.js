@@ -20216,6 +20216,7 @@ var Navbar = exports.Navbar = function (_React$Component) {
 
             var d = (0, _jquery2.default)(".navLink").children();
             var divs = [d[0], d[1], d[2]];
+
             window.addEventListener("scroll", function (error) {
 
                 for (var id in divs) {
@@ -34784,8 +34785,12 @@ var Container = function (_React$Component) {
 	}
 
 	_createClass(Container, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {}
+	}, {
 		key: 'handleClick',
 		value: function handleClick(event) {
+
 			if (event.target.innerText == "rekha tenjarla") {
 				document.querySelector("#home").scrollIntoView({ behavior: 'smooth' });
 			} else {

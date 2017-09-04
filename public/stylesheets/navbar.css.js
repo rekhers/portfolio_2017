@@ -32,7 +32,7 @@ links:{
 },
 
 text:{
-fontFamily: 'Montserrat',
+	fontFamily: 'Montserrat',
   fontSize: '1.8em',
   background: 'linear-gradient(216deg, #ff8a40, #fd5068, #dc4588)',
   WebkitBackgroundClip: 'text',

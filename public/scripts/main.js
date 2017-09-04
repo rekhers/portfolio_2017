@@ -14,14 +14,20 @@ class Container extends React.Component{
 	
 	constructor(){
 		super();
-
 	}
 
+
+	componentDidMount(){	
+		
+	}
+
+
 	handleClick(event){
+
 		if(event.target.innerText == "rekha tenjarla"){
 			 document.querySelector("#home").scrollIntoView({ behavior: 'smooth' });
 		} else {
-        document.querySelector("#" + event.target.innerText).scrollIntoView({ behavior: 'smooth' });
+        	document.querySelector("#" + event.target.innerText).scrollIntoView({ behavior: 'smooth' });
     	}
 
     }
