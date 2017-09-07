@@ -7,7 +7,7 @@ html, body{
 }
 
 .navbar{
-	background-color: #222;
+	background-color: #50514F;
 	width: 100%;
 	position: fixed;
 	height: auto;
@@ -21,12 +21,12 @@ html, body{
 
   	.nameTitle{
             font-family: 'Montserrat';
-              font-size: 1.8em;
-              background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-              -webkit-background-clip: text;
+              font-size: 1.4em;
+              cursor:pointer;
+               	background: linear-gradient(130deg, #247BA0, #F25F5C, #FFE066);
+				background-size: 170% 300%;              
+			   -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
-              cursor: pointer;
-				background-size: 500% 500%;
 				-webkit-animation: Gradient 5s ease infinite;
 
               &:hover{
@@ -36,9 +36,9 @@ html, body{
 
 
 	.navlink{
-		color: #fff;
+		color: #FFF;
 		font-family: 'Montserrat';
-		font-size: 1.5em;
+		font-size: 1.2em;
 		display: flex;
 		flex-flow: row;
 		justify-content: space-around;
@@ -49,9 +49,9 @@ html, body{
 		.links{
 			margin-left: 10%;
 			cursor: pointer;
-			   -webkit-background-clip: text;
-              -webkit-text-fill-color: #FFF;
-				background-size: 500% 500%;
+			color:#FFF;
+			  padding-bottom: 1%;
+  		
 
 			&:hover{
 				background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
@@ -62,11 +62,10 @@ html, body{
 		}
 
 		.selected{
-		
-				background-size: 200% 200%;
-				background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
-				 -webkit-text-fill-color: transparent;
-				 -webkit-background-clip: text;
+
+			border-bottom: 2px solid #FFF;
+  			line-height: "5%";
+
 		}
 
 

@@ -11,12 +11,16 @@ container:{
   flexDirection: "column",
   justifyContent: "flex-start",
   alignItems:"center",
-  height: "auto"
+  height: "100%"
+},
+
+tools:{
+  background: 'linear-gradient(145deg,#c3f0c8,#509bf5)'
 },
 
 bio:{
   fontFamily: 'Montserrat',
-  fontSize: '1.5rem',
+  fontSize: '1rem',
   lineHeight: '2em',
   width: "60%",
   marginTop: "2%",

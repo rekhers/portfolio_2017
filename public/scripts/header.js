@@ -11,9 +11,9 @@ export const Header = () => {
       <div style={styles.text}>
         
       <div> hey, i'm rekha. </div>
-      <div> linguist,  </div> 
-      <div> developer, </div>
-      <div> data visualizer.</div> 
+      <div style={styles.ling}> linguist,  </div> 
+      <div style={styles.dev}> developer, </div>
+      <div style={styles.dataVis}> data visualizer.</div> 
      
         </div> 
     </div> 

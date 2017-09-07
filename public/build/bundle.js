@@ -20142,17 +20142,17 @@ var Header = exports.Header = function Header() {
       ),
       _react2.default.createElement(
         'div',
-        null,
+        { style: _headerCss2.default.ling },
         ' linguist,  '
       ),
       _react2.default.createElement(
         'div',
-        null,
+        { style: _headerCss2.default.dev },
         ' developer, '
       ),
       _react2.default.createElement(
         'div',
-        null,
+        { style: _headerCss2.default.dataVis },
         ' data visualizer.'
       )
     )
@@ -20217,13 +20217,22 @@ var Navbar = exports.Navbar = function (_React$Component) {
             var d = (0, _jquery2.default)(".navLink").children();
             var divs = [d[0], d[1], d[2]];
 
+            var elem = document.getElementsByClassName("nameTitle")[0];
+
             window.addEventListener("scroll", function (error) {
+
+                elem.style.animationPlayState = "running";
 
                 for (var id in divs) {
                     var old = (0, _jquery2.default)(divs[id]).css('background');
+                    console.log("name:");
+                    console.log(name);
+
                     window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 2 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 2 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
                 }
             });
+
+            elem.style.animationPlayState = "paused";
         }
     }, {
         key: 'componentDidMount',
@@ -20683,12 +20692,16 @@ exports.default = {
     flexDirection: "column",
     justifyContent: "flex-start",
     alignItems: "center",
-    height: "auto"
+    height: "100%"
+  },
+
+  tools: {
+    background: 'linear-gradient(145deg,#c3f0c8,#509bf5)'
   },
 
   bio: {
     fontFamily: 'Montserrat',
-    fontSize: '1.5rem',
+    fontSize: '1rem',
     lineHeight: '2em',
     width: "60%",
     marginTop: "2%",
@@ -20736,7 +20749,7 @@ exports.default = {
 
 	background: (_background = {
 		height: "20%",
-		background: '#222',
+		background: '#F25F5C',
 		display: 'flex',
 		justifyContent: 'space-around'
 	}, _defineProperty(_background, 'height', "100%"), _defineProperty(_background, 'width', "100%"), _background),
@@ -20771,14 +20784,26 @@ exports.default = {
 
   container: {
     margin: '0, auto',
-    backgroundColor: "#222",
+    backgroundColor: "#50514F",
     height: '100%'
+  },
+
+  ling: {
+    color: "#247BA0"
+  },
+
+  dev: {
+    color: "#F25F5C"
+  },
+
+  dataVis: {
+    color: "#FFE066"
   },
 
   text: {
     color: '#FFF',
     fontFamily: 'Montserrat',
-    fontSize: '3rem',
+    fontSize: '2.5rem',
     float: 'left',
     paddingTop: '12%',
     paddingLeft: '5%',
@@ -20816,7 +20841,7 @@ exports.default = {
 	container: {
 		height: "100%",
 		width: "100%",
-		backgroundColor: "gainsboro"
+		backgroundColor: "#247BA0"
 	}
 };
 

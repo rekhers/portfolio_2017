@@ -9,14 +9,26 @@ export default{
 
 container:{
   margin: '0, auto',
-  backgroundColor: "#222",
+  backgroundColor: "#50514F",
   height: '100%'
+},
+
+ling:{
+  color: "#247BA0"
+},
+
+dev:{
+  color: "#F25F5C"
+},
+
+dataVis:{
+  color: "#FFE066"
 },
 
 text:{
   color: '#FFF',
   fontFamily: 'Montserrat',
-  fontSize: '3rem',
+  fontSize: '2.5rem',
   float: 'left',
   paddingTop: '12%',
   paddingLeft:'5%',

@@ -3,6 +3,6 @@ export default{
 	container:{
 		height: "100%",
 		width: "100%",
-		backgroundColor: "gainsboro"
+		backgroundColor: "#247BA0"
 	}
 }
