@@ -6,7 +6,7 @@ export default{
 	
 background:{
 	height: "20%",
-	background: '#F25F5C',
+	background: '#247BA0',
 	display: 'flex',
 	justifyContent: 'space-around',
 	height: "100%",

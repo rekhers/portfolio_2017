@@ -45,10 +45,8 @@ body {
   padding-bottom: 1%;
 }
 .navbar .navlink .links:hover {
-  background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  border-bottom: 2px solid #FFF;
+  line-height: "5%";
 }
 .navbar .navlink .selected {
   border-bottom: 2px solid #FFF;

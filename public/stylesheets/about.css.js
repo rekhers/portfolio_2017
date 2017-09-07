@@ -8,10 +8,12 @@ container:{
   backgroundColor: "#FFF",
   color: "black",
   display: "flex",
-  flexDirection: "column",
-  justifyContent: "flex-start",
+  flexDirection: "row",
+  justifyContent: "center",
   alignItems:"center",
-  height: "100%"
+  height: "auto",
+  marginTop: '5%',
+  marginBottom: '2%'
 },
 
 tools:{
@@ -22,25 +24,25 @@ bio:{
   fontFamily: 'Montserrat',
   fontSize: '1rem',
   lineHeight: '2em',
-  width: "60%",
+  width: "68%",
   marginTop: "2%",
   marginBottom: "5%"
 },
 
 pic:{
   borderRadius: "50%",
-  width: "12rem",
-  height: "12rem",
-  marginBottom: '3em'
+  width: "10rem",
+  height: "10rem",
 },
 
 cont:{
-    marginTop: "5%",
-    width: "12rem",
-    height: "12rem",
-    padding: ".5rem",
+    width: "10rem",
+    height: "10rem",
+    padding: ".3rem",
+    background: '#247BA0',
    //  background: 'linear-gradient(to right, #0865F1 0%, #C704F6 100%)',
-   // borderRadius: "50%"
+   borderRadius: "50%",
+   marginRight: '5%'
 
 
 }

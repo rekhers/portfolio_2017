@@ -20033,13 +20033,7 @@ var Bio = function Bio() {
     return _react2.default.createElement(
         'div',
         { style: _aboutCss2.default.bio },
-        ' I\'m a javascript developer excited about visualizing data and building inuititive web apps that make the world a better and/or funner place. ',
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null),
-        'I currently work at the Atlas Project in Washington, D.C., where I contribute to a propietary toolkit of political data for high-profile clients affiliated with the Democratic party.',
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null),
-        'Outside of work, I build apps that integrate social media APIs and allow me to explore things that I\'m passionate about \u2014 music, language, and social justice.'
+        ' I\'m a javascript developer excited about visualizing data and making the world a better and/or funner place. I\'ve gone down the React rabbit hole this past year, and I\'m a better person and developer for it. Building apps is my vehicle to explore things that I\'m passionate about \u2014 music, language, and social justice.'
     );
 };
 
@@ -20689,10 +20683,12 @@ exports.default = {
     backgroundColor: "#FFF",
     color: "black",
     display: "flex",
-    flexDirection: "column",
-    justifyContent: "flex-start",
+    flexDirection: "row",
+    justifyContent: "center",
     alignItems: "center",
-    height: "100%"
+    height: "auto",
+    marginTop: '5%',
+    marginBottom: '2%'
   },
 
   tools: {
@@ -20703,24 +20699,29 @@ exports.default = {
     fontFamily: 'Montserrat',
     fontSize: '1rem',
     lineHeight: '2em',
-    width: "60%",
+    width: "68%",
     marginTop: "2%",
     marginBottom: "5%"
   },
 
   pic: {
     borderRadius: "50%",
-    width: "12rem",
-    height: "12rem",
-    marginBottom: '3em'
+    width: "10rem",
+    height: "10rem"
   },
 
   cont: {
-    marginTop: "5%",
-    width: "12rem",
-    height: "12rem",
-    padding: ".5rem"
+    width: "10rem",
+    height: "10rem",
+    padding: ".3rem",
+    background: '#247BA0',
+    //  background: 'linear-gradient(to right, #0865F1 0%, #C704F6 100%)',
+    borderRadius: "50%",
+    marginRight: '5%'
+
   }
+
+  //14B97D
 
 };
 
@@ -20749,7 +20750,7 @@ exports.default = {
 
 	background: (_background = {
 		height: "20%",
-		background: '#F25F5C',
+		background: '#247BA0',
 		display: 'flex',
 		justifyContent: 'space-around'
 	}, _defineProperty(_background, 'height', "100%"), _defineProperty(_background, 'width', "100%"), _background),
@@ -20841,7 +20842,7 @@ exports.default = {
 	container: {
 		height: "100%",
 		width: "100%",
-		backgroundColor: "#247BA0"
+		backgroundColor: "#F25F5C"
 	}
 };
 

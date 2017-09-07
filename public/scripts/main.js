@@ -26,7 +26,7 @@ class Container extends React.Component{
 
 		if(event.target.innerText == "rekha tenjarla"){
 			 document.querySelector("#home").scrollIntoView({ behavior: 'smooth' });
-		} else {
+		} else{
         	document.querySelector("#" + event.target.innerText).scrollIntoView({ behavior: 'smooth' });
     	}
 
