@@ -8,16 +8,43 @@ background:{
 	height: "20%",
 	background: '#247BA0',
 	display: 'flex',
-	justifyContent: 'space-around',
-	height: "100%",
-	width: "100%"
+	height: "auto",
+	width: "auto", 
+	color: "#FFF",
+	fontFamily: "Montserrat",
+	fontSize: '1.3rem'
 },
 
 pic:{
-  marginTop: '10%',
-  width: '10rem',
-    height: '10rem',
-    borderRadius: '50%'
+  width: '22em',
+    height: '12em',
+    border: '2px solid black'
+},
+
+picHolder:{
+    margin: '5%'
+
+},
+
+thinpic:{
+  width: '10em',
+    height: '10em',
+        border: '2px solid black'
+
+},
+
+mediumpic:{
+  width: '16em',
+    height: '10em',
+        border: '2px solid black'
+
+},
+
+container: {
+	display: "flex",
+	flexDirection: "row",
+	flexWrap: "wrap",
+	padding: "5%"
 }
 
 

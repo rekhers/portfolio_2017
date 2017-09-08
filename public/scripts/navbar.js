@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
 
+/*
+*
+*   Styles for this class are in a less file which are compiled down by Grunt -- to handle gradient and scroll animations
+*
+*/
 export class Navbar extends React.Component {
 
     constructor(){
