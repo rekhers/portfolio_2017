@@ -10,37 +10,38 @@ export default{
 		display: 'flex',
 		flexDirection: 'row',
 		justifyContent: 'space-around',
-		padding: "5%"
+		padding: "7%"
 	},
 
 	section:{
 		display: "flex",
 		flexDirection: "row",
 		justifyContent: "space-between",
-		 flexWrap: "wrap"
-	},
-
-	sectionTitle:{
-		fontSize: "2rem",
-		paddingBottom: "10%"
+		textAlign: 'center'
 	},
 
 	pic: {
 		height: "3rem",
 		width: "3rem",
+		display: "block",
+		margin: "0 auto"
 	},
 
 	logoText:{
-		display: "block",
-
-		textAlign: "center",
-		marginRight: "10%",
-		paddingBottom: "5%"
+		paddingRight: "12%",
+		textAlign: "center"
 	},
 
 	styleSection:{
-		display: "block",
-		textAlign: "center"
+		display: "flex",
+		flexDirection:"column",
+		justifyContent: "space-between"
+	},
+
+	sectionTitle:{
+		fontSize: '1.5rem',
+		paddingBottom: '1rem',
+		textAlign:'center'
 	}
 
 

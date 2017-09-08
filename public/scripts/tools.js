@@ -11,21 +11,23 @@ export class Tools extends React.Component{
 	}
 
 	render(){
-		return( <div id="tools" style={styles.container}>
+		return( 
+			<div id="tools" style={styles.container}>
 
-				<div id="client" style={styles.styleSection}> 
+				<div id="client" style={styles.skillSection}> 
+					
 					<div style={styles.sectionTitle}> Client </div>
 
 					<div style={styles.section}>
 
 					<div style={styles.logoText}>   
 						<img style={styles.pic} src='public/javascript.png'/>
-						<div> Javascript </div>
+						<div> ES6 </div>
 					</div> 
 
 					<div style={styles.logoText}> 
 						<img style={styles.pic} src='public/react.svg'/>
-						<div> React  </div>
+						<div> react  </div>
 
 					</div> 
 
@@ -54,36 +56,31 @@ export class Tools extends React.Component{
 
 				</div>
 
-				<div id="server" style={styles.styleSection}> 
+				<div id="server" style={styles.skillSection}> 
+
 					<div style={styles.sectionTitle}> Server </div>
 
 					<div style={styles.section}>
 
 						<div style={styles.logoText}> 
-							<img style={styles.pic} src='public/node.jpeg'/>
-							<div> Node / Express  </div>
+							<img style={styles.pic} src='public/nodejshex.png'/>
+							<div> Node  </div>
 						</div> 
 
 
 					<div style={styles.logoText}> 
-						<img style={styles.pic} src='public/socketio.png'/>
+						<img style={styles.pic} src='public/socketiologo.png'/>
 						<div> socket.io  </div>
 					</div> 
 
-
-					<div style={styles.logoText}> 
-						<img style={styles.pic} src='public/php.png'/>
-						<div> PHP  </div>
-					</div> 
-
 				</div>
 
 				</div>
 
-				<div id="database" style={styles.styleSection}> 
+				<div id="database" style={styles.skillSection}> 
 					<div style={styles.sectionTitle}> Database </div>
 
-					<div style={styles.section}>
+					<div>
 
 							<div style={styles.logoText}> 
 								<img style={styles.pic} src='public/mysql.svg'/>

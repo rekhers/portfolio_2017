@@ -20,8 +20,8 @@ body {
   font-family: 'Montserrat';
   font-size: 1.4em;
   cursor: pointer;
-  background: linear-gradient(130deg, #247BA0, #F25F5C, #FFE066);
-  background-size: 170% 350%;
+  background: linear-gradient(90deg, #247BA0, #F25F5C, #FFE066);
+  background-size: 200% 350%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: Gradient 7s ease infinite;

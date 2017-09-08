@@ -20328,7 +20328,7 @@ var Tools = exports.Tools = function (_React$Component) {
 				{ id: 'tools', style: _toolsCss2.default.container },
 				_react2.default.createElement(
 					'div',
-					{ id: 'client', style: _toolsCss2.default.styleSection },
+					{ id: 'client', style: _toolsCss2.default.skillSection },
 					_react2.default.createElement(
 						'div',
 						{ style: _toolsCss2.default.sectionTitle },
@@ -20344,7 +20344,7 @@ var Tools = exports.Tools = function (_React$Component) {
 							_react2.default.createElement(
 								'div',
 								null,
-								' Javascript '
+								' ES6 '
 							)
 						),
 						_react2.default.createElement(
@@ -20354,7 +20354,7 @@ var Tools = exports.Tools = function (_React$Component) {
 							_react2.default.createElement(
 								'div',
 								null,
-								' React  '
+								' react  '
 							)
 						),
 						_react2.default.createElement(
@@ -20403,7 +20403,7 @@ var Tools = exports.Tools = function (_React$Component) {
 				),
 				_react2.default.createElement(
 					'div',
-					{ id: 'server', style: _toolsCss2.default.styleSection },
+					{ id: 'server', style: _toolsCss2.default.skillSection },
 					_react2.default.createElement(
 						'div',
 						{ style: _toolsCss2.default.sectionTitle },
@@ -20415,38 +20415,28 @@ var Tools = exports.Tools = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/node.jpeg' }),
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/nodejshex.png' }),
 							_react2.default.createElement(
 								'div',
 								null,
-								' Node / Express  '
+								' Node  '
 							)
 						),
 						_react2.default.createElement(
 							'div',
 							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/socketio.png' }),
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/socketiologo.png' }),
 							_react2.default.createElement(
 								'div',
 								null,
 								' socket.io  '
-							)
-						),
-						_react2.default.createElement(
-							'div',
-							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/php.png' }),
-							_react2.default.createElement(
-								'div',
-								null,
-								' PHP  '
 							)
 						)
 					)
 				),
 				_react2.default.createElement(
 					'div',
-					{ id: 'database', style: _toolsCss2.default.styleSection },
+					{ id: 'database', style: _toolsCss2.default.skillSection },
 					_react2.default.createElement(
 						'div',
 						{ style: _toolsCss2.default.sectionTitle },
@@ -20454,7 +20444,7 @@ var Tools = exports.Tools = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						'div',
-						{ style: _toolsCss2.default.section },
+						null,
 						_react2.default.createElement(
 							'div',
 							{ style: _toolsCss2.default.logoText },
@@ -20996,37 +20986,38 @@ exports.default = {
 		display: 'flex',
 		flexDirection: 'row',
 		justifyContent: 'space-around',
-		padding: "5%"
+		padding: "7%"
 	},
 
 	section: {
 		display: "flex",
 		flexDirection: "row",
 		justifyContent: "space-between",
-		flexWrap: "wrap"
-	},
-
-	sectionTitle: {
-		fontSize: "2rem",
-		paddingBottom: "10%"
+		textAlign: 'center'
 	},
 
 	pic: {
 		height: "3rem",
-		width: "3rem"
+		width: "3rem",
+		display: "block",
+		margin: "0 auto"
 	},
 
 	logoText: {
-		display: "block",
-
-		textAlign: "center",
-		marginRight: "10%",
-		paddingBottom: "5%"
+		paddingRight: "12%",
+		textAlign: "center"
 	},
 
 	styleSection: {
-		display: "block",
-		textAlign: "center"
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "space-between"
+	},
+
+	sectionTitle: {
+		fontSize: '1.5rem',
+		paddingBottom: '1rem',
+		textAlign: 'center'
 	}
 
 };
