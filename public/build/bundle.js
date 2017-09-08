@@ -17376,7 +17376,7 @@ var Tools = exports.Tools = function (_React$Component) {
 							_react2.default.createElement(
 								'div',
 								null,
-								' SASS  '
+								' sass  '
 							)
 						),
 						_react2.default.createElement(
@@ -17409,7 +17409,7 @@ var Tools = exports.Tools = function (_React$Component) {
 							_react2.default.createElement(
 								'div',
 								null,
-								' Node  '
+								' node.js  '
 							)
 						),
 						_react2.default.createElement(
@@ -17442,7 +17442,7 @@ var Tools = exports.Tools = function (_React$Component) {
 							_react2.default.createElement(
 								'div',
 								null,
-								' MySql  '
+								' MySQL  '
 							)
 						)
 					)
@@ -20232,7 +20232,7 @@ var Bio = function Bio() {
   return _react2.default.createElement(
     'div',
     { style: _aboutCss2.default.bio },
-    ' I\'m a javascript developer excited about visualizing data and thinking about ways to make the world a better and/or funner place. I\'ve gone down the React rabbit hole this past year, and I\'m a better person for it. Writing code is my vehicle to exploring the things that I\'m passionate about \u2014 music, language, and social justice.'
+    ' I\'m a javascript developer excited about visualizing data and thinking about how to do it in a way that might make the world a better and/or funner place. I\'ve gone down the React rabbit hole this past year, and I\'m a better person for it. Writing code is my vehicle to exploring the things that I\'m passionate about \u2014 music, language, and social justice.'
   );
 };
 
@@ -20395,7 +20395,14 @@ var Navbar = exports.Navbar = function (_React$Component) {
                     console.log("name:");
                     console.log(name);
 
-                    window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 1.2 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 1.2 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
+                    window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 3 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 3 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
+                }
+
+                if (window.pageYOffset > (0, _jquery2.default)("#projects").position().top + (0, _jquery2.default)("#projects").height() / 2.5) {
+                    console.log("getting here?");
+                    (0, _jquery2.default)(that.refs.contact).addClass("selected");
+                } else {
+                    (0, _jquery2.default)(that.refs.contact).removeClass("selected");
                 }
             });
         }
@@ -20430,7 +20437,7 @@ var Navbar = exports.Navbar = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'div',
-                        { className: 'links' },
+                        { ref: 'contact', className: 'links contact' },
                         ' contact '
                     )
                 )
@@ -20486,7 +20493,7 @@ var Projects = exports.Projects = function Projects() {
 			_react2.default.createElement(
 				'div',
 				{ style: _projectsCss2.default.picHolder },
-				_react2.default.createElement('img', { style: _projectsCss2.default.pic, src: 'public/tweets-usa.png' })
+				_react2.default.createElement('img', { style: _projectsCss2.default.pic, src: 'public/tweets.png' })
 			),
 			_react2.default.createElement(
 				'div',
@@ -20888,7 +20895,7 @@ exports.default = {
   bio: {
     fontFamily: 'Montserrat',
     fontSize: '1rem',
-    lineHeight: '2em',
+    lineHeight: '2.3em',
     width: "60%",
     marginTop: "2%",
     marginBottom: "5%"

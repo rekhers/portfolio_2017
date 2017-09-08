@@ -23,7 +23,7 @@ tools:{
 bio:{
   fontFamily: 'Montserrat',
   fontSize: '1rem',
-  lineHeight: '2em',
+  lineHeight: '2.3em',
   width: "60%",
   marginTop: "2%",
   marginBottom: "5%"

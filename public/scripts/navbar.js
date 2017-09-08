@@ -38,8 +38,18 @@ export class Navbar extends React.Component {
                console.log("name:");
                console.log(name);
 
-                    window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/1.2  && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/1.2 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
+                    window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/3  && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/3 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
                     }
+
+
+                    if(window.pageYOffset > $("#projects").position().top + $("#projects").height()/2.5){
+                        console.log("getting here?");
+                         $(that.refs.contact).addClass("selected");
+                    } else {
+                         $(that.refs.contact).removeClass("selected");
+
+                    }
+
                 }) 
 
 
@@ -58,7 +68,7 @@ export class Navbar extends React.Component {
              <div className="navLink" onClick={this.props.onClick()}>
                  <div className="links" ref="about" > about </div>
                  <div className="links"> projects </div>
-                 <div className="links"> contact </div>
+                 <div ref="contact" className="links contact"> contact </div>
              </div>
          </div>)
     }

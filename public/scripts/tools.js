@@ -14,6 +14,7 @@ export class Tools extends React.Component{
 		return( 
 			<div id="tools" style={styles.container}>
 
+
 				<div id="client" style={styles.skillSection}> 
 					
 					<div style={styles.sectionTitle}> Client </div>
@@ -43,7 +44,7 @@ export class Tools extends React.Component{
 
 					<div style={styles.logoText}> 
 						<img style={styles.pic} src='public/sass.png'/>
-						<div> SASS  </div>
+						<div> sass  </div>
 					</div> 
 
 					<div style={styles.logoText}> 
@@ -64,7 +65,7 @@ export class Tools extends React.Component{
 
 						<div style={styles.logoText}> 
 							<img style={styles.pic} src='public/nodejshex.png'/>
-							<div> Node  </div>
+							<div> node.js  </div>
 						</div> 
 
 
@@ -84,7 +85,7 @@ export class Tools extends React.Component{
 
 							<div style={styles.logoText}> 
 								<img style={styles.pic} src='public/mysql.svg'/>
-								<div> MySql  </div>
+								<div> MySQL  </div>
 							</div> 
 					</div>
 				</div>

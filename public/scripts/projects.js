@@ -7,7 +7,9 @@ import styles from '../stylesheets/projects.css.js';
 export const Projects = () =>{
 	return (<div id="projects" style={styles.background}> 
 
+
 		<div style={styles.container}> 
+
 
 					<div style={styles.picHolder}> 
 						<img style={styles.mediumpic} src='public/toptracks.png'/>
@@ -15,7 +17,7 @@ export const Projects = () =>{
 
 					
 					<div style={styles.picHolder}>  
-						<img style={styles.pic} src="public/tweets-usa.png" />
+						<img style={styles.pic} src="public/tweets.png" />
 					</div> 
 
 						<div style={styles.picHolder}>  
