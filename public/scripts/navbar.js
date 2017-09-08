@@ -26,7 +26,6 @@ export class Navbar extends React.Component {
 
         window.addEventListener("scroll", function(error){
 
-            elem.style.animationPlayState = "running";
 
 
             for(var id in divs){   
@@ -34,11 +33,10 @@ export class Navbar extends React.Component {
                console.log("name:");
                console.log(name);
 
-                    window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/2  && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/2 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
+                    window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/1.2  && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/1.2 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
                     }
                 }) 
 
-                elem.style.animationPlayState = "paused";
 
     }
 

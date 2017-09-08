@@ -20007,7 +20007,7 @@ module.exports = ReactPropTypesSecret;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 exports.About = undefined;
 
@@ -20027,69 +20027,42 @@ var _aboutCss = __webpack_require__(93);
 
 var _aboutCss2 = _interopRequireDefault(_aboutCss);
 
+var _tools = __webpack_require__(91);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Bio = function Bio() {
-    return _react2.default.createElement(
-        'div',
-        { style: _aboutCss2.default.bio },
-        ' I\'m a javascript developer excited about visualizing data and making the world a better and/or funner place. I\'ve gone down the React rabbit hole this past year, and I\'m a better person and developer for it. Building apps is my vehicle to explore things that I\'m passionate about \u2014 music, language, and social justice.'
-    );
+  return _react2.default.createElement(
+    'div',
+    { style: _aboutCss2.default.bio },
+    ' I\'m a javascript developer excited about visualizing data and thinking about ways to make the world a better and/or funner place. I\'ve gone down the React rabbit hole this past year, and I\'m a better person for it. Writing code is my vehicle to exploring the things that I\'m passionate about \u2014 music, language, and social justice.'
+  );
 };
 
 var Pic = function Pic() {
-    return _react2.default.createElement(
-        'div',
-        { style: _aboutCss2.default.cont },
-        _react2.default.createElement('img', { style: _aboutCss2.default.pic, src: 'public/circle_face.gif' })
-    );
+  return _react2.default.createElement(
+    'div',
+    { style: _aboutCss2.default.cont },
+    _react2.default.createElement('img', { style: _aboutCss2.default.pic, src: 'public/circle_face.gif' })
+  );
 };
 
 var About = exports.About = function About() {
-    return _react2.default.createElement(
-        'div',
-        { id: 'about', style: _aboutCss2.default.container },
-        _react2.default.createElement(Pic, null),
-        _react2.default.createElement(Bio, null)
-    );
+  return _react2.default.createElement(
+    'div',
+    { id: 'about' },
+    _react2.default.createElement(
+      'div',
+      { style: _aboutCss2.default.container },
+      _react2.default.createElement(Pic, null),
+      _react2.default.createElement(Bio, null)
+    ),
+    _react2.default.createElement(_tools.Tools, null)
+  );
 };
 
 /***/ }),
 /* 88 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-exports.Contact = undefined;
-
-var _react = __webpack_require__(9);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(21);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _jquery = __webpack_require__(20);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _contactCss = __webpack_require__(94);
-
-var _contactCss2 = _interopRequireDefault(_contactCss);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Contact = exports.Contact = function Contact() {
-	return _react2.default.createElement('div', { id: 'contact', style: _contactCss2.default.background });
-};
-
-/***/ }),
-/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20116,7 +20089,7 @@ var _reactResponsive = __webpack_require__(182);
 
 var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
-var _headerCss = __webpack_require__(95);
+var _headerCss = __webpack_require__(94);
 
 var _headerCss2 = _interopRequireDefault(_headerCss);
 
@@ -20154,7 +20127,7 @@ var Header = exports.Header = function Header() {
 };
 
 /***/ }),
-/* 90 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20215,18 +20188,14 @@ var Navbar = exports.Navbar = function (_React$Component) {
 
             window.addEventListener("scroll", function (error) {
 
-                elem.style.animationPlayState = "running";
-
                 for (var id in divs) {
                     var old = (0, _jquery2.default)(divs[id]).css('background');
                     console.log("name:");
                     console.log(name);
 
-                    window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 2 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 2 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
+                    window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 1.2 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 1.2 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
                 }
             });
-
-            elem.style.animationPlayState = "paused";
         }
     }, {
         key: 'componentDidMount',
@@ -20271,7 +20240,7 @@ var Navbar = exports.Navbar = function (_React$Component) {
 }(_react2.default.Component);
 
 /***/ }),
-/* 91 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20281,6 +20250,40 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 exports.Projects = undefined;
+
+var _react = __webpack_require__(9);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(21);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _jquery = __webpack_require__(20);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _projectsCss = __webpack_require__(95);
+
+var _projectsCss2 = _interopRequireDefault(_projectsCss);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Projects = exports.Projects = function Projects() {
+	return _react2.default.createElement('div', { id: 'projects', style: _projectsCss2.default.background });
+};
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.Tools = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -20296,9 +20299,9 @@ var _jquery = __webpack_require__(20);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _projectsCss = __webpack_require__(96);
+var _toolsCss = __webpack_require__(96);
 
-var _projectsCss2 = _interopRequireDefault(_projectsCss);
+var _toolsCss2 = _interopRequireDefault(_toolsCss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20308,23 +20311,167 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Projects = exports.Projects = function (_React$Component) {
-	_inherits(Projects, _React$Component);
+var Tools = exports.Tools = function (_React$Component) {
+	_inherits(Tools, _React$Component);
 
-	function Projects() {
-		_classCallCheck(this, Projects);
+	function Tools() {
+		_classCallCheck(this, Tools);
 
-		return _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this));
+		return _possibleConstructorReturn(this, (Tools.__proto__ || Object.getPrototypeOf(Tools)).call(this));
 	}
 
-	_createClass(Projects, [{
+	_createClass(Tools, [{
 		key: 'render',
 		value: function render() {
-			return _react2.default.createElement('div', { id: 'projects', style: _projectsCss2.default.container });
+			return _react2.default.createElement(
+				'div',
+				{ id: 'tools', style: _toolsCss2.default.container },
+				_react2.default.createElement(
+					'div',
+					{ id: 'client', style: _toolsCss2.default.styleSection },
+					_react2.default.createElement(
+						'div',
+						{ style: _toolsCss2.default.sectionTitle },
+						' Client '
+					),
+					_react2.default.createElement(
+						'div',
+						{ style: _toolsCss2.default.section },
+						_react2.default.createElement(
+							'div',
+							{ style: _toolsCss2.default.logoText },
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/javascript.png' }),
+							_react2.default.createElement(
+								'div',
+								null,
+								' Javascript '
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ style: _toolsCss2.default.logoText },
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/react.svg' }),
+							_react2.default.createElement(
+								'div',
+								null,
+								' React  '
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ style: _toolsCss2.default.logoText },
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/d3-outline.png' }),
+							_react2.default.createElement(
+								'div',
+								null,
+								' d3  '
+							)
+						),
+						' ',
+						_react2.default.createElement('br', null),
+						_react2.default.createElement(
+							'div',
+							{ style: _toolsCss2.default.logoText },
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/html5.png' }),
+							_react2.default.createElement(
+								'div',
+								null,
+								' HTML5  '
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ style: _toolsCss2.default.logoText },
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/sass.png' }),
+							_react2.default.createElement(
+								'div',
+								null,
+								' SASS  '
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ style: _toolsCss2.default.logoText },
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/css3.png' }),
+							_react2.default.createElement(
+								'div',
+								null,
+								' CSS3  '
+							)
+						)
+					)
+				),
+				_react2.default.createElement(
+					'div',
+					{ id: 'server', style: _toolsCss2.default.styleSection },
+					_react2.default.createElement(
+						'div',
+						{ style: _toolsCss2.default.sectionTitle },
+						' Server '
+					),
+					_react2.default.createElement(
+						'div',
+						{ style: _toolsCss2.default.section },
+						_react2.default.createElement(
+							'div',
+							{ style: _toolsCss2.default.logoText },
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/node.jpeg' }),
+							_react2.default.createElement(
+								'div',
+								null,
+								' Node / Express  '
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ style: _toolsCss2.default.logoText },
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/socketio.png' }),
+							_react2.default.createElement(
+								'div',
+								null,
+								' socket.io  '
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ style: _toolsCss2.default.logoText },
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/php.png' }),
+							_react2.default.createElement(
+								'div',
+								null,
+								' PHP  '
+							)
+						)
+					)
+				),
+				_react2.default.createElement(
+					'div',
+					{ id: 'database', style: _toolsCss2.default.styleSection },
+					_react2.default.createElement(
+						'div',
+						{ style: _toolsCss2.default.sectionTitle },
+						' Database '
+					),
+					_react2.default.createElement(
+						'div',
+						{ style: _toolsCss2.default.section },
+						_react2.default.createElement(
+							'div',
+							{ style: _toolsCss2.default.logoText },
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/mysql.svg' }),
+							_react2.default.createElement(
+								'div',
+								null,
+								' MySql  '
+							)
+						)
+					)
+				)
+			);
 		}
 	}]);
 
-	return Projects;
+	return Tools;
 }(_react2.default.Component);
 
 /***/ }),
@@ -20699,7 +20846,7 @@ exports.default = {
     fontFamily: 'Montserrat',
     fontSize: '1rem',
     lineHeight: '2em',
-    width: "68%",
+    width: "60%",
     marginTop: "2%",
     marginBottom: "5%"
   },
@@ -20727,45 +20874,6 @@ exports.default = {
 
 /***/ }),
 /* 94 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _background;
-
-var _react = __webpack_require__(9);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-exports.default = {
-
-	background: (_background = {
-		height: "20%",
-		background: '#247BA0',
-		display: 'flex',
-		justifyContent: 'space-around'
-	}, _defineProperty(_background, 'height', "100%"), _defineProperty(_background, 'width', "100%"), _background),
-
-	pic: {
-		marginTop: '10%',
-		width: '10rem',
-		height: '10rem',
-		borderRadius: '50%'
-	}
-
-};
-
-/***/ }),
-/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20828,6 +20936,45 @@ exports.default = {
    */
 
 /***/ }),
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _background;
+
+var _react = __webpack_require__(9);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+exports.default = {
+
+	background: (_background = {
+		height: "20%",
+		background: '#247BA0',
+		display: 'flex',
+		justifyContent: 'space-around'
+	}, _defineProperty(_background, 'height', "100%"), _defineProperty(_background, 'width', "100%"), _background),
+
+	pic: {
+		marginTop: '10%',
+		width: '10rem',
+		height: '10rem',
+		borderRadius: '50%'
+	}
+
+};
+
+/***/ }),
 /* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20840,10 +20987,48 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = {
 
 	container: {
-		height: "100%",
-		width: "100%",
-		backgroundColor: "#F25F5C"
+		width: "auto",
+		height: "auto",
+		color: "#FFF",
+		fontSize: '1rem',
+		backgroundColor: "#F25F5C",
+		fontFamily: 'Montserrat',
+		display: 'flex',
+		flexDirection: 'row',
+		justifyContent: 'space-around',
+		padding: "5%"
+	},
+
+	section: {
+		display: "flex",
+		flexDirection: "row",
+		justifyContent: "space-between",
+		flexWrap: "wrap"
+	},
+
+	sectionTitle: {
+		fontSize: "2rem",
+		paddingBottom: "10%"
+	},
+
+	pic: {
+		height: "3rem",
+		width: "3rem"
+	},
+
+	logoText: {
+		display: "block",
+
+		textAlign: "center",
+		marginRight: "10%",
+		paddingBottom: "5%"
+	},
+
+	styleSection: {
+		display: "block",
+		textAlign: "center"
 	}
+
 };
 
 /***/ }),
@@ -34777,15 +34962,15 @@ var _reactDom = __webpack_require__(21);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _header = __webpack_require__(89);
+var _header = __webpack_require__(88);
 
 var _about = __webpack_require__(87);
 
-var _navbar = __webpack_require__(90);
+var _navbar = __webpack_require__(89);
 
-var _contact = __webpack_require__(88);
+var _projects = __webpack_require__(90);
 
-var _projects = __webpack_require__(91);
+var _tools = __webpack_require__(91);
 
 var _jquery = __webpack_require__(20);
 
@@ -34836,8 +35021,7 @@ var Container = function (_React$Component) {
 					} }),
 				_react2.default.createElement(_header.Header, null),
 				_react2.default.createElement(_about.About, null),
-				_react2.default.createElement(_projects.Projects, null),
-				_react2.default.createElement(_contact.Contact, null)
+				_react2.default.createElement(_projects.Projects, null)
 			);
 		}
 	}]);

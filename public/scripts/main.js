@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { Header } from '../scripts/header.js';
 import { About } from '../scripts/about.js';
 import { Navbar } from '../scripts/navbar.js';
-import { Contact } from '../scripts/contact.js';
 import { Projects } from '../scripts/projects.js';
+import { Tools } from '../scripts/tools.js';
 
 import $ from 'jquery';
 const scroll = require('smoothscroll-polyfill').polyfill();
@@ -39,7 +39,6 @@ class Container extends React.Component{
                 <Header/>
                  <About/>
                  <Projects/>
-                 <Contact />
                 </div>)
 	}
 
