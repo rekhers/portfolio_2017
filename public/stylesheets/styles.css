@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i|Space+Mono:400,700,700i|Roboto|Montserrat:400,500,600,600i,700,800');
+/*
+* 
+* Shared, namespaced styles compiled by grunt for the navbar and contact components. opted against inline styles 
+* since these components involve some animation
+*
+*/
+html,
+body {
+  margin: 0;
+}
+.navbar {
+  background-color: #50514F;
+  width: 100%;
+  position: fixed;
+  height: auto;
+  padding-left: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  z-index: 99;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.navbar .nameTitle {
+  font-family: 'Montserrat';
+  font-size: 1.4em;
+  cursor: pointer;
+  background: linear-gradient(90deg, #247BA0, #F25F5C, #FFE066);
+  background-size: 200% 350%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: Gradient 7s ease infinite;
+}
+.navbar .nameTitle:hover {
+  -webkit-text-fill-color: #FFF;
+}
+.navbar .navlink {
+  color: #FFF;
+  font-family: 'Montserrat';
+  font-size: 1.2em;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  padding-right: 12%;
+}
+.navbar .navlink .links {
+  margin-left: 10%;
+  cursor: pointer;
+  color: #FFF;
+  padding-bottom: 1%;
+}
+.navbar .navlink .links:hover {
+  border-bottom: 2px solid #FFF;
+  line-height: "5%";
+}
+.navbar .navlink .selected {
+  border-bottom: 2px solid #FFF;
+  line-height: "5%";
+}
+.projects {
+  background: #247BA0;
+  display: flex;
+  height: auto;
+  width: auto;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 1.3rem;
+}
+.projects .pic {
+  width: 22em;
+  height: 12em;
+  border: 2px solid black;
+}
+.projects .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: .5;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+}
+.projects .picHolderThin {
+  margin: 5%;
+  background-color: black;
+  position: relative;
+  width: 10em;
+  height: 10em;
+}
+.projects .picHolder {
+  margin: 5%;
+  background-color: black;
+  position: relative;
+  width: 22em;
+  height: 12em;
+}
+.projects .picHolderMedium {
+  margin: 5%;
+  background-color: black;
+  position: relative;
+  width: 16em;
+  height: 10em;
+}
+.projects .thinpic {
+  width: 10em;
+  height: 10em;
+  border: 2px solid black;
+}
+.projects .mediumpic {
+  width: 16em;
+  height: 10em;
+  border: 2px solid black;
+}
+.projects .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5%;
+}
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -25,7 +25,7 @@ const Bio = () => {
 
 const Pic = () =>{
   return ( <div style={styles.cont}>
-  <img style={styles.pic} src='public/circle_face.gif'/>
+  <img style={styles.pic} src='public/assets/circle_face.gif'/>
   </div>
   )
     

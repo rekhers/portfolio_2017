@@ -12,7 +12,7 @@ background:{
 	width: "auto", 
 	color: "#FFF",
 	fontFamily: "Montserrat",
-	fontSize: '1.3rem'
+	fontSize: '1.3rem',
 },
 
 pic:{
@@ -20,18 +20,18 @@ pic:{
     height: '12em',
     border: '2px solid black',
 
+
 },
 
 picHolder:{
     margin: '5%',
     bacgroundColor: 'black',
-    position: 'relative'
 },
 
 thinpic:{
   width: '10em',
     height: '10em',
-        border: '2px solid black'
+   border: '2px solid black'
 
 },
 

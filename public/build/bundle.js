@@ -20249,7 +20249,7 @@ var Pic = function Pic() {
   return _react2.default.createElement(
     'div',
     { style: _aboutCss2.default.cont },
-    _react2.default.createElement('img', { style: _aboutCss2.default.pic, src: 'public/circle_face.gif' })
+    _react2.default.createElement('img', { style: _aboutCss2.default.pic, src: 'public/assets/circle_face.gif' })
   );
 };
 
@@ -20541,110 +20541,98 @@ var Projects = exports.Projects = function (_React$Component) {
 	function Projects() {
 		_classCallCheck(this, Projects);
 
-		var _this = _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this));
-
-		_this.state = { overlay: {
-				position: 'absolute',
-				top: '0',
-				left: '0',
-				width: '100%',
-				height: '100%',
-				backgroundColor: 'black',
-				zIndex: '50'
-			}
-		};
-
-		_this.hover = _this.hover.bind(_this);
-		return _this;
+		return _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this));
+		// 	this.state = { overlay: { 
+		// 		position: 'absolute',
+		// 		top: '0',
+		// 		left: '0',
+		// 		width: '100%',
+		// 		height: '100%',
+		// 		backgroundColor: 'black',
+		// 		zIndex: '50',
+		// 		opacity: '.5',
+		// 		overflowx:'hidden'
+		// 	}
+		// }
 	}
 
 	_createClass(Projects, [{
-		key: 'hover',
-		value: function hover(elem) {
-			console.log("getting to mouseover?");
-			console.log(elem.target);
-		}
-	}, {
 		key: 'render',
 		value: function render() {
-			var _this2 = this;
-
 			return _react2.default.createElement(
 				'div',
-				{ id: 'projects', style: _projectsCss2.default.background },
+				{ className: 'projects' },
 				_react2.default.createElement(
 					'div',
-					{ style: _projectsCss2.default.container },
+					{ className: 'container' },
 					_react2.default.createElement(
 						'div',
-						{ id: '1', style: _projectsCss2.default.picHolder, onMouseEnter: function onMouseEnter() {
-								return _this2.hover.bind(_this2);
-							} },
-						_react2.default.createElement('img', { style: _projectsCss2.default.mediumpic, src: 'public/toptracks.png' }),
+						{ className: 'picHolderMedium' },
+						_react2.default.createElement('img', { className: 'mediumpic', src: 'public/assets/toptracks.png' }),
 						_react2.default.createElement(
 							'div',
-							{ style: this.state.overlay },
-							' '
+							{ className: 'overlay' },
+							' sdfsd '
 						)
 					),
 					_react2.default.createElement(
 						'div',
-						{ id: '2', style: _projectsCss2.default.picHolder, onMouseEnter: this.hover },
-						_react2.default.createElement('img', { style: _projectsCss2.default.pic, src: 'public/tweets.png' }),
+						{ className: 'picHolder' },
+						_react2.default.createElement('img', { className: 'pic', src: 'public/assets/tweets.png' }),
 						_react2.default.createElement(
 							'div',
-							{ style: this.state.overlay },
-							' '
+							{ className: 'overlay' },
+							' sdfsdf'
 						)
 					),
 					_react2.default.createElement(
 						'div',
-						{ id: '3', style: _projectsCss2.default.picHolder, onMouseEnter: this.hover },
-						_react2.default.createElement('img', { style: _projectsCss2.default.mediumpic, src: 'public/tweets-usmap.png' }),
+						{ className: 'picHolderMedium' },
+						_react2.default.createElement('img', { className: 'mediumpic', src: 'public/assets/tweets-usmap.png' }),
 						_react2.default.createElement(
 							'div',
-							{ style: this.state.overlay },
-							' '
+							{ className: 'overlay' },
+							'fsdf '
 						)
 					),
 					_react2.default.createElement(
 						'div',
-						{ id: '4', style: _projectsCss2.default.picHolder, onMouseEnter: this.hover },
-						_react2.default.createElement('img', { style: _projectsCss2.default.pic, src: 'public/d3-life-globe.png' }),
+						{ className: 'picHolder' },
+						_react2.default.createElement('img', { className: 'pic', src: 'public/assets/d3-life-globe.png' }),
 						_react2.default.createElement(
 							'div',
-							{ style: this.state.overlay },
-							' '
+							{ className: 'overlay' },
+							' sdfsdf'
 						)
 					),
 					_react2.default.createElement(
 						'div',
-						{ style: _projectsCss2.default.picHolder, onMouseEnter: this.hover },
-						_react2.default.createElement('img', { style: _projectsCss2.default.thinpic, src: 'public/previousprofile.png' }),
+						{ className: 'picHolderThin' },
+						_react2.default.createElement('img', { className: 'thinpic', src: 'public/assets/previousprofile.png' }),
 						_react2.default.createElement(
 							'div',
-							{ style: this.state.overlay },
-							' '
+							{ className: 'overlay' },
+							' sdfs'
 						)
 					),
 					_react2.default.createElement(
 						'div',
-						{ style: _projectsCss2.default.picHolder, onMouseEnter: this.hover },
-						_react2.default.createElement('img', { style: _projectsCss2.default.thinpic, src: 'public/txchoropleth.png' }),
+						{ className: 'picHolderThin' },
+						_react2.default.createElement('img', { className: 'thinpic', src: 'public/assets/txchoropleth.png' }),
 						_react2.default.createElement(
 							'div',
-							{ style: this.state.overlay },
-							' '
+							{ className: 'overlay' },
+							' sdfds '
 						)
 					),
 					_react2.default.createElement(
 						'div',
-						{ style: _projectsCss2.default.picHolder, onMouseEnter: this.hover },
-						_react2.default.createElement('img', { style: _projectsCss2.default.mediumpic, src: 'public/wsumaptooltip.png' }),
+						{ className: 'picHolderMedium' },
+						_react2.default.createElement('img', { className: 'mediumpic', src: 'public/assets/wsumaptooltip.png' }),
 						_react2.default.createElement(
 							'div',
-							{ style: this.state.overlay },
-							' '
+							{ className: 'overlay' },
+							' asf as'
 						)
 					)
 				)
@@ -21025,6 +21013,12 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+/*
+*
+* this is a second level component, that I still wanted to include in a separate file. It's called in the About component
+*
+*/
+
 var Tools = exports.Tools = function (_React$Component) {
 	_inherits(Tools, _React$Component);
 
@@ -21054,7 +21048,7 @@ var Tools = exports.Tools = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/javascript.png' }),
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/javascript.png' }),
 							_react2.default.createElement(
 								'div',
 								null,
@@ -21064,7 +21058,7 @@ var Tools = exports.Tools = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/react.svg' }),
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/react.svg' }),
 							_react2.default.createElement(
 								'div',
 								null,
@@ -21074,7 +21068,7 @@ var Tools = exports.Tools = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/d3-outline.png' }),
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/d3-outline.png' }),
 							_react2.default.createElement(
 								'div',
 								null,
@@ -21086,7 +21080,7 @@ var Tools = exports.Tools = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/html5.png' }),
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/html5.png' }),
 							_react2.default.createElement(
 								'div',
 								null,
@@ -21096,7 +21090,7 @@ var Tools = exports.Tools = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/sass.png' }),
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/sass.png' }),
 							_react2.default.createElement(
 								'div',
 								null,
@@ -21106,7 +21100,7 @@ var Tools = exports.Tools = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/css3.png' }),
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/css3.png' }),
 							_react2.default.createElement(
 								'div',
 								null,
@@ -21129,7 +21123,7 @@ var Tools = exports.Tools = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/nodejshex.png' }),
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/nodejshex.png' }),
 							_react2.default.createElement(
 								'div',
 								null,
@@ -21139,7 +21133,7 @@ var Tools = exports.Tools = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/socketiologo.png' }),
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/socketiologo.png' }),
 							_react2.default.createElement(
 								'div',
 								null,
@@ -21162,7 +21156,7 @@ var Tools = exports.Tools = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/mysql.svg' }),
+							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/mysql.svg' }),
 							_react2.default.createElement(
 								'div',
 								null,
@@ -21383,8 +21377,7 @@ exports.default = {
 
 	picHolder: {
 		margin: '5%',
-		bacgroundColor: 'black',
-		position: 'relative'
+		bacgroundColor: 'black'
 	},
 
 	thinpic: {

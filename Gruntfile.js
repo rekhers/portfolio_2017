@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                     yuicompress: true
                 },
             files: {
-                "./public/stylesheets/navbar.css": "./public/stylesheets/navbar.less"
+                "./public/stylesheets/styles.css": "./public/stylesheets/styles.less"
             }
         }
     },

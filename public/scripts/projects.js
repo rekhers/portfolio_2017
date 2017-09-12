@@ -8,73 +8,69 @@ export class Projects extends React.Component{
 
 	constructor(){
 		super();
-		this.state = { overlay: { 
-			position: 'absolute',
-			top: '0',
-			left: '0',
-			width: '100%',
-			height: '100%',
-			backgroundColor: 'black',
-			zIndex: '50',
-		}
+	// 	this.state = { overlay: { 
+	// 		position: 'absolute',
+	// 		top: '0',
+	// 		left: '0',
+	// 		width: '100%',
+	// 		height: '100%',
+	// 		backgroundColor: 'black',
+	// 		zIndex: '50',
+	// 		opacity: '.5',
+	// 		overflowx:'hidden'
+	// 	}
+	// }
 	}
 
-		this.hover = this.hover.bind(this);
-	}
-
-	hover(elem){
-		console.log("getting to mouseover?");
-		console.log(elem.target);
-		}
 
 
 	render(){
-		return (<div id="projects" style={styles.background}> 
+		return (<div className="projects"> 
 
 
-		<div style={styles.container}> 
+		<div className="container"> 
 
 
-					<div id='1' style={styles.picHolder} onMouseEnter={() => this.hover.bind(this)}> 
-						<img style={styles.mediumpic} src='public/toptracks.png'/>
-						<div style={this.state.overlay}> </div> 
+					<div className="picHolderMedium"> 
+						<img className="mediumpic" src='public/assets/toptracks.png'/>
+						<div className="overlay"> sdfsd </div> 
 					</div> 
 
 					
-					<div id='2' style={styles.picHolder} onMouseEnter={this.hover}>  
-						<img style={styles.pic} src="public/tweets.png" />
-						<div style={this.state.overlay}> </div> 
+					<div className="picHolder">  
+						<img className="pic"src="public/assets/tweets.png" />
+						<div className="overlay"> sdfsdf</div> 
 
 					</div> 
 
 					
-					<div id='3' style={styles.picHolder} onMouseEnter={this.hover}>  
-						<img style={styles.mediumpic} src="public/tweets-usmap.png" />
-						<div style={this.state.overlay}> </div> 
+					<div className="picHolderMedium">  
+						<img className="mediumpic" src="public/assets/tweets-usmap.png" />
+						<div className="overlay">fsdf </div> 
 					</div> 
 
 
-					<div id='4' style={styles.picHolder} onMouseEnter={this.hover}> 
-						<img style={styles.pic} src='public/d3-life-globe.png'/>
-						<div style={this.state.overlay}> </div> 
+					<div className="picHolder"> 
+						<img className="pic" src='public/assets/d3-life-globe.png'/>
+						<div className="overlay"> sdfsdf</div> 
 					</div> 
 
 
-					<div style={styles.picHolder} onMouseEnter={this.hover}>  
-						<img style={styles.thinpic} src='public/previousprofile.png'/>
-						<div style={this.state.overlay}> </div> 
+					<div className="picHolderThin">  
+						<img className="thinpic" src='public/assets/previousprofile.png'/>
+						<div className="overlay"> sdfs</div> 
 					</div> 
 
-					<div style={styles.picHolder} onMouseEnter={this.hover}>  
-						<img style={styles.thinpic} src='public/txchoropleth.png'/>
-						<div style={this.state.overlay}> </div> 
+					<div className="picHolderThin">  
+						<img className="thinpic" src='public/assets/txchoropleth.png'/>
+						<div className="overlay"> sdfds </div> 
 
 					</div> 
 
 
-					<div style={styles.picHolder} onMouseEnter={this.hover}>  
-						<img style={styles.mediumpic} src='public/wsumaptooltip.png'/>
-						<div style={this.state.overlay}> </div> 
+					<div className="picHolderMedium">  
+						<img className="mediumpic" src='public/assets/wsumaptooltip.png'/>
+						<div className="overlay"> asf as</div> 
 
 					</div> 
 

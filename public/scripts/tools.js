@@ -4,6 +4,11 @@ import $ from 'jquery';
 import styles from '../stylesheets/tools.css.js';
 
 
+/*
+*
+* this is a second level component, that I still wanted to include in a separate file. It's called in the About component
+*
+*/
 
 export class Tools extends React.Component{
 	constructor(){
@@ -22,33 +27,33 @@ export class Tools extends React.Component{
 					<div style={styles.section}>
 
 					<div style={styles.logoText}>   
-						<img style={styles.pic} src='public/javascript.png'/>
+						<img style={styles.pic} src='public/assets/javascript.png'/>
 						<div> ES6 </div>
 					</div> 
 
 					<div style={styles.logoText}> 
-						<img style={styles.pic} src='public/react.svg'/>
+						<img style={styles.pic} src='public/assets/react.svg'/>
 						<div> react  </div>
 
 					</div> 
 
 					<div style={styles.logoText}> 
-						<img style={styles.pic} src='public/d3-outline.png'/>
+						<img style={styles.pic} src='public/assets/d3-outline.png'/>
 						<div> d3  </div>
 					</div> <br/>
 
 					<div style={styles.logoText}> 
-						<img style={styles.pic} src='public/html5.png'/>
+						<img style={styles.pic} src='public/assets/html5.png'/>
 						<div> HTML5  </div>
 					</div> 
 
 					<div style={styles.logoText}> 
-						<img style={styles.pic} src='public/sass.png'/>
+						<img style={styles.pic} src='public/assets/sass.png'/>
 						<div> sass  </div>
 					</div> 
 
 					<div style={styles.logoText}> 
-						<img style={styles.pic} src='public/css3.png'/>
+						<img style={styles.pic} src='public/assets/css3.png'/>
 						<div> CSS3  </div>
 					</div> 
 
@@ -64,13 +69,13 @@ export class Tools extends React.Component{
 					<div style={styles.section}>
 
 						<div style={styles.logoText}> 
-							<img style={styles.pic} src='public/nodejshex.png'/>
+							<img style={styles.pic} src='public/assets/nodejshex.png'/>
 							<div> node.js  </div>
 						</div> 
 
 
 					<div style={styles.logoText}> 
-						<img style={styles.pic} src='public/socketiologo.png'/>
+						<img style={styles.pic} src='public/assets/socketiologo.png'/>
 						<div> socket.io  </div>
 					</div> 
 
@@ -84,7 +89,7 @@ export class Tools extends React.Component{
 					<div>
 
 							<div style={styles.logoText}> 
-								<img style={styles.pic} src='public/mysql.svg'/>
+								<img style={styles.pic} src='public/assets/mysql.svg'/>
 								<div> MySQL  </div>
 							</div> 
 					</div>
