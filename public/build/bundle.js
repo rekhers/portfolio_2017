@@ -20441,8 +20441,6 @@ var Navbar = exports.Navbar = function (_React$Component) {
 
                 for (var id in divs) {
                     var old = (0, _jquery2.default)(divs[id]).css('background');
-                    console.log("name:");
-                    console.log(name);
 
                     window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 3 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 3 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
                 }
@@ -20561,7 +20559,7 @@ var Projects = exports.Projects = function (_React$Component) {
 		value: function render() {
 			return _react2.default.createElement(
 				'div',
-				{ className: 'projects' },
+				{ className: 'projects', id: 'projects' },
 				_react2.default.createElement(
 					'div',
 					{ className: 'container' },
@@ -36295,6 +36293,8 @@ var Container = function (_React$Component) {
 
 			if (event.target.innerText == "rekha tenjarla") {
 				document.querySelector("#home").scrollIntoView({ behavior: 'smooth' });
+			} else if (event.target.innerText == "about") {
+				window.scroll({ top: 550, left: 0, behavior: 'smooth' });
 			} else {
 				document.querySelector("#" + event.target.innerText).scrollIntoView({ behavior: 'smooth' });
 			}

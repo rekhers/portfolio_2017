@@ -35,8 +35,7 @@ export class Navbar extends React.Component {
 
             for(var id in divs){   
                var old =  $(divs[id]).css('background')
-               console.log("name:");
-               console.log(name);
+         
 
                     window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/3  && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/3 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
                     }

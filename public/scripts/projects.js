@@ -25,7 +25,7 @@ export class Projects extends React.Component{
 
 
 	render(){
-		return (<div className="projects"> 
+		return (<div className="projects" id="projects"> 
 
 
 		<div className="container"> 
