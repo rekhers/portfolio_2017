@@ -18,12 +18,14 @@ background:{
 pic:{
   width: '22em',
     height: '12em',
-    border: '2px solid black'
+    border: '2px solid black',
+
 },
 
 picHolder:{
-    margin: '5%'
-
+    margin: '5%',
+    bacgroundColor: 'black',
+    position: 'relative'
 },
 
 thinpic:{
@@ -35,8 +37,8 @@ thinpic:{
 
 mediumpic:{
   width: '16em',
-    height: '10em',
-        border: '2px solid black'
+   height: '10em',
+   border: '2px solid black'
 
 },
 
