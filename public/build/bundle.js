@@ -20342,6 +20342,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Header = undefined;
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(7);
 
 var _react2 = _interopRequireDefault(_react);
@@ -20364,36 +20366,79 @@ var _headerCss2 = _interopRequireDefault(_headerCss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Header = exports.Header = function Header() {
-  return _react2.default.createElement(
-    'div',
-    { id: 'home', style: _headerCss2.default.container },
-    _react2.default.createElement(
-      'div',
-      { style: _headerCss2.default.text },
-      _react2.default.createElement(
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Header = exports.Header = function (_React$Component) {
+  _inherits(Header, _React$Component);
+
+  function Header(props) {
+    _classCallCheck(this, Header);
+
+    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
+  }
+
+  _createClass(Header, [{
+    key: 'handleClick',
+    value: function handleClick() {}
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
         'div',
-        null,
-        ' hey, i\'m rekha. '
-      ),
-      _react2.default.createElement(
-        'div',
-        { style: _headerCss2.default.ling },
-        ' linguist,  '
-      ),
-      _react2.default.createElement(
-        'div',
-        { style: _headerCss2.default.dev },
-        ' developer, '
-      ),
-      _react2.default.createElement(
-        'div',
-        { style: _headerCss2.default.dataVis },
-        ' data visualizer.'
-      )
-    )
-  );
-};
+        { id: 'home', style: _headerCss2.default.container },
+        _react2.default.createElement(
+          'div',
+          { style: _headerCss2.default.text },
+          _react2.default.createElement(
+            'div',
+            null,
+            ' hey, i\'m rekha. '
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: _headerCss2.default.ling },
+            ' linguist,  '
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: _headerCss2.default.dev },
+            ' developer, '
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: _headerCss2.default.dataVis },
+            ' data visualizer.'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { onClick: this.props.onClick(), id: 'chevronHolder' },
+          _react2.default.createElement(
+            'div',
+            { className: 'blue chevron' },
+            ' '
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'red chevron' },
+            ' '
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'yellow chevron' },
+            ' '
+          )
+        )
+      );
+    }
+  }]);
+
+  return Header;
+}(_react2.default.Component);
 
 /***/ }),
 /* 94 */
@@ -36281,10 +36326,11 @@ var Container = function (_React$Component) {
 	}, {
 		key: 'handleClick',
 		value: function handleClick(event) {
+			console.log(event.target.innerText);
 
 			if (event.target.innerText == "rekha tenjarla") {
 				document.querySelector("#home").scrollIntoView({ behavior: 'smooth' });
-			} else if (event.target.innerText == "about") {
+			} else if (event.target.innerText == "about" || event.target.innerText == '') {
 				window.scroll({ top: 550, left: 0, behavior: 'smooth' });
 			} else {
 				document.querySelector("#" + event.target.innerText).scrollIntoView({ behavior: 'smooth' });
@@ -36301,7 +36347,9 @@ var Container = function (_React$Component) {
 				_react2.default.createElement(_navbar.Navbar, { onClick: function onClick() {
 						return _this2.handleClick;
 					} }),
-				_react2.default.createElement(_header.Header, null),
+				_react2.default.createElement(_header.Header, { onClick: function onClick() {
+						return _this2.handleClick;
+					} }),
 				_react2.default.createElement(_about.About, null),
 				_react2.default.createElement(_projects.Projects, null),
 				_react2.default.createElement(_contact.Contact, null)

@@ -4,7 +4,18 @@ import $ from 'jquery';
 import MediaQuery from 'react-responsive';
 import styles from '../stylesheets/header.css.js';
 
-export const Header = () => {
+export class Header extends React.Component{
+    constructor(props){
+      super(props);
+
+    }
+
+
+ handleClick(){
+
+ }
+
+render(){
     return (
     <div id="home" style={styles.container}>
 
@@ -16,8 +27,18 @@ export const Header = () => {
       <div style={styles.dataVis}> data visualizer.</div> 
      
         </div> 
+
+
+
+         <div onClick={this.props.onClick()} id="chevronHolder">
+            <div className="blue chevron"> </div>
+            <div className="red chevron"> </div>
+            <div className="yellow chevron"> </div>
+          </div> 
     </div> 
       );
+}
+
 }
 
 

@@ -21,10 +21,11 @@ class Container extends React.Component{
 	}
 
 	handleClick(event){
+		console.log(event.target.innerText );
 
 		if(event.target.innerText == "rekha tenjarla"){
 			 document.querySelector("#home").scrollIntoView({ behavior: 'smooth' });
-		} else if(event.target.innerText == "about"){
+		} else if(event.target.innerText == "about" || event.target.innerText == ''){
 			 window.scroll({ top: 550, left: 0, behavior: 'smooth'});
 		}
 		else{
@@ -37,7 +38,7 @@ class Container extends React.Component{
 	render(){
 		return(<div>
 				<Navbar onClick={() => this.handleClick}/>
-                <Header/>
+                <Header onClick={() => this.handleClick}/>
                  <About/>
                  <Projects/>
                  <Contact />

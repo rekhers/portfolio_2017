@@ -11,11 +11,59 @@ html, body{
 	margin: 0;
 }
 
-a{
+
+#chevronHolder{
+	width: auto;
+	height:auto;
+	font-size: 100px;
+	margin-left: 50%;
+	padding-top: 35%;
+	cursor:pointer;
+
 	&:hover{
-		color:black;
+
+		.chevron{
+			margin-top: -20px;
+			color:#FFF;
+		}
 	}
+
+	.chevron:before{
+		border-style: solid;
+		border-width: 0.02em 0.02em 0 0;
+		content: '';
+		display: inline-block;
+		height: 0.45em;
+		left: 0.15em;
+		position: relative;
+		transform: rotate(-45deg);
+		vertical-align: top;
+		width: 0.45em;
+		padding-top: -5em;
+		transform: rotate(135deg);
+	}
+
+	.chevron{
+		margin-top: -40px;
+		
+	}
+
+
+	.blue{
+		color: #247BA0;
+	}
+
+	.red{
+		color:#F25F5C;
+	}
+
+	.yellow{
+		color:#FFE066;
+	}
+
+
 }
+
 
 .navbar{
 	background-color: #FFF;
