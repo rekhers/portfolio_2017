@@ -18,12 +18,23 @@ export default{
 	icons:{
 			fontSize: "3rem",
 		  	cursor:"pointer",
-            color: "#247BA0"
 	},
+
+	github:{
+            color: "#247BA0"
+	 },
+
+	 linkedin:{
+	 	color: "#F25F5C"
+	 },
+
+	 mail:{
+		color: "#FFE066"
+	 },
 
 
 	pointy: {
-		fontSize: "25"
+		fontSize: "2em"
 	}
 
 }

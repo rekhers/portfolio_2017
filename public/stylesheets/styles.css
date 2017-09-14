@@ -18,7 +18,8 @@ body {
   cursor: pointer;
 }
 #chevronHolder:hover .chevron {
-  margin-top: -20px;
+  margin-top: -30px;
+  border-width: 0.1em 0.1em 0 0;
   color: #FFF;
 }
 #chevronHolder .chevron:before {
@@ -105,6 +106,11 @@ body {
   background: #F25F5C;
   -webkit-text-fill-color: #FFF;
 }
+/*
+*
+* PROJECTS STYLES
+*
+*/
 .projects {
   background: #247BA0;
   display: flex;
@@ -121,6 +127,7 @@ body {
   font-family: Roboto;
   line-height: 180%;
   padding: 5%;
+  display: none;
 }
 .projects .overlay {
   position: absolute;
@@ -176,6 +183,16 @@ body {
   flex-wrap: wrap;
   padding: 5%;
   height: auto;
+}
+.pointy {
+  font-size: 2em;
+  cursor: pointer;
+}
+.pointy:hover {
+  background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @-webkit-keyframes Gradient {
   0% {

@@ -20279,6 +20279,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Contact = undefined;
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(7);
 
 var _react2 = _interopRequireDefault(_react);
@@ -20297,38 +20299,59 @@ var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 /*
 *
 * TODO: add class level styles here 
 * 
 */
-var Contact = exports.Contact = function Contact() {
-	return _react2.default.createElement(
-		'div',
-		{ id: 'contact', style: _contactCss2.default.container, className: 'contactContainer' },
-		_react2.default.createElement(
-			'a',
-			{ className: 'contactIcon', href: 'http://www.github.com/rekhers' },
-			_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'github' }),
-			' '
-		),
-		_react2.default.createElement(
-			'a',
-			{ className: 'contactIcon', href: 'https://www.linkedin.com/in/rekha-tenjarla-588a19112' },
-			_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'linkedin-square' })
-		),
-		_react2.default.createElement(
-			'a',
-			{ className: 'contactIcon', href: 'mailto:rekha.tenjarla@gmail.com' },
-			_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'envelope' })
-		),
-		_react2.default.createElement(
-			'div',
-			{ style: _contactCss2.default.pointy },
-			' \u261D\uFE0E '
-		)
-	);
-};
+var Contact = exports.Contact = function (_React$Component) {
+	_inherits(Contact, _React$Component);
+
+	function Contact(props) {
+		_classCallCheck(this, Contact);
+
+		return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this, props));
+	}
+
+	_createClass(Contact, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ id: 'contact', style: _contactCss2.default.container, className: 'contactContainer' },
+				_react2.default.createElement(
+					'a',
+					{ style: _contactCss2.default.github, className: 'contactIcon', href: 'http://www.github.com/rekhers' },
+					_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'github' }),
+					' '
+				),
+				_react2.default.createElement(
+					'a',
+					{ style: _contactCss2.default.linkedin, className: 'contactIcon', href: 'https://www.linkedin.com/in/rekha-tenjarla-588a19112' },
+					_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'linkedin-square' })
+				),
+				_react2.default.createElement(
+					'a',
+					{ style: _contactCss2.default.mail, className: 'contactIcon', href: 'mailto:rekha.tenjarla@gmail.com' },
+					_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'envelope' })
+				),
+				_react2.default.createElement(
+					'div',
+					{ onClick: this.props.onClick(), className: 'pointy', title: 'go back up' },
+					'\u261D\uFE0E'
+				)
+			);
+		}
+	}]);
+
+	return Contact;
+}(_react2.default.Component);
 
 /***/ }),
 /* 93 */
@@ -21363,12 +21386,23 @@ exports.default = {
 
 	icons: {
 		fontSize: "3rem",
-		cursor: "pointer",
+		cursor: "pointer"
+	},
+
+	github: {
 		color: "#247BA0"
 	},
 
+	linkedin: {
+		color: "#F25F5C"
+	},
+
+	mail: {
+		color: "#FFE066"
+	},
+
 	pointy: {
-		fontSize: "25"
+		fontSize: "2em"
 	}
 
 };
@@ -36332,6 +36366,8 @@ var Container = function (_React$Component) {
 				document.querySelector("#home").scrollIntoView({ behavior: 'smooth' });
 			} else if (event.target.innerText == "about" || event.target.innerText == '') {
 				window.scroll({ top: 550, left: 0, behavior: 'smooth' });
+			} else if (event.target.innerText == "☝︎") {
+				document.getElementById("home").scrollIntoView({ behavior: 'smooth' });
 			} else {
 				document.querySelector("#" + event.target.innerText).scrollIntoView({ behavior: 'smooth' });
 			}
@@ -36352,7 +36388,9 @@ var Container = function (_React$Component) {
 					} }),
 				_react2.default.createElement(_about.About, null),
 				_react2.default.createElement(_projects.Projects, null),
-				_react2.default.createElement(_contact.Contact, null)
+				_react2.default.createElement(_contact.Contact, { onClick: function onClick() {
+						return _this2.handleClick;
+					} })
 			);
 		}
 	}]);
