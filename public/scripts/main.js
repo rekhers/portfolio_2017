@@ -16,11 +16,9 @@ class Container extends React.Component{
 		super();
 	}
 
-
 	componentDidMount(){	
 		
 	}
-
 
 	handleClick(event){
 

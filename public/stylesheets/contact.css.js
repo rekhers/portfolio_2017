@@ -5,12 +5,12 @@ import React from 'react';
 export default{
 
 	container:{
-	height: "50%",
-	 backgroundColor: "#50514F",
+	height: "30%",
+	 backgroundColor: "#FFF",
 	 display: "flex",
 	 flexDirection: "row",
 	 justifyContent: "space-around",
-	 alignItems: "center"
+	 alignItems: "center",
 
 	},
 
@@ -18,7 +18,12 @@ export default{
 	icons:{
 			fontSize: "3rem",
 		  	cursor:"pointer",
-            color: "#FFF"
+            color: "#247BA0"
+	},
+
+
+	pointy: {
+		fontSize: "25"
 	}
 
 }

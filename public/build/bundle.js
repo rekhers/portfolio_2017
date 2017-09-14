@@ -20297,13 +20297,36 @@ var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/*
+*
+* TODO: add class level styles here 
+* 
+*/
 var Contact = exports.Contact = function Contact() {
 	return _react2.default.createElement(
 		'div',
-		{ id: 'contact', style: _contactCss2.default.container },
-		_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'github' }),
-		_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'linkedin-square' }),
-		_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'envelope' })
+		{ id: 'contact', style: _contactCss2.default.container, className: 'contactContainer' },
+		_react2.default.createElement(
+			'a',
+			{ className: 'contactIcon', href: 'http://www.github.com/rekhers' },
+			_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'github' }),
+			' '
+		),
+		_react2.default.createElement(
+			'a',
+			{ className: 'contactIcon', href: 'https://www.linkedin.com/in/rekha-tenjarla-588a19112' },
+			_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'linkedin-square' })
+		),
+		_react2.default.createElement(
+			'a',
+			{ className: 'contactIcon', href: 'mailto:rekha.tenjarla@gmail.com' },
+			_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'envelope' })
+		),
+		_react2.default.createElement(
+			'div',
+			{ style: _contactCss2.default.pointy },
+			' \u261D\uFE0E '
+		)
 	);
 };
 
@@ -20521,10 +20544,6 @@ var _jquery = __webpack_require__(21);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _projectsCss = __webpack_require__(101);
-
-var _projectsCss2 = _interopRequireDefault(_projectsCss);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20570,7 +20589,15 @@ var Projects = exports.Projects = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							{ className: 'overlay' },
-							' sdfsd '
+							_react2.default.createElement(
+								'div',
+								{ className: 'text' },
+								'TOP TRACKS ',
+								_react2.default.createElement('br', null),
+								' ',
+								_react2.default.createElement('br', null),
+								' Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication. '
+							)
 						)
 					),
 					_react2.default.createElement(
@@ -20580,7 +20607,20 @@ var Projects = exports.Projects = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							{ className: 'overlay' },
-							' sdfsdf'
+							_react2.default.createElement(
+								'div',
+								{ className: 'text' },
+								'WICKED TWITTA ',
+								_react2.default.createElement('br', null),
+								' ',
+								_react2.default.createElement('br', null),
+								'An ongoing project that uses the Twitter API, Google Maps API, and the Natural Language Toolkit to visualize, filter, and analyze linguistic trends. This app was born out of a final project for a college computational linguistics course, in which I analyzed twitter corpora to compare whether the new england vernacular "wicked" was being used as an adjective or adverb in any given context. "That party was wicked" (adj) vs. "She\'s wicked smart" (adv).  ',
+								_react2.default.createElement(
+									'a',
+									{ href: 'http://www.github.com/rekhers' },
+									' github '
+								)
+							)
 						)
 					),
 					_react2.default.createElement(
@@ -20589,8 +20629,8 @@ var Projects = exports.Projects = function (_React$Component) {
 						_react2.default.createElement('img', { className: 'mediumpic', src: 'public/assets/tweets-usmap.png' }),
 						_react2.default.createElement(
 							'div',
-							{ className: 'overlay' },
-							'fsdf '
+							{ className: 'text' },
+							'Top Tracks -- Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API '
 						)
 					),
 					_react2.default.createElement(
@@ -20599,8 +20639,8 @@ var Projects = exports.Projects = function (_React$Component) {
 						_react2.default.createElement('img', { className: 'pic', src: 'public/assets/d3-life-globe.png' }),
 						_react2.default.createElement(
 							'div',
-							{ className: 'overlay' },
-							' sdfsdf'
+							{ className: 'text' },
+							'Top Tracks -- Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API '
 						)
 					),
 					_react2.default.createElement(
@@ -20609,8 +20649,8 @@ var Projects = exports.Projects = function (_React$Component) {
 						_react2.default.createElement('img', { className: 'thinpic', src: 'public/assets/previousprofile.png' }),
 						_react2.default.createElement(
 							'div',
-							{ className: 'overlay' },
-							' sdfs'
+							{ className: 'text' },
+							'Top Tracks -- Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API '
 						)
 					),
 					_react2.default.createElement(
@@ -20619,8 +20659,8 @@ var Projects = exports.Projects = function (_React$Component) {
 						_react2.default.createElement('img', { className: 'thinpic', src: 'public/assets/txchoropleth.png' }),
 						_react2.default.createElement(
 							'div',
-							{ className: 'overlay' },
-							' sdfds '
+							{ className: 'text' },
+							'Top Tracks -- Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API '
 						)
 					),
 					_react2.default.createElement(
@@ -20630,7 +20670,12 @@ var Projects = exports.Projects = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							{ className: 'overlay' },
-							' asf as'
+							' ',
+							_react2.default.createElement(
+								'div',
+								{ className: 'text' },
+								'Top Tracks -- Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API '
+							)
 						)
 					)
 				)
@@ -21257,8 +21302,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = {
 
 	container: {
-		height: "50%",
-		backgroundColor: "#50514F",
+		height: "30%",
+		backgroundColor: "#FFF",
 		display: "flex",
 		flexDirection: "row",
 		justifyContent: "space-around",
@@ -21269,7 +21314,11 @@ exports.default = {
 	icons: {
 		fontSize: "3rem",
 		cursor: "pointer",
-		color: "#FFF"
+		color: "#247BA0"
+	},
+
+	pointy: {
+		fontSize: "25"
 	}
 
 };
@@ -21338,70 +21387,7 @@ exports.default = {
    */
 
 /***/ }),
-/* 101 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _background;
-
-var _react = __webpack_require__(7);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-exports.default = {
-
-	background: (_background = {
-		height: "20%",
-		background: '#247BA0',
-		display: 'flex'
-	}, _defineProperty(_background, 'height', "auto"), _defineProperty(_background, 'width', "auto"), _defineProperty(_background, 'color', "#FFF"), _defineProperty(_background, 'fontFamily', "Montserrat"), _defineProperty(_background, 'fontSize', '1.3rem'), _background),
-
-	pic: {
-		width: '22em',
-		height: '12em',
-		border: '2px solid black'
-
-	},
-
-	picHolder: {
-		margin: '5%',
-		bacgroundColor: 'black'
-	},
-
-	thinpic: {
-		width: '10em',
-		height: '10em',
-		border: '2px solid black'
-
-	},
-
-	mediumpic: {
-		width: '16em',
-		height: '10em',
-		border: '2px solid black'
-
-	},
-
-	container: {
-		display: "flex",
-		flexDirection: "row",
-		flexWrap: "wrap",
-		padding: "5%"
-	}
-
-};
-
-/***/ }),
+/* 101 */,
 /* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
