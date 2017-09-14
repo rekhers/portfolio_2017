@@ -20462,18 +20462,23 @@ var Navbar = exports.Navbar = function (_React$Component) {
 
             window.addEventListener("scroll", function (error) {
 
+                /*
+                *
+                * If we've scrolled past a third of the previous component, highlight the next corresponding nav div
+                * 
+                */
                 for (var id in divs) {
-                    var old = (0, _jquery2.default)(divs[id]).css('background');
-
-                    window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 3 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 3 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
+                    window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 5 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 3 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
                 }
 
-                if (window.pageYOffset > (0, _jquery2.default)("#projects").position().top + (0, _jquery2.default)("#projects").height() / 2.5) {
-                    console.log("getting here?");
-                    (0, _jquery2.default)(that.refs.contact).addClass("selected");
-                } else {
-                    (0, _jquery2.default)(that.refs.contact).removeClass("selected");
-                }
+                /*
+                *
+                * Special cases handle the less than half page contact component and the highlighting of the name div  
+                * 
+                */
+                window.pageYOffset > (0, _jquery2.default)("#projects").position().top + (0, _jquery2.default)("#projects").height() / 2.5 ? (0, _jquery2.default)(that.refs.contact).addClass("selected") : (0, _jquery2.default)(that.refs.contact).removeClass("selected");
+
+                window.pageYOffset < (0, _jquery2.default)("#about").position().top - (0, _jquery2.default)("#about").position().top / 5 ? (0, _jquery2.default)(".nameTitle").addClass("nameSelect") : (0, _jquery2.default)(".nameTitle").removeClass("nameSelect");
             });
         }
     }, {
@@ -20489,7 +20494,7 @@ var Navbar = exports.Navbar = function (_React$Component) {
                 { id: 'navbar', className: 'navbar' },
                 _react2.default.createElement(
                     'div',
-                    { onClick: this.props.onClick(), ref: 'home', className: 'nameTitle' },
+                    { onClick: this.props.onClick(), ref: 'home', className: 'nameTitle nameSelect' },
                     'rekha tenjarla'
                 ),
                 _react2.default.createElement(
@@ -21404,7 +21409,7 @@ exports.default = {
 		height: "auto",
 		color: "#FFF",
 		fontSize: '1rem',
-		backgroundColor: "#F25F5C",
+		backgroundColor: "#333333",
 		fontFamily: 'Montserrat',
 		display: 'flex',
 		flexDirection: 'row',

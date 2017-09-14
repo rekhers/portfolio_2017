@@ -31,11 +31,19 @@ a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-left: 5%;
+  padding-right: 10%;
   padding-top: 1rem;
   padding-bottom: 1%;
 }
 .navbar .nameTitle:hover {
+  cursor: pointer;
+  background: #F25F5C;
   -webkit-text-fill-color: #FFF;
+}
+.navbar .nameSelect {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #FFF;
+  background: #F25F5C;
 }
 .navbar .navlink {
   color: #FFF;
@@ -61,7 +69,6 @@ a:hover {
 .navbar .navlink .selected {
   background: #F25F5C;
   -webkit-text-fill-color: #FFF;
-  border-bottom: 3px solid #F25F5C;
 }
 .projects {
   background: #247BA0;

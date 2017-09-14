@@ -5,7 +5,7 @@ export default{
 		height: "auto",
 		color: "#FFF",
 		fontSize: '1rem',
-		backgroundColor: "#F25F5C",
+		backgroundColor: "#333333",
 		fontFamily: 'Montserrat',
 		display: 'flex',
 		flexDirection: 'row',

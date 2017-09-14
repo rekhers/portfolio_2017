@@ -27,8 +27,6 @@ a{
   	display: flex;
   	flex-flow: row;
   	justify-content: space-between;
-  	// border-bottom: 3px solid #F25F5C;
-
 
   	.nameTitle{
             font-family: 'Montserrat';
@@ -40,12 +38,26 @@ a{
                -webkit-text-fill-color: transparent;
 				// -webkit-animation: Gradient 7s ease infinite;
 				padding-left: 5%;
+				padding-right: 10%;
 				padding-top: 1rem;
 				padding-bottom: 1%;
-			              &:hover{
-              -webkit-text-fill-color: #FFF;
+
+
+			
+
+			         &:hover{
+			         	cursor:pointer;
+              		background: #F25F5C;
+           			 -webkit-text-fill-color: #FFF;
               }
             }
+
+        	.nameSelect{
+				 -webkit-background-clip: text;
+           			 -webkit-text-fill-color: #FFF;
+           			 background: #F25F5C;
+
+				}
 
 
 	.navlink{
@@ -79,7 +91,6 @@ a{
 		.selected{
 			background: #F25F5C;
             -webkit-text-fill-color: #FFF;
-            border-bottom: 3px solid #F25F5C;
 
 		}
 

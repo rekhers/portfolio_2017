@@ -32,23 +32,25 @@ export class Navbar extends React.Component {
         window.addEventListener("scroll", function(error){
 
 
-
+            /*
+            *
+            * If we've scrolled past a third of the previous component, highlight the next corresponding nav div
+            * 
+            */
             for(var id in divs){   
-               var old =  $(divs[id]).css('background')
-         
-
-                    window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/3  && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/3 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
+                    window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/5  && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/3 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
                     }
 
 
-                    if(window.pageYOffset > $("#projects").position().top + $("#projects").height()/2.5){
-                        console.log("getting here?");
-                         $(that.refs.contact).addClass("selected");
-                    } else {
-                         $(that.refs.contact).removeClass("selected");
 
-                    }
+             /*
+            *
+            * Special cases handle the less than half page contact component and the highlighting of the name div  
+            * 
+            */
+             window.pageYOffset > $("#projects").position().top + $("#projects").height()/2.5 ? $(that.refs.contact).addClass("selected") :$(that.refs.contact).removeClass("selected");
 
+            window.pageYOffset < $("#about").position().top - $("#about").position().top/5 ? $(".nameTitle").addClass("nameSelect") : $(".nameTitle").removeClass("nameSelect");
                 }) 
 
 
@@ -61,7 +63,7 @@ export class Navbar extends React.Component {
 
     render(){
         return (<div id="navbar" className="navbar"> 
-            <div onClick={this.props.onClick()} ref="home" className="nameTitle">
+            <div onClick={this.props.onClick()} ref="home" className="nameTitle nameSelect">
              rekha tenjarla
              </div>
              <div className="navLink" onClick={this.props.onClick()}>
