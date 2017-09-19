@@ -127,12 +127,12 @@ body {
   color: #FFF;
   font-family: Montserrat;
   font-size: 1.3rem;
-  padding: 5%;
+  padding: 4%;
   overflow: scroll;
   height: auto;
 }
 .project-container .pic {
-  width: 22em;
+  width: 16em;
   height: 12em;
   border: 2px solid black;
 }
@@ -159,10 +159,21 @@ body {
 .project-container .overlay:hover {
   opacity: .87;
 }
+.project-container .description {
+  width: 20rem;
+  line-height: 2rem;
+  background-color: #FFF;
+  border: 2px solid #333333;
+  font-size: .98rem;
+  color: #333333;
+  padding: 3rem;
+}
 .project-container .picHolder {
-  background-color: black;
-  width: 10em;
-  height: 10em;
+  padding: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 .project-container .picHolderMedium {
   margin: 5%;

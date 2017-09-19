@@ -12,7 +12,7 @@ class ProjectDiv extends React.Component{
 		super(props);
 
 		//list of projects and associated skills, with inherited props list of skills that reflect user's selection
-		this.state = {skills: this.props.skills, projects: {toptracks: {skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png"}, tweets:{skills:["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png"}, d3lifeglobe: {skills: ["javascript", "d3", "html", "css", "node"], src: "public/assets/d3lifeglobe.png"}, previousprofile: {skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png"}}}
+		this.state = {skills: this.props.skills, projects: {toptracks: {skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication."}, tweets:{skills:["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "tweets hehe"}, d3lifeglobe: {skills: ["javascript", "d3", "html", "css", "node"], src: "public/assets/d3lifeglobe.png",  description: "tweets hehe"}, previousprofile: {skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png",  description: "tweets hehe"}}}
 
 	}
 
@@ -56,18 +56,25 @@ class ProjectDiv extends React.Component{
 		if(projects.length > 0) {
  
 			return (<div className="project-container">
+				 <div> Choose some skills from above to see how I've used them! </div> 
 				{Object.keys(projects).map(function(key, i){ 
 	  					return (<div key={i} className="picHolder">
 	  							<img className="pic" src={projects[key].src}/>
+	  							<div className="description"> {projects[key].description}</div>
 								</div>)
 	  			})}
   			</div>)
 		}else{
-			return <div className="project-container"> Choose a skill </div> 
+			return 	(<div className="project-container">
+			<div> Choose some skills from above to see how I've used them! </div> 
+			</div>)
+
 		}
 
 	} else{
-			return <div className="project-container"> Choose a skill </div> 
+			return (<div className="project-container">
+			<div> Choose some skills from above to see how I've used them! </div> 
+			</div>)
 		}
 }
 }

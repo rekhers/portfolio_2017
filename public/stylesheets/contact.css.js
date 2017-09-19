@@ -7,10 +7,6 @@ export default{
 	container:{
 	height: "30%",
 	 backgroundColor: "#FFF",
-	 display: "flex",
-	 flexDirection: "row",
-	 justifyContent: "space-around",
-	 alignItems: "center",
 	 borderTop: "2px solid #F25F5C"
 	},
 
@@ -19,6 +15,19 @@ export default{
 			fontSize: "3rem",
 		  	cursor:"pointer",
 		  	color: "black"
+	},
+
+	iconRow:{
+		 display: "flex",
+	 flexDirection: "row",
+	 justifyContent: "space-around",
+	 alignItems: "center"
+	},
+
+	smallText:{
+		fontFamily: 'Montserrat',
+		fontSize: '.7rem',
+		
 	},
 
 	

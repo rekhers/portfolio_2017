@@ -20323,20 +20323,24 @@ var Contact = exports.Contact = function (_React$Component) {
 				'div',
 				{ id: 'contact', style: _contactCss2.default.container, className: 'contactContainer' },
 				_react2.default.createElement(
-					'a',
-					{ style: _contactCss2.default.github, className: 'contactIcon', href: 'http://www.github.com/rekhers' },
-					_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'github' }),
-					' '
-				),
-				_react2.default.createElement(
-					'a',
-					{ style: _contactCss2.default.linkedin, className: 'contactIcon', href: 'https://www.linkedin.com/in/rekha-tenjarla-588a19112' },
-					_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'linkedin-square' })
-				),
-				_react2.default.createElement(
-					'a',
-					{ style: _contactCss2.default.mail, className: 'contactIcon', href: 'mailto:rekha.tenjarla@gmail.com' },
-					_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'envelope' })
+					'div',
+					{ style: _contactCss2.default.iconRow },
+					_react2.default.createElement(
+						'a',
+						{ style: _contactCss2.default.github, className: 'contactIcon', href: 'http://www.github.com/rekhers' },
+						_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'github' }),
+						' '
+					),
+					_react2.default.createElement(
+						'a',
+						{ style: _contactCss2.default.linkedin, className: 'contactIcon', href: 'https://www.linkedin.com/in/rekha-tenjarla-588a19112' },
+						_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'linkedin-square' })
+					),
+					_react2.default.createElement(
+						'a',
+						{ style: _contactCss2.default.mail, className: 'contactIcon', href: 'mailto:rekha.tenjarla@gmail.com' },
+						_react2.default.createElement(_reactFontawesome2.default, { style: _contactCss2.default.icons, name: 'envelope' })
+					)
 				),
 				_react2.default.createElement(
 					'div',
@@ -20642,7 +20646,7 @@ var ProjectDiv = function (_React$Component) {
 		//list of projects and associated skills, with inherited props list of skills that reflect user's selection
 		var _this = _possibleConstructorReturn(this, (ProjectDiv.__proto__ || Object.getPrototypeOf(ProjectDiv)).call(this, props));
 
-		_this.state = { skills: _this.props.skills, projects: { toptracks: { skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png" }, tweets: { skills: ["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png" }, d3lifeglobe: { skills: ["javascript", "d3", "html", "css", "node"], src: "public/assets/d3lifeglobe.png" }, previousprofile: { skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png" } } };
+		_this.state = { skills: _this.props.skills, projects: { toptracks: { skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication." }, tweets: { skills: ["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "tweets hehe" }, d3lifeglobe: { skills: ["javascript", "d3", "html", "css", "node"], src: "public/assets/d3lifeglobe.png", description: "tweets hehe" }, previousprofile: { skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png", description: "tweets hehe" } } };
 
 		return _this;
 	}
@@ -20691,11 +20695,22 @@ var ProjectDiv = function (_React$Component) {
 					return _react2.default.createElement(
 						'div',
 						{ className: 'project-container' },
+						_react2.default.createElement(
+							'div',
+							null,
+							' Choose some skills from above to see how I\'ve used them! '
+						),
 						Object.keys(projects).map(function (key, i) {
 							return _react2.default.createElement(
 								'div',
 								{ key: i, className: 'picHolder' },
-								_react2.default.createElement('img', { className: 'pic', src: projects[key].src })
+								_react2.default.createElement('img', { className: 'pic', src: projects[key].src }),
+								_react2.default.createElement(
+									'div',
+									{ className: 'description' },
+									' ',
+									projects[key].description
+								)
 							);
 						})
 					);
@@ -20703,14 +20718,22 @@ var ProjectDiv = function (_React$Component) {
 					return _react2.default.createElement(
 						'div',
 						{ className: 'project-container' },
-						' Choose a skill '
+						_react2.default.createElement(
+							'div',
+							null,
+							' Choose some skills from above to see how I\'ve used them! '
+						)
 					);
 				}
 			} else {
 				return _react2.default.createElement(
 					'div',
 					{ className: 'project-container' },
-					' Choose a skill '
+					_react2.default.createElement(
+						'div',
+						null,
+						' Choose some skills from above to see how I\'ve used them! '
+					)
 				);
 			}
 		}
@@ -21440,10 +21463,6 @@ exports.default = {
 	container: {
 		height: "30%",
 		backgroundColor: "#FFF",
-		display: "flex",
-		flexDirection: "row",
-		justifyContent: "space-around",
-		alignItems: "center",
 		borderTop: "2px solid #F25F5C"
 	},
 
@@ -21451,6 +21470,19 @@ exports.default = {
 		fontSize: "3rem",
 		cursor: "pointer",
 		color: "black"
+	},
+
+	iconRow: {
+		display: "flex",
+		flexDirection: "row",
+		justifyContent: "space-around",
+		alignItems: "center"
+	},
+
+	smallText: {
+		fontFamily: 'Montserrat',
+		fontSize: '.7rem'
+
 	},
 
 	pointy: {
