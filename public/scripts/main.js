@@ -21,7 +21,6 @@ class Container extends React.Component{
 	}
 
 	handleClick(event){
-		console.log(event.target.innerText );
 
 		if(event.target.innerText == "rekha tenjarla"){
 			 document.querySelector("#home").scrollIntoView({ behavior: 'smooth' });

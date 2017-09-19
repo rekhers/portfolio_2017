@@ -20538,7 +20538,7 @@ var Navbar = exports.Navbar = function (_React$Component) {
                 * 
                 */
                 for (var id in divs) {
-                    window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 5 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 3 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
+                    window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 8 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 3 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
                 }
 
                 /*
@@ -20639,9 +20639,11 @@ var ProjectDiv = function (_React$Component) {
 	function ProjectDiv(props) {
 		_classCallCheck(this, ProjectDiv);
 
+		//list of projects and associated skills, with inherited props list of skills that reflect user's selection
 		var _this = _possibleConstructorReturn(this, (ProjectDiv.__proto__ || Object.getPrototypeOf(ProjectDiv)).call(this, props));
 
-		_this.state = { skills: _this.props.skills, projects: { toptracks: { skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png" }, tweets: { skills: ["javascript", "html", "css"], src: "public/assets/tweets.png" }, d3lifeglobe: { skills: ["javascript", "d3", "html", "css"], src: "public/assets/d3lifeglobe.png" } } };
+		_this.state = { skills: _this.props.skills, projects: { toptracks: { skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png" }, tweets: { skills: ["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png" }, d3lifeglobe: { skills: ["javascript", "d3", "html", "css", "node"], src: "public/assets/d3lifeglobe.png" }, previousprofile: { skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png" } } };
+
 		return _this;
 	}
 
@@ -20649,6 +20651,13 @@ var ProjectDiv = function (_React$Component) {
 		key: 'componentDidMount',
 		value: function componentDidMount() {
 			this.filteredProjects();
+		}
+	}, {
+		key: 'componentWillReceiveProps',
+		value: function componentWillReceiveProps(props) {
+			this.setState({ skills: props.skills }, function () {
+				this.filteredProjects();
+			});
 		}
 	}, {
 		key: 'filteredProjects',
@@ -20671,27 +20680,37 @@ var ProjectDiv = function (_React$Component) {
 		key: 'render',
 		value: function render() {
 
+			var that = this;
+
 			if (this.state.filteredProjects) {
 
 				var skills = _underscore2.default.values(this.state.skills);
 				var projects = this.state.filteredProjects;
+				if (projects.length > 0) {
 
-				return _react2.default.createElement(
-					'div',
-					{ className: 'project-container' },
-					Object.keys(projects).map(function (key, i) {
-						return _react2.default.createElement(
-							'div',
-							{ key: i, className: 'picHolder' },
-							_react2.default.createElement('img', { className: 'pic', src: projects[key].src })
-						);
-					})
-				);
+					return _react2.default.createElement(
+						'div',
+						{ className: 'project-container' },
+						Object.keys(projects).map(function (key, i) {
+							return _react2.default.createElement(
+								'div',
+								{ key: i, className: 'picHolder' },
+								_react2.default.createElement('img', { className: 'pic', src: projects[key].src })
+							);
+						})
+					);
+				} else {
+					return _react2.default.createElement(
+						'div',
+						{ className: 'project-container' },
+						' Choose a skill '
+					);
+				}
 			} else {
 				return _react2.default.createElement(
 					'div',
-					null,
-					' hehe '
+					{ className: 'project-container' },
+					' Choose a skill '
 				);
 			}
 		}
@@ -20709,14 +20728,26 @@ var Projects = exports.Projects = function (_React$Component2) {
 		var _this2 = _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this));
 
 		_this2.state = { skills: ["d3"] };
+		_this2.handleClick = _this2.handleClick.bind(_this2);
 		return _this2;
 	}
 
 	_createClass(Projects, [{
-		key: 'handleHover',
-		value: function handleHover(e) {
-			console.log("in hover");
-			console.log(e.target);
+		key: 'handleClick',
+		value: function handleClick(e) {
+			var id = e.target.id;
+			var skills = this.state.skills;
+
+			if (_underscore2.default.contains(skills, id)) {
+				skills = _underscore2.default.without(skills, id);
+			} else {
+				skills.push(id);
+			}
+
+			console.log("current skills");
+			console.log(skills);
+
+			this.setState({ skills: skills });
 		}
 	}, {
 		key: 'render',
@@ -21178,16 +21209,29 @@ var Tools = exports.Tools = function (_React$Component) {
 	function Tools(props) {
 		_classCallCheck(this, Tools);
 
-		return _possibleConstructorReturn(this, (Tools.__proto__ || Object.getPrototypeOf(Tools)).call(this, props));
+		var _this = _possibleConstructorReturn(this, (Tools.__proto__ || Object.getPrototypeOf(Tools)).call(this, props));
+
+		_this.state = {};
+		return _this;
 	}
 
 	_createClass(Tools, [{
 		key: 'componentDidMount',
 		value: function componentDidMount() {
-			(0, _jquery2.default)(".section div").hover(function (e) {
-				(0, _jquery2.default)(this).css("background-color", "#FFF").css("color", "black");
-			}, function () {
-				(0, _jquery2.default)(this).css("background-color", "#333333").css("color", "#FFF");
+
+			// $(".section div").hover(function(e){
+			// 	$(this).css("background-color", "#FFF").css("color", "black");
+			// }, function(){
+			// 	$(this).css("background-color", "#333333").css("color", "#FFF");
+			// })
+
+
+			(0, _jquery2.default)(".skill").click(function () {
+				if ((0, _jquery2.default)(this).hasClass("clicked")) {
+					(0, _jquery2.default)(this).removeClass("clicked");
+				} else {
+					(0, _jquery2.default)(this).addClass("clicked");
+				}
 			});
 		}
 	}, {
@@ -21209,47 +21253,47 @@ var Tools = exports.Tools = function (_React$Component) {
 						{ className: 'section', style: _toolsCss2.default.section },
 						_react2.default.createElement(
 							'div',
-							{ id: 'javascript', style: _toolsCss2.default.skill },
+							{ onClick: this.props.onClick(), id: 'javascript', className: 'skill' },
 							'javascript'
 						),
 						_react2.default.createElement(
 							'div',
-							{ id: 'react', style: _toolsCss2.default.skill },
+							{ onClick: this.props.onClick(), id: 'react', className: 'skill' },
 							'react'
 						),
 						_react2.default.createElement(
 							'div',
-							{ id: 'd3', style: _toolsCss2.default.skill },
+							{ onClick: this.props.onClick(), id: 'd3', className: 'skill clicked' },
 							'd3'
 						),
 						_react2.default.createElement(
 							'div',
-							{ id: 'html', style: _toolsCss2.default.skill },
+							{ onClick: this.props.onClick(), id: 'html', className: 'skill' },
 							'HTML5'
 						),
 						_react2.default.createElement(
 							'div',
-							{ id: 'less', style: _toolsCss2.default.skill },
+							{ onClick: this.props.onClick(), id: 'less', className: 'skill' },
 							'less'
 						),
 						_react2.default.createElement(
 							'div',
-							{ id: 'css', style: _toolsCss2.default.skill },
+							{ onClick: this.props.onClick(), id: 'css', className: 'skill' },
 							'CSS3'
 						),
 						_react2.default.createElement(
 							'div',
-							{ id: 'wordpress', style: _toolsCss2.default.skill },
+							{ onClick: this.props.onClick(), id: 'wordpress', className: 'skill' },
 							'wordpress'
 						),
 						_react2.default.createElement(
 							'div',
-							{ id: 'grunt', style: _toolsCss2.default.skill },
+							{ onClick: this.props.onClick(), id: 'grunt', className: 'skill' },
 							'grunt'
 						),
 						_react2.default.createElement(
 							'div',
-							{ id: 'webpack', style: _toolsCss2.default.skill },
+							{ onClick: this.props.onClick(), id: 'webpack', className: 'skill' },
 							'webpack'
 						)
 					)
@@ -21267,17 +21311,17 @@ var Tools = exports.Tools = function (_React$Component) {
 						{ className: 'section', style: _toolsCss2.default.section },
 						_react2.default.createElement(
 							'div',
-							{ id: 'node', style: _toolsCss2.default.skill },
+							{ onClick: this.props.onClick(), id: 'node', className: 'skill' },
 							'node.js'
 						),
 						_react2.default.createElement(
 							'div',
-							{ id: 'socketio', style: _toolsCss2.default.skill },
+							{ onClick: this.props.onClick(), id: 'socketio', className: 'skill' },
 							'socket.io'
 						),
 						_react2.default.createElement(
 							'div',
-							{ id: 'php', style: _toolsCss2.default.skill },
+							{ onClick: this.props.onClick(), id: 'php', className: 'skill' },
 							'PHP'
 						)
 					)
@@ -21295,7 +21339,7 @@ var Tools = exports.Tools = function (_React$Component) {
 						{ className: 'section', style: _toolsCss2.default.section },
 						_react2.default.createElement(
 							'div',
-							{ style: _toolsCss2.default.skill },
+							{ id: 'mysql', onClick: this.props.onClick(), className: 'skill' },
 							'MySQL'
 						)
 					)
@@ -37924,7 +37968,6 @@ var Container = function (_React$Component) {
 	}, {
 		key: 'handleClick',
 		value: function handleClick(event) {
-			console.log(event.target.innerText);
 
 			if (event.target.innerText == "rekha tenjarla") {
 				document.querySelector("#home").scrollIntoView({ behavior: 'smooth' });

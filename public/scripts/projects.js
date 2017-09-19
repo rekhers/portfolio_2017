@@ -10,11 +10,20 @@ class ProjectDiv extends React.Component{
 
 	constructor(props){
 		super(props);
-		this.state = {skills: this.props.skills, projects: {toptracks: {skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png"}, tweets:{skills:["javascript", "html", "css"], src: "public/assets/tweets.png"}, d3lifeglobe: {skills: ["javascript", "d3", "html", "css"], src: "public/assets/d3lifeglobe.png"}}}
+
+		//list of projects and associated skills, with inherited props list of skills that reflect user's selection
+		this.state = {skills: this.props.skills, projects: {toptracks: {skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png"}, tweets:{skills:["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png"}, d3lifeglobe: {skills: ["javascript", "d3", "html", "css", "node"], src: "public/assets/d3lifeglobe.png"}, previousprofile: {skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png"}}}
+
 	}
 
 	componentDidMount(){
 		this.filteredProjects();
+	}
+
+	componentWillReceiveProps(props){
+		this.setState({skills: props.skills}, function(){
+			this.filteredProjects();
+		})
 	}
 
 	filteredProjects(){
@@ -35,24 +44,31 @@ class ProjectDiv extends React.Component{
 
 	}
 
+
 	render(){
+
+		var that = this;
 
 		if(this.state.filteredProjects){
 
 		const skills = _.values(this.state.skills);
 		const projects = this.state.filteredProjects;
+		if(projects.length > 0) {
  
-		return (<div className="project-container">
-			{Object.keys(projects).map(function(key, i){ 
-  					return (<div key={i} className="picHolder">
-  							<img className="pic" src={projects[key].src}/>
-							</div>)
-  			})}
+			return (<div className="project-container">
+				{Object.keys(projects).map(function(key, i){ 
+	  					return (<div key={i} className="picHolder">
+	  							<img className="pic" src={projects[key].src}/>
+								</div>)
+	  			})}
   			</div>)
+		}else{
+			return <div className="project-container"> Choose a skill </div> 
+		}
 
-	} else {
-		return <div> hehe </div> 
-	}
+	} else{
+			return <div className="project-container"> Choose a skill </div> 
+		}
 }
 }
 
@@ -62,11 +78,26 @@ export class Projects extends React.Component{
 	constructor(){
 		super()
 		this.state = {skills: ["d3"]} 
+		this.handleClick = this.handleClick.bind(this);
 	}
 
-	handleHover(e){
-		console.log("in hover");
-		console.log(e.target);
+	handleClick(e){
+	var id = e.target.id;
+	var skills = this.state.skills;
+
+	if(_.contains(skills, id)){
+		skills = _.without(skills, id);
+
+	} else {
+		skills.push(id);
+	}
+
+	console.log("current skills");
+	console.log(skills);
+
+	this.setState({skills: skills})
+
+
 	}
 
 	render(){

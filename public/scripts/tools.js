@@ -13,15 +13,31 @@ import styles from '../stylesheets/tools.css.js';
 export class Tools extends React.Component{
 	constructor(props){
 		super(props);
+
+		this.state = {
+		
+		} 
 	}
 
 	componentDidMount(){
-		$(".section div").hover(function(e){
-			$(this).css("background-color", "#FFF").css("color", "black");
-		}, function(){
-			$(this).css("background-color", "#333333").css("color", "#FFF");
-		})
-	}
+		
+		// $(".section div").hover(function(e){
+		// 	$(this).css("background-color", "#FFF").css("color", "black");
+		// }, function(){
+		// 	$(this).css("background-color", "#333333").css("color", "#FFF");
+		// })
+
+
+		$(".skill").click(function(){
+			if($(this).hasClass("clicked")){
+				$(this).removeClass("clicked");
+			} else {
+				$(this).addClass("clicked");
+			}
+		
+	})
+
+}
 
 	render(){
 		return( 
@@ -33,39 +49,39 @@ export class Tools extends React.Component{
 
 					<div className="section" style={styles.section}>
 
-							<div id="javascript" style={styles.skill}>   
+							<div onClick={this.props.onClick()} id="javascript" className="skill">   
 								javascript 
 							</div> 
 
-							<div id="react" style={styles.skill}> 
+							<div onClick={this.props.onClick()} id="react" className="skill"> 
 								react  
 								</div>
 
 
-							<div id="d3" style={styles.skill}> 
+							<div onClick={this.props.onClick()} id="d3" className="skill clicked"> 
 								d3  
 								</div>
 
-							<div id="html" style={styles.skill}> 
+							<div onClick={this.props.onClick()} id="html" className="skill"> 
 								 HTML5 
 							</div> 
 
-							<div id="less" style={styles.skill}> 
+							<div onClick={this.props.onClick()} id="less" className="skill"> 
 								less
 							</div> 
 
-							<div id="css" style={styles.skill}> 
+							<div onClick={this.props.onClick()} id="css" className="skill"> 
 								CSS3  
 							</div> 
 
-							<div id="wordpress" style={styles.skill}> 
+							<div onClick={this.props.onClick()} id="wordpress" className="skill"> 
 							wordpress
 							</div> 
-							<div id="grunt" style={styles.skill}> 
+							<div onClick={this.props.onClick()} id="grunt" className="skill"> 
 							grunt
 							</div> 
 
-							<div id="webpack" style={styles.skill}> 
+							<div onClick={this.props.onClick()} id="webpack" className="skill"> 
 							webpack
 							</div> 
 					</div>
@@ -78,16 +94,16 @@ export class Tools extends React.Component{
 
 						<div className="section" style={styles.section}>
 
-								<div id="node" style={styles.skill}> 
+								<div onClick={this.props.onClick()} id="node" className="skill"> 
 										 node.js 
 								</div> 
 
 
-							<div id="socketio" style={styles.skill}> 
+							<div onClick={this.props.onClick()} id="socketio" className="skill"> 
 									 socket.io  
 							</div>
 
-							<div id="php" style={styles.skill}> 
+							<div onClick={this.props.onClick()} id="php" className="skill"> 
 								PHP  
 							</div>  
 
@@ -100,7 +116,7 @@ export class Tools extends React.Component{
 
 					<div className="section" style={styles.section}>
 
-							<div style={styles.skill}> 
+							<div id="mysql" onClick={this.props.onClick()} className="skill"> 
 									MySQL 
 							</div> 
 					</div>
