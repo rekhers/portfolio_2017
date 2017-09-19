@@ -9,6 +9,11 @@ html,
 body {
   margin: 0;
 }
+/*
+*
+* HEADER -- Chevron styles / animation
+*
+*/
 #chevronHolder {
   width: auto;
   height: auto;
@@ -48,6 +53,11 @@ body {
 #chevronHolder .yellow {
   color: #FFE066;
 }
+/*
+*
+* NAVBAR 
+*
+*/
 .navbar {
   background-color: #FFF;
   width: 100%;
@@ -70,6 +80,7 @@ body {
   padding-right: 10%;
   padding-top: 1rem;
   padding-bottom: 1%;
+  white-space: nowrap;
 }
 .navbar .nameTitle:hover {
   cursor: pointer;
@@ -108,28 +119,30 @@ body {
 }
 /*
 *
-* PROJECTS STYLES
+* PROJECTS 
 *
 */
-.projects {
+.project-container {
   background: #247BA0;
-  display: flex;
   color: #FFF;
   font-family: Montserrat;
   font-size: 1.3rem;
+  padding: 5%;
+  overflow: scroll;
+  height: 50%;
 }
-.projects .pic {
+.project-container .pic {
   width: 22em;
   height: 12em;
   border: 2px solid black;
 }
-.projects .text {
+.project-container .text {
   font-family: Roboto;
   line-height: 180%;
   padding: 5%;
   display: none;
 }
-.projects .overlay {
+.project-container .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -143,47 +156,45 @@ body {
   font-size: .8em;
   overflow-y: scroll;
 }
-.projects .overlay:hover {
+.project-container .overlay:hover {
   opacity: .87;
 }
-.projects .picHolderThin {
+.project-container .picHolderThin {
   margin: 5%;
   background-color: black;
   position: relative;
   width: 10em;
   height: 10em;
 }
-.projects .picHolder {
+.project-container .picHolder {
   margin: 5%;
   background-color: black;
   position: relative;
   width: 22em;
   height: 12em;
 }
-.projects .picHolderMedium {
+.project-container .picHolderMedium {
   margin: 5%;
   background-color: black;
   position: relative;
   width: 16em;
   height: 10em;
 }
-.projects .thinpic {
+.project-container .thinpic {
   width: 10em;
   height: 10em;
   border: 2px solid black;
 }
-.projects .mediumpic {
+.project-container .mediumpic {
   width: 16em;
   height: 10em;
   border: 2px solid black;
 }
-.projects .container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 5%;
-  height: auto;
-}
+/*
+*
+* CONTACT -- pointy finger styles
+*
+*/
 .pointy {
   font-size: 2em;
   cursor: pointer;

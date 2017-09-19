@@ -42,13 +42,12 @@ export class Navbar extends React.Component {
                     }
 
 
-
              /*
             *
             * Special cases handle the less than half page contact component and the highlighting of the name div  
             * 
             */
-             window.pageYOffset > $("#projects").position().top + $("#projects").height()/2.5 ? $(that.refs.contact).addClass("selected") :$(that.refs.contact).removeClass("selected");
+             window.pageYOffset > $("#projects").position().top + $("#projects").height()/4 ? $(that.refs.contact).addClass("selected") :$(that.refs.contact).removeClass("selected");
 
             window.pageYOffset < $("#about").position().top - $("#about").position().top/5 ? $(".nameTitle").addClass("nameSelect") : $(".nameTitle").removeClass("nameSelect");
                 }) 

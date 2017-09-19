@@ -20227,8 +20227,6 @@ var _aboutCss = __webpack_require__(98);
 
 var _aboutCss2 = _interopRequireDefault(_aboutCss);
 
-var _tools = __webpack_require__(97);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /*
@@ -20241,7 +20239,7 @@ var Bio = function Bio() {
   return _react2.default.createElement(
     'div',
     { style: _aboutCss2.default.bio },
-    ' I\'m a javascript developer excited about visualizing data and thinking about how to do it in a way that might make the world a better and/or funner place. I\'ve gone down the React rabbit hole this past year, and I\'m a better person for it. Writing code is my vehicle to exploring the things that I\'m passionate about \u2014 music, language, and social justice.'
+    ' I\'m a javascript developer excited about visualizing data and thinking about how to do it in a way that might make the world a better place. I\'ve gone down the React rabbit hole this past year, and I\'m a better person for it. Writing code is my vehicle to exploring the things that I\'m passionate about \u2014 music, language, and social justice.'
   );
 };
 
@@ -20262,8 +20260,7 @@ var About = exports.About = function About() {
       { style: _aboutCss2.default.container },
       _react2.default.createElement(Pic, null),
       _react2.default.createElement(Bio, null)
-    ),
-    _react2.default.createElement(_tools.Tools, null)
+    )
   );
 };
 
@@ -20345,6 +20342,11 @@ var Contact = exports.Contact = function (_React$Component) {
 					'div',
 					{ onClick: this.props.onClick(), className: 'pointy', title: 'go back up' },
 					'\u261D\uFE0E'
+				),
+				_react2.default.createElement(
+					'div',
+					null,
+					' designed & coded with \u2665 by me '
 				)
 			);
 		}
@@ -20544,7 +20546,7 @@ var Navbar = exports.Navbar = function (_React$Component) {
                 * Special cases handle the less than half page contact component and the highlighting of the name div  
                 * 
                 */
-                window.pageYOffset > (0, _jquery2.default)("#projects").position().top + (0, _jquery2.default)("#projects").height() / 2.5 ? (0, _jquery2.default)(that.refs.contact).addClass("selected") : (0, _jquery2.default)(that.refs.contact).removeClass("selected");
+                window.pageYOffset > (0, _jquery2.default)("#projects").position().top + (0, _jquery2.default)("#projects").height() / 4 ? (0, _jquery2.default)(that.refs.contact).addClass("selected") : (0, _jquery2.default)(that.refs.contact).removeClass("selected");
 
                 window.pageYOffset < (0, _jquery2.default)("#about").position().top - (0, _jquery2.default)("#about").position().top / 5 ? (0, _jquery2.default)(".nameTitle").addClass("nameSelect") : (0, _jquery2.default)(".nameTitle").removeClass("nameSelect");
             });
@@ -20617,6 +20619,8 @@ var _jquery = __webpack_require__(21);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
+var _tools = __webpack_require__(97);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20625,133 +20629,157 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Projects = exports.Projects = function (_React$Component) {
-	_inherits(Projects, _React$Component);
+var ProjectDiv = function (_React$Component) {
+	_inherits(ProjectDiv, _React$Component);
 
-	function Projects() {
-		_classCallCheck(this, Projects);
+	function ProjectDiv(props) {
+		_classCallCheck(this, ProjectDiv);
 
-		return _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this));
-		// 	this.state = { overlay: { 
-		// 		position: 'absolute',
-		// 		top: '0',
-		// 		left: '0',
-		// 		width: '100%',
-		// 		height: '100%',
-		// 		backgroundColor: 'black',
-		// 		zIndex: '50',
-		// 		opacity: '.5',
-		// 		overflowx:'hidden'
-		// 	}
-		// }
+		var _this = _possibleConstructorReturn(this, (ProjectDiv.__proto__ || Object.getPrototypeOf(ProjectDiv)).call(this, props));
+
+		_this.state = { skills: _this.props.skills };
+		return _this;
 	}
 
-	_createClass(Projects, [{
+	_createClass(ProjectDiv, [{
 		key: 'render',
 		value: function render() {
 			return _react2.default.createElement(
 				'div',
-				{ className: 'projects', id: 'projects' },
+				{ className: 'project-container' },
 				_react2.default.createElement(
 					'div',
-					{ className: 'container' },
+					{ className: 'picHolderMedium' },
+					_react2.default.createElement('img', { className: 'mediumpic', src: 'public/assets/toptracks.png' }),
 					_react2.default.createElement(
 						'div',
-						{ className: 'picHolderMedium' },
-						_react2.default.createElement('img', { className: 'mediumpic', src: 'public/assets/toptracks.png' }),
-						_react2.default.createElement(
-							'div',
-							{ className: 'overlay' },
-							_react2.default.createElement(
-								'div',
-								{ className: 'text' },
-								'TOP TRACKS ',
-								_react2.default.createElement('br', null),
-								' ',
-								_react2.default.createElement('br', null),
-								' Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication. '
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'picHolder' },
-						_react2.default.createElement('img', { className: 'pic', src: 'public/assets/tweets.png' }),
-						_react2.default.createElement(
-							'div',
-							{ className: 'overlay' },
-							_react2.default.createElement(
-								'div',
-								{ className: 'text' },
-								'WICKED TWITTA ',
-								_react2.default.createElement('br', null),
-								' ',
-								_react2.default.createElement('br', null),
-								'An ongoing project that uses the Twitter API, Google Maps API, and the Natural Language Toolkit to visualize, filter, and analyze linguistic trends. This app was born out of a final project for a college computational linguistics course, in which I analyzed twitter corpora to compare whether the new england vernacular "wicked" was being used as an adjective or adverb in any given context. "That party was wicked" (adj) vs. "She\'s wicked smart" (adv).  ',
-								_react2.default.createElement(
-									'a',
-									{ href: 'http://www.github.com/rekhers' },
-									' github '
-								)
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'picHolderMedium' },
-						_react2.default.createElement('img', { className: 'mediumpic', src: 'public/assets/tweets-usmap.png' }),
+						{ className: 'overlay' },
 						_react2.default.createElement(
 							'div',
 							{ className: 'text' },
-							'Top Tracks -- Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API '
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'picHolder' },
-						_react2.default.createElement('img', { className: 'pic', src: 'public/assets/d3-life-globe.png' }),
-						_react2.default.createElement(
-							'div',
-							{ className: 'text' },
-							'Top Tracks -- Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API '
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'picHolderThin' },
-						_react2.default.createElement('img', { className: 'thinpic', src: 'public/assets/previousprofile.png' }),
-						_react2.default.createElement(
-							'div',
-							{ className: 'text' },
-							'Top Tracks -- Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API '
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'picHolderThin' },
-						_react2.default.createElement('img', { className: 'thinpic', src: 'public/assets/txchoropleth.png' }),
-						_react2.default.createElement(
-							'div',
-							{ className: 'text' },
-							'Top Tracks -- Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API '
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'picHolderMedium' },
-						_react2.default.createElement('img', { className: 'mediumpic', src: 'public/assets/wsumaptooltip.png' }),
-						_react2.default.createElement(
-							'div',
-							{ className: 'overlay' },
+							'TOP TRACKS ',
+							_react2.default.createElement('br', null),
 							' ',
+							_react2.default.createElement('br', null),
+							' Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication. '
+						)
+					)
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'picHolder' },
+					_react2.default.createElement('img', { className: 'pic', src: 'public/assets/tweets.png' }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'overlay' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'text' },
+							'WICKED TWITTA ',
+							_react2.default.createElement('br', null),
+							' ',
+							_react2.default.createElement('br', null),
+							'An ongoing project that uses the Twitter API, Google Maps API, and the Natural Language Toolkit to visualize, filter, and analyze linguistic trends. This app was born out of a final project for a college computational linguistics course, in which I analyzed twitter corpora to compare whether the new england vernacular "wicked" was being used as an adjective or adverb in any given context. "That party was wicked" (adj) vs. "She\'s wicked smart" (adv).  ',
 							_react2.default.createElement(
-								'div',
-								{ className: 'text' },
-								'Top Tracks -- Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API '
+								'a',
+								{ href: 'http://www.github.com/rekhers' },
+								' github '
 							)
 						)
 					)
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'picHolderMedium' },
+					_react2.default.createElement('img', { className: 'mediumpic', src: 'public/assets/tweets-usmap.png' }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'text' },
+						'Top Tracks -- Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API '
+					)
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'picHolder' },
+					_react2.default.createElement('img', { className: 'pic', src: 'public/assets/d3-life-globe.png' }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'text' },
+						'Top Tracks -- Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API '
+					)
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'picHolderThin' },
+					_react2.default.createElement('img', { className: 'thinpic', src: 'public/assets/previousprofile.png' }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'text' },
+						'Top Tracks -- Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API '
+					)
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'picHolderThin' },
+					_react2.default.createElement('img', { className: 'thinpic', src: 'public/assets/txchoropleth.png' }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'text' },
+						'Top Tracks -- Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API '
+					)
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'picHolderMedium' },
+					_react2.default.createElement('img', { className: 'mediumpic', src: 'public/assets/wsumaptooltip.png' }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'overlay' },
+						' ',
+						_react2.default.createElement(
+							'div',
+							{ className: 'text' },
+							'Top Tracks -- Lists a user\'s top scrobbled tracks over different periods of time, built with React and the Last.fm API '
+						)
+					)
 				)
+			);
+		}
+	}]);
+
+	return ProjectDiv;
+}(_react2.default.Component);
+
+var Projects = exports.Projects = function (_React$Component2) {
+	_inherits(Projects, _React$Component2);
+
+	function Projects() {
+		_classCallCheck(this, Projects);
+
+		var _this2 = _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this));
+
+		_this2.state = { skills: ["javscript", "react", "html", "css"] };
+		return _this2;
+	}
+
+	_createClass(Projects, [{
+		key: 'handleHover',
+		value: function handleHover(e) {
+			console.log("in hover");
+			console.log(e.target);
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			var _this3 = this;
+
+			return _react2.default.createElement(
+				'div',
+				{ id: 'projects' },
+				_react2.default.createElement(_tools.Tools, { onClick: function onClick() {
+						return _this3.handleClick;
+					} }),
+				_react2.default.createElement(ProjectDiv, { skills: this.state.skills })
 			);
 		}
 	}]);
@@ -21138,13 +21166,22 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Tools = exports.Tools = function (_React$Component) {
 	_inherits(Tools, _React$Component);
 
-	function Tools() {
+	function Tools(props) {
 		_classCallCheck(this, Tools);
 
-		return _possibleConstructorReturn(this, (Tools.__proto__ || Object.getPrototypeOf(Tools)).call(this));
+		return _possibleConstructorReturn(this, (Tools.__proto__ || Object.getPrototypeOf(Tools)).call(this, props));
 	}
 
 	_createClass(Tools, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			(0, _jquery2.default)(".section div").hover(function (e) {
+				(0, _jquery2.default)(this).css("background-color", "#FFF").css("color", "black");
+			}, function () {
+				(0, _jquery2.default)(this).css("background-color", "#333333").css("color", "#FFF");
+			});
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			return _react2.default.createElement(
@@ -21160,68 +21197,51 @@ var Tools = exports.Tools = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						'div',
-						{ style: _toolsCss2.default.section },
+						{ className: 'section', style: _toolsCss2.default.section },
 						_react2.default.createElement(
 							'div',
-							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/javascript.png' }),
-							_react2.default.createElement(
-								'div',
-								null,
-								' ES6 '
-							)
+							{ style: _toolsCss2.default.skill },
+							'jasvascript'
 						),
 						_react2.default.createElement(
 							'div',
-							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/react.svg' }),
-							_react2.default.createElement(
-								'div',
-								null,
-								' react  '
-							)
+							{ style: _toolsCss2.default.skill },
+							'react'
 						),
 						_react2.default.createElement(
 							'div',
-							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/d3-outline.png' }),
-							_react2.default.createElement(
-								'div',
-								null,
-								' d3  '
-							)
-						),
-						' ',
-						_react2.default.createElement('br', null),
-						_react2.default.createElement(
-							'div',
-							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/html5.png' }),
-							_react2.default.createElement(
-								'div',
-								null,
-								' HTML5  '
-							)
+							{ style: _toolsCss2.default.skill },
+							'd3'
 						),
 						_react2.default.createElement(
 							'div',
-							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/sass.png' }),
-							_react2.default.createElement(
-								'div',
-								null,
-								' sass  '
-							)
+							{ style: _toolsCss2.default.skill },
+							'HTML5'
 						),
 						_react2.default.createElement(
 							'div',
-							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/css3.png' }),
-							_react2.default.createElement(
-								'div',
-								null,
-								' CSS3  '
-							)
+							{ style: _toolsCss2.default.skill },
+							'less'
+						),
+						_react2.default.createElement(
+							'div',
+							{ style: _toolsCss2.default.skill },
+							'CSS3'
+						),
+						_react2.default.createElement(
+							'div',
+							{ style: _toolsCss2.default.skill },
+							'wordpress'
+						),
+						_react2.default.createElement(
+							'div',
+							{ style: _toolsCss2.default.skill },
+							'grunt'
+						),
+						_react2.default.createElement(
+							'div',
+							{ style: _toolsCss2.default.skill },
+							'webpack'
 						)
 					)
 				),
@@ -21235,26 +21255,21 @@ var Tools = exports.Tools = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						'div',
-						{ style: _toolsCss2.default.section },
+						{ className: 'section', style: _toolsCss2.default.section },
 						_react2.default.createElement(
 							'div',
-							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/nodejshex.png' }),
-							_react2.default.createElement(
-								'div',
-								null,
-								' node.js  '
-							)
+							{ style: _toolsCss2.default.skill },
+							'node.js'
 						),
 						_react2.default.createElement(
 							'div',
-							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/socketiologo.png' }),
-							_react2.default.createElement(
-								'div',
-								null,
-								' socket.io  '
-							)
+							{ style: _toolsCss2.default.skill },
+							'socket.io'
+						),
+						_react2.default.createElement(
+							'div',
+							{ style: _toolsCss2.default.skill },
+							'PHP'
 						)
 					)
 				),
@@ -21268,16 +21283,11 @@ var Tools = exports.Tools = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						'div',
-						null,
+						{ className: 'section', style: _toolsCss2.default.section },
 						_react2.default.createElement(
 							'div',
-							{ style: _toolsCss2.default.logoText },
-							_react2.default.createElement('img', { style: _toolsCss2.default.pic, src: 'public/assets/mysql.svg' }),
-							_react2.default.createElement(
-								'div',
-								null,
-								' MySQL  '
-							)
+							{ style: _toolsCss2.default.skill },
+							'MySQL'
 						)
 					)
 				)
@@ -21380,25 +21390,14 @@ exports.default = {
 		display: "flex",
 		flexDirection: "row",
 		justifyContent: "space-around",
-		alignItems: "center"
-
+		alignItems: "center",
+		borderTop: "2px solid #F25F5C"
 	},
 
 	icons: {
 		fontSize: "3rem",
-		cursor: "pointer"
-	},
-
-	github: {
-		color: "#247BA0"
-	},
-
-	linkedin: {
-		color: "#F25F5C"
-	},
-
-	mail: {
-		color: "#FFE066"
+		cursor: "pointer",
+		color: "black"
 	},
 
 	pointy: {
@@ -21484,41 +21483,43 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = {
 
 	container: {
-		width: "auto",
 		height: "auto",
 		color: "#FFF",
 		fontSize: '1rem',
 		backgroundColor: "#333333",
 		fontFamily: 'Montserrat',
-		display: 'flex',
-		flexDirection: 'row',
-		justifyContent: 'space-around',
-		padding: "7%"
+		whiteSpace: "nowrap",
+		padding: "4%",
+		paddingTop: "5%",
+		display: "flex",
+		flexDirection: "row",
+		justifyContent: "center"
+
+	},
+
+	skillSection: {
+		width: "35rem",
+		marginRight: "5rem"
 	},
 
 	section: {
 		display: "flex",
 		flexDirection: "row",
-		justifyContent: "space-between",
-		textAlign: 'center'
+		justifyContent: "space-around",
+		textAlign: 'center',
+		flexWrap: 'wrap'
 	},
 
-	pic: {
-		height: "3rem",
-		width: "3rem",
-		display: "block",
-		margin: "0 auto"
-	},
-
-	logoText: {
-		paddingRight: "12%",
-		textAlign: "center"
-	},
-
-	styleSection: {
-		display: "flex",
-		flexDirection: "column",
-		justifyContent: "space-between"
+	skill: {
+		textAlign: "center",
+		width: "auto",
+		border: "2px solid #FFF",
+		borderRadius: "5%",
+		padding: ".7rem",
+		fontSize: '1rem',
+		marginRight: '.5rem',
+		marginBottom: '.3rem',
+		cursor: 'pointer'
 	},
 
 	sectionTitle: {

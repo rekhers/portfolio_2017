@@ -12,6 +12,11 @@ html, body{
 }
 
 
+/*
+*
+* HEADER -- Chevron styles / animation
+*
+*/
 #chevronHolder{
 	width: auto;
 	height:auto;
@@ -24,8 +29,7 @@ html, body{
 
 		.chevron{
 			margin-top: -30px;
-					border-width: 0.1em 0.1em 0 0;
-
+			border-width: 0.1em 0.1em 0 0;
 			color:#FFF;
 		}
 	}
@@ -51,22 +55,29 @@ html, body{
 	}
 
 
-	.blue{
-		color: #247BA0;
-	}
+		.blue{
+			color: #247BA0;
+		}
 
-	.red{
-		color:#F25F5C;
-	}
+		.red{
+			color:#F25F5C;
+		}
 
-	.yellow{
-		color:#FFE066;
-	}
+		.yellow{
+			color:#FFE066;
+		}
 
 
 }
 
 
+
+
+/*
+*
+* NAVBAR 
+*
+*/
 .navbar{
 	background-color: #FFF;
 	width: 100%;
@@ -86,20 +97,18 @@ html, body{
 				background-size: 200% 200%;              
 			   -webkit-background-clip: text;
                -webkit-text-fill-color: transparent;
-				// -webkit-animation: Gradient 7s ease infinite;
 				padding-left: 5%;
 				padding-right: 10%;
 				padding-top: 1rem;
 				padding-bottom: 1%;
+    			white-space: nowrap;
 
 
-			
-
-			         &:hover{
-			         	cursor:pointer;
-              		background: #F25F5C;
-           			 -webkit-text-fill-color: #FFF;
-              }
+				       &:hover{
+				         cursor:pointer;
+	              		 background: #F25F5C;
+	           			 -webkit-text-fill-color: #FFF;
+	             	 }
             }
 
         	.nameSelect{
@@ -150,22 +159,19 @@ html, body{
 
 
 
-
-
-
 /*
 *
-* PROJECTS STYLES
+* PROJECTS 
 *
 */
- .projects{
-
+ .project-container{
 		background: #247BA0;
-		display: flex;
-
 		color: #FFF;
 		font-family: Montserrat;
 		font-size: 1.3rem;
+		padding: 5%;
+		overflow: scroll;
+		height: 50%;
 
   .pic{
 	  width: 22em;
@@ -242,15 +248,18 @@ html, body{
 
 }
 
-.container{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	padding: 5%;
-	height: auto;
-}
+
 }
 
+
+
+
+
+/*
+*
+* CONTACT -- pointy finger styles
+*
+*/
 .pointy{
 	font-size: 2em;
 	cursor:pointer;
@@ -261,6 +270,9 @@ html, body{
             -webkit-text-fill-color: transparent;
 	}
 }
+
+
+
 
   @-webkit-keyframes Gradient {
 	0% {

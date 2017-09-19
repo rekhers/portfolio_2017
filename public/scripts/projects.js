@@ -1,34 +1,20 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import { Tools } from '../scripts/tools.js';
 
 
-export class Projects extends React.Component{
+class ProjectDiv extends React.Component{
 
-	constructor(){
-		super();
-	// 	this.state = { overlay: { 
-	// 		position: 'absolute',
-	// 		top: '0',
-	// 		left: '0',
-	// 		width: '100%',
-	// 		height: '100%',
-	// 		backgroundColor: 'black',
-	// 		zIndex: '50',
-	// 		opacity: '.5',
-	// 		overflowx:'hidden'
-	// 	}
-	// }
+	constructor(props){
+		super(props);
+		this.state = {skills: this.props.skills}
 	}
 
-
-
 	render(){
-		return (<div className="projects" id="projects"> 
+		return (
 
-
-		<div className="container"> 
-
+		<div className="project-container"> 
 
 					<div className="picHolderMedium"> 
 						<img className="mediumpic" src='public/assets/toptracks.png'/>
@@ -89,10 +75,31 @@ export class Projects extends React.Component{
 
 					</div> 
 
-		</div>
-
 		</div>)
 
+	}
+}
+
+
+export class Projects extends React.Component{
+
+	constructor(){
+		super()
+		this.state = {skills: ["javscript", "react", "html", "css"]} 
+	}
+
+	handleHover(e){
+		console.log("in hover");
+		console.log(e.target);
+	}
+
+	render(){
+	return (
+		<div id="projects">
+			<Tools onClick={() => this.handleClick} />
+			<ProjectDiv skills={this.state.skills} />
+		</div>
+		)
 	}
 }
 

@@ -1,42 +1,46 @@
 export default{
 	
 	container:{
-		width: "auto",
 		height: "auto",
 		color: "#FFF",
 		fontSize: '1rem',
 		backgroundColor: "#333333",
 		fontFamily: 'Montserrat',
-		display: 'flex',
-		flexDirection: 'row',
-		justifyContent: 'space-around',
-		padding: "7%"
+		whiteSpace: "nowrap",
+		padding: "4%",
+		paddingTop: "5%",
+		display: "flex",
+		flexDirection: "row",
+		justifyContent: "center"
+
+	},
+
+	skillSection:{
+		width: "35rem",
+		marginRight: "5rem"
 	},
 
 	section:{
 		display: "flex",
 		flexDirection: "row",
-		justifyContent: "space-between",
-		textAlign: 'center'
+		justifyContent: "space-around",
+		textAlign: 'center',
+		flexWrap: 'wrap' 
 	},
 
-	pic: {
-		height: "3rem",
-		width: "3rem",
-		display: "block",
-		margin: "0 auto"
+
+	skill:{
+		textAlign: "center",
+		width: "auto",
+		border: "2px solid #FFF",
+		borderRadius: "5%",
+		padding: ".7rem",
+		fontSize: '1rem',
+		marginRight: '.5rem',
+		marginBottom: '.3rem',
+		cursor: 'pointer'
 	},
 
-	logoText:{
-		paddingRight: "12%",
-		textAlign: "center"
-	},
-
-	styleSection:{
-		display: "flex",
-		flexDirection:"column",
-		justifyContent: "space-between"
-	},
 
 	sectionTitle:{
 		fontSize: '1.5rem',

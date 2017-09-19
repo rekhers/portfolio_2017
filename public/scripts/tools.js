@@ -11,53 +11,63 @@ import styles from '../stylesheets/tools.css.js';
 */
 
 export class Tools extends React.Component{
-	constructor(){
-		super();
+	constructor(props){
+		super(props);
+	}
+
+	componentDidMount(){
+		$(".section div").hover(function(e){
+			$(this).css("background-color", "#FFF").css("color", "black");
+		}, function(){
+			$(this).css("background-color", "#333333").css("color", "#FFF");
+		})
 	}
 
 	render(){
 		return( 
 			<div id="tools" style={styles.container}>
 
-
 				<div id="client" style={styles.skillSection}> 
 					
 					<div style={styles.sectionTitle}> Client </div>
 
-					<div style={styles.section}>
+					<div className="section" style={styles.section}>
 
-					<div style={styles.logoText}>   
-						<img style={styles.pic} src='public/assets/javascript.png'/>
-						<div> ES6 </div>
-					</div> 
+							<div style={styles.skill}>   
+								jasvascript 
+							</div> 
 
-					<div style={styles.logoText}> 
-						<img style={styles.pic} src='public/assets/react.svg'/>
-						<div> react  </div>
-
-					</div> 
-
-					<div style={styles.logoText}> 
-						<img style={styles.pic} src='public/assets/d3-outline.png'/>
-						<div> d3  </div>
-					</div> <br/>
-
-					<div style={styles.logoText}> 
-						<img style={styles.pic} src='public/assets/html5.png'/>
-						<div> HTML5  </div>
-					</div> 
-
-					<div style={styles.logoText}> 
-						<img style={styles.pic} src='public/assets/sass.png'/>
-						<div> sass  </div>
-					</div> 
-
-					<div style={styles.logoText}> 
-						<img style={styles.pic} src='public/assets/css3.png'/>
-						<div> CSS3  </div>
-					</div> 
+							<div style={styles.skill}> 
+								react  
+								</div>
 
 
+							<div style={styles.skill}> 
+								d3  
+								</div>
+
+							<div style={styles.skill}> 
+								 HTML5 
+							</div> 
+
+							<div style={styles.skill}> 
+								less
+							</div> 
+
+							<div style={styles.skill}> 
+								CSS3  
+							</div> 
+
+							<div style={styles.skill}> 
+							wordpress
+							</div> 
+							<div style={styles.skill}> 
+							grunt
+							</div> 
+
+							<div style={styles.skill}> 
+							webpack
+							</div> 
 					</div>
 
 				</div>
@@ -66,31 +76,32 @@ export class Tools extends React.Component{
 
 					<div style={styles.sectionTitle}> Server </div>
 
-					<div style={styles.section}>
+						<div className="section" style={styles.section}>
 
-						<div style={styles.logoText}> 
-							<img style={styles.pic} src='public/assets/nodejshex.png'/>
-							<div> node.js  </div>
-						</div> 
+								<div style={styles.skill}> 
+										 node.js 
+								</div> 
 
 
-					<div style={styles.logoText}> 
-						<img style={styles.pic} src='public/assets/socketiologo.png'/>
-						<div> socket.io  </div>
-					</div> 
+							<div style={styles.skill}> 
+									 socket.io  
+							</div>
 
-				</div>
+							<div style={styles.skill}> 
+								PHP  
+							</div>  
+
+						</div>
 
 				</div>
 
 				<div id="database" style={styles.skillSection}> 
 					<div style={styles.sectionTitle}> Database </div>
 
-					<div>
+					<div className="section" style={styles.section}>
 
-							<div style={styles.logoText}> 
-								<img style={styles.pic} src='public/assets/mysql.svg'/>
-								<div> MySQL  </div>
+							<div style={styles.skill}> 
+									MySQL 
 							</div> 
 					</div>
 				</div>

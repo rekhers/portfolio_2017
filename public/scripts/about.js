@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import styles from '../stylesheets/about.css.js';
-import { Tools } from '../scripts/tools.js';
 
 /*
 *
@@ -13,7 +12,7 @@ import { Tools } from '../scripts/tools.js';
 const Bio = () => {
     return <div style={styles.bio}> I'm a javascript developer excited about visualizing data and 
                         
-                        thinking about how to do it in a way that might make the world a better and/or funner place.
+                        thinking about how to do it in a way that might make the world a better place.
                                     
                         I've gone down the React rabbit hole this past year, and I'm a better person for it.
                                     
@@ -40,7 +39,6 @@ export const About = () => {
       <Pic />
           <Bio /> 
       </div>
-      <Tools />
     </div> 
     )
 

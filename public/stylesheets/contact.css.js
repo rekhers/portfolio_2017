@@ -11,27 +11,17 @@ export default{
 	 flexDirection: "row",
 	 justifyContent: "space-around",
 	 alignItems: "center",
-
+	 borderTop: "2px solid #F25F5C"
 	},
 
 
 	icons:{
 			fontSize: "3rem",
 		  	cursor:"pointer",
+		  	color: "black"
 	},
 
-	github:{
-            color: "#247BA0"
-	 },
-
-	 linkedin:{
-	 	color: "#F25F5C"
-	 },
-
-	 mail:{
-		color: "#FFE066"
-	 },
-
+	
 
 	pointy: {
 		fontSize: "2em"
