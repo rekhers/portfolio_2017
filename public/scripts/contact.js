@@ -22,7 +22,7 @@ export class Contact extends React.Component{
 
 		 	<div onClick={this.props.onClick()} className="pointy" title="go back up">☝︎</div>
 
-		 	<div> designed & coded with ♥ by me </div>
+		 	<div style={styles.smallText}> designed & coded with ♥ by me </div>
 		</div>)
 
 }

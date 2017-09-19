@@ -159,19 +159,10 @@ body {
 .project-container .overlay:hover {
   opacity: .87;
 }
-.project-container .picHolderThin {
-  margin: 5%;
+.project-container .picHolder {
   background-color: black;
-  position: relative;
   width: 10em;
   height: 10em;
-}
-.project-container .picHolder {
-  margin: 5%;
-  background-color: black;
-  position: relative;
-  width: 22em;
-  height: 12em;
 }
 .project-container .picHolderMedium {
   margin: 5%;

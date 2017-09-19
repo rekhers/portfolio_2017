@@ -33,39 +33,39 @@ export class Tools extends React.Component{
 
 					<div className="section" style={styles.section}>
 
-							<div style={styles.skill}>   
-								jasvascript 
+							<div id="javascript" style={styles.skill}>   
+								javascript 
 							</div> 
 
-							<div style={styles.skill}> 
+							<div id="react" style={styles.skill}> 
 								react  
 								</div>
 
 
-							<div style={styles.skill}> 
+							<div id="d3" style={styles.skill}> 
 								d3  
 								</div>
 
-							<div style={styles.skill}> 
+							<div id="html" style={styles.skill}> 
 								 HTML5 
 							</div> 
 
-							<div style={styles.skill}> 
+							<div id="less" style={styles.skill}> 
 								less
 							</div> 
 
-							<div style={styles.skill}> 
+							<div id="css" style={styles.skill}> 
 								CSS3  
 							</div> 
 
-							<div style={styles.skill}> 
+							<div id="wordpress" style={styles.skill}> 
 							wordpress
 							</div> 
-							<div style={styles.skill}> 
+							<div id="grunt" style={styles.skill}> 
 							grunt
 							</div> 
 
-							<div style={styles.skill}> 
+							<div id="webpack" style={styles.skill}> 
 							webpack
 							</div> 
 					</div>
@@ -78,16 +78,16 @@ export class Tools extends React.Component{
 
 						<div className="section" style={styles.section}>
 
-								<div style={styles.skill}> 
+								<div id="node" style={styles.skill}> 
 										 node.js 
 								</div> 
 
 
-							<div style={styles.skill}> 
+							<div id="socketio" style={styles.skill}> 
 									 socket.io  
 							</div>
 
-							<div style={styles.skill}> 
+							<div id="php" style={styles.skill}> 
 								PHP  
 							</div>  
 
