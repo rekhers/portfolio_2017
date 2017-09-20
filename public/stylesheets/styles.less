@@ -165,7 +165,7 @@ html, body{
 *
 */
  .project-container{
-		background: #247BA0;
+		background: #333333;
 		color: #FFF;
 		font-family: Montserrat;
 		font-size: 1.3rem;
@@ -216,7 +216,7 @@ html, body{
 	width: 30rem;
 	line-height: 2rem;
 	background-color: #FFF;
-	border: 2px solid #333333;
+	border: 1px solid #F25F5C;
 	font-size: .98rem;
 	color: #333333;
 	padding: 3rem;
@@ -282,6 +282,7 @@ html, body{
 .pointy{
 	font-size: 2em;
 	cursor:pointer;
+	padding-left: 87%;
 	&:hover{
 			background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
 			background-size: 200% 200%;              
@@ -291,6 +292,24 @@ html, body{
 }
 
 
+//when I use flexbox for this it changes the cog animation to an orbit instead of a spin
+.footer{
+ width: auto;
+ display: inline-block;
+ padding-left: 30rem;
+ padding-bottom: 3rem;
+
+	.cog{
+		display:inline-block;
+		margin-right: 2%;
+	}
+
+	.smallText{
+		font-family: Montserrat;
+		font-size: 1rem;
+		display: inline-block;
+	}
+}
 
 
   @-webkit-keyframes Gradient {

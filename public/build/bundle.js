@@ -20349,8 +20349,13 @@ var Contact = exports.Contact = function (_React$Component) {
 				),
 				_react2.default.createElement(
 					'div',
-					{ style: _contactCss2.default.smallText },
-					' designed & coded with \u2665 by me '
+					{ className: 'footer' },
+					_react2.default.createElement(_reactFontawesome2.default, { className: 'cog', name: 'cog', spin: true }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'smallText' },
+						' designed & coded with \u2665 by me '
+					)
 				)
 			);
 		}
@@ -20542,7 +20547,7 @@ var Navbar = exports.Navbar = function (_React$Component) {
                 * 
                 */
                 for (var id in divs) {
-                    window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 7 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 7 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
+                    window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 7 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 3 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
                 }
 
                 /*
@@ -20649,7 +20654,7 @@ var ProjectDiv = function (_React$Component) {
 		//list of projects and associated skills, with inherited props list of skills that reflect user's selection
 		var _this = _possibleConstructorReturn(this, (ProjectDiv.__proto__ || Object.getPrototypeOf(ProjectDiv)).call(this, props));
 
-		_this.state = { skills: _this.props.skills, projects: { toptracks: { skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication." }, tweets: { skills: ["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "An ongoing project that uses the Twitter API, Google Maps API, and the Natural Language Toolkit to visualize, filter, and analyze linguistic trends. This app was born out of a final project for a college computational linguistics course, in which I analyzed twitter corpora to compare whether the new england vernacular 'wicked' was being used as an adjective or adverb in any given context. 'That party was wicked' (adj) vs. 'She's wicked smart' (adv)." }, d3lifeglobe: { skills: ["javascript", "d3", "html", "css", "node"], src: "public/assets/d3lifeglobe.png", description: "tweets hehe" }, previousprofile: { skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png", description: "My previous profile -- a few d3 data visualizations in there that I'm proud of " } } };
+		_this.state = { skills: _this.props.skills, projects: { toptracks: { skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication." }, tweets: { skills: ["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "An ongoing project that uses the Twitter API, Google Maps API, and the Natural Language Toolkit to visualize, filter, and analyze linguistic trends. This app was born out of a final project for a college computational linguistics course, in which I analyzed twitter corpora to compare whether the new england vernacular 'wicked' was being used as an adjective or adverb in any given context. 'That party was wicked' (adj) vs. 'She's wicked smart' (adv)." }, d3lifeglobe: { skills: ["javascript", "d3", "html", "css", "node"], src: "public/assets/d3lifeglobe.png", description: "An animated d3 globe that rotates to a given coordinate and projects a path between the places that I've lived." }, previousprofile: { skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png", description: "My previous profile -- I'm proud of some of the d3 data visualizations that I built for it and not so proud of the lack of responsiveness." }, thisprofile: { skills: ["react", "webpack", "css", "less", "html", "node"], src: "", description: "This single page app was built with react which allowed me to flexibly integrate this filter function class component with other pure component sections. Building this app tested my commitment to inline styles with React. Since many of these components require animation that I'm accustomed to using pseudo selectors and css for, I opted to " } } };
 
 		return _this;
 	}
@@ -20666,10 +20671,16 @@ var ProjectDiv = function (_React$Component) {
 				this.filteredProjects();
 			});
 		}
+
+		/*
+  *
+  * filter logic that updates selected skills and passes it up to its parent component 
+  *
+  */
+
 	}, {
 		key: 'filteredProjects',
 		value: function filteredProjects() {
-
 			var skills = _underscore2.default.values(this.state.skills);
 			var obj = this.state.projects;
 			var out = [];
@@ -20680,7 +20691,6 @@ var ProjectDiv = function (_React$Component) {
 					out.push(obj[key]);
 				}
 			}
-
 			this.setState({ filteredProjects: out });
 		}
 	}, {
@@ -21466,29 +21476,34 @@ exports.default = {
 	container: {
 		height: "30%",
 		backgroundColor: "#FFF",
-		borderTop: "2px solid #F25F5C"
+		borderTop: "2px solid #F25F5C",
+		display: "flex",
+		flexDirection: "column"
 	},
 
 	icons: {
 		fontSize: "3rem",
 		cursor: "pointer",
-		color: "black"
+		color: "#247BA0"
 	},
 
 	iconRow: {
 		display: "flex",
 		flexDirection: "row",
 		justifyContent: "space-around",
-		alignItems: "center"
+		alignItems: "center",
+		padding: "5%"
 	},
 
 	smallText: {
 		fontFamily: 'Montserrat',
-		fontSize: '.7rem'
-
+		fontSize: '.7rem',
+		paddingLeft: "80rem",
+		paddingTop: "10rem"
 	},
 
 	pointy: {
+		paddingLeft: "75rem",
 		fontSize: "2em"
 	}
 

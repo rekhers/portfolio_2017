@@ -12,7 +12,7 @@ class ProjectDiv extends React.Component{
 		super(props);
 
 		//list of projects and associated skills, with inherited props list of skills that reflect user's selection
-		this.state = {skills: this.props.skills, projects: {toptracks: {skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication."}, tweets:{skills:["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "An ongoing project that uses the Twitter API, Google Maps API, and the Natural Language Toolkit to visualize, filter, and analyze linguistic trends. This app was born out of a final project for a college computational linguistics course, in which I analyzed twitter corpora to compare whether the new england vernacular 'wicked' was being used as an adjective or adverb in any given context. 'That party was wicked' (adj) vs. 'She's wicked smart' (adv)."}, d3lifeglobe: {skills: ["javascript", "d3", "html", "css", "node"], src: "public/assets/d3lifeglobe.png",  description: "tweets hehe"}, previousprofile: {skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png",  description: "My previous profile -- a few d3 data visualizations in there that I'm proud of "}}}
+		this.state = {skills: this.props.skills, projects: {toptracks: {skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication."}, tweets:{skills:["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "An ongoing project that uses the Twitter API, Google Maps API, and the Natural Language Toolkit to visualize, filter, and analyze linguistic trends. This app was born out of a final project for a college computational linguistics course, in which I analyzed twitter corpora to compare whether the new england vernacular 'wicked' was being used as an adjective or adverb in any given context. 'That party was wicked' (adj) vs. 'She's wicked smart' (adv)."}, d3lifeglobe: {skills: ["javascript", "d3", "html", "css", "node"], src: "public/assets/d3lifeglobe.png",  description: "An animated d3 globe that rotates to a given coordinate and projects a path between the places that I've lived."}, previousprofile: {skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png",  description: "My previous profile -- I'm proud of some of the d3 data visualizations that I built for it and not so proud of the lack of responsiveness."}, thisprofile: {skills: ["react","webpack", "css", "less", "html", "node"], src: "",  description: "This single page app was built with react which allowed me to flexibly integrate this filter function class component with other pure component sections. Building this app tested my commitment to inline styles with React. Since many of these components require animation that I'm accustomed to using pseudo selectors and css for, I opted to "}}}
 
 	}
 
@@ -26,8 +26,14 @@ class ProjectDiv extends React.Component{
 		})
 	}
 
-	filteredProjects(){
 
+
+	/*
+	*
+	* filter logic that updates selected skills and passes it up to its parent component 
+	*
+	*/
+	filteredProjects(){
 		var skills = _.values(this.state.skills);
 		var obj = this.state.projects;
 		var out = [];
@@ -38,10 +44,7 @@ class ProjectDiv extends React.Component{
 				out.push(obj[key]);
 			}
 		}
-
 		this.setState({filteredProjects: out})
-
-
 	}
 
 
