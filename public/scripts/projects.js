@@ -12,7 +12,7 @@ class ProjectDiv extends React.Component{
 		super(props);
 
 		//list of projects and associated skills, with inherited props list of skills that reflect user's selection
-		this.state = {skills: this.props.skills, projects: {toptracks: {skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication."}, tweets:{skills:["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "tweets hehe"}, d3lifeglobe: {skills: ["javascript", "d3", "html", "css", "node"], src: "public/assets/d3lifeglobe.png",  description: "tweets hehe"}, previousprofile: {skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png",  description: "tweets hehe"}}}
+		this.state = {skills: this.props.skills, projects: {toptracks: {skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication."}, tweets:{skills:["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "An ongoing project that uses the Twitter API, Google Maps API, and the Natural Language Toolkit to visualize, filter, and analyze linguistic trends. This app was born out of a final project for a college computational linguistics course, in which I analyzed twitter corpora to compare whether the new england vernacular 'wicked' was being used as an adjective or adverb in any given context. 'That party was wicked' (adj) vs. 'She's wicked smart' (adv)."}, d3lifeglobe: {skills: ["javascript", "d3", "html", "css", "node"], src: "public/assets/d3lifeglobe.png",  description: "tweets hehe"}, previousprofile: {skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png",  description: "My previous profile -- a few d3 data visualizations in there that I'm proud of "}}}
 
 	}
 
@@ -56,7 +56,7 @@ class ProjectDiv extends React.Component{
 		if(projects.length > 0) {
  
 			return (<div className="project-container">
-				 <div> Choose some skills from above to see how I've used them! </div> 
+				 <div className="chooseText"> Choose some skills from above to see how I've used them! </div> 
 				{Object.keys(projects).map(function(key, i){ 
 	  					return (<div key={i} className="picHolder">
 	  							<img className="pic" src={projects[key].src}/>
@@ -66,14 +66,14 @@ class ProjectDiv extends React.Component{
   			</div>)
 		}else{
 			return 	(<div className="project-container">
-			<div> Choose some skills from above to see how I've used them! </div> 
+			<div className="chooseText"> Choose some skills from above to see how I've used them! </div> 
 			</div>)
 
 		}
 
 	} else{
 			return (<div className="project-container">
-			<div> Choose some skills from above to see how I've used them! </div> 
+			<div className="chooseText"> Choose some skills from above to see how I've used them! </div> 
 			</div>)
 		}
 }

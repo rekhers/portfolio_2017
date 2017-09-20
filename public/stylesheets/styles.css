@@ -159,8 +159,11 @@ body {
 .project-container .overlay:hover {
   opacity: .87;
 }
+.project-container .chooseText {
+  margin-left: 7%;
+}
 .project-container .description {
-  width: 20rem;
+  width: 30rem;
   line-height: 2rem;
   background-color: #FFF;
   border: 2px solid #333333;

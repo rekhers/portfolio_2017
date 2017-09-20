@@ -20538,11 +20538,11 @@ var Navbar = exports.Navbar = function (_React$Component) {
 
                 /*
                 *
-                * If we've scrolled past a third of the previous component, highlight the next corresponding nav div
+                * In a world where I had made the component sizes all the same this would have worked for all the cases. But alas.
                 * 
                 */
                 for (var id in divs) {
-                    window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 8 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 3 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
+                    window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 7 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 7 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
                 }
 
                 /*
@@ -20550,7 +20550,10 @@ var Navbar = exports.Navbar = function (_React$Component) {
                 * Special cases handle the less than half page contact component and the highlighting of the name div  
                 * 
                 */
-                window.pageYOffset > (0, _jquery2.default)("#projects").position().top + (0, _jquery2.default)("#projects").height() / 4 ? (0, _jquery2.default)(that.refs.contact).addClass("selected") : (0, _jquery2.default)(that.refs.contact).removeClass("selected");
+
+                window.pageYOffset > (0, _jquery2.default)("#about").position().top - (0, _jquery2.default)("#about").height() && window.pageYOffset < (0, _jquery2.default)("#projects").position().top - (0, _jquery2.default)("#about").height() / 3 ? (0, _jquery2.default)(that.refs.about).addClass("selected") : (0, _jquery2.default)(that.refs.about).removeClass("selected");
+
+                window.pageYOffset > (0, _jquery2.default)("#projects").position().top + (0, _jquery2.default)("#projects").height() / 7 ? (0, _jquery2.default)(that.refs.contact).addClass("selected") : (0, _jquery2.default)(that.refs.contact).removeClass("selected");
 
                 window.pageYOffset < (0, _jquery2.default)("#about").position().top - (0, _jquery2.default)("#about").position().top / 5 ? (0, _jquery2.default)(".nameTitle").addClass("nameSelect") : (0, _jquery2.default)(".nameTitle").removeClass("nameSelect");
             });
@@ -20646,7 +20649,7 @@ var ProjectDiv = function (_React$Component) {
 		//list of projects and associated skills, with inherited props list of skills that reflect user's selection
 		var _this = _possibleConstructorReturn(this, (ProjectDiv.__proto__ || Object.getPrototypeOf(ProjectDiv)).call(this, props));
 
-		_this.state = { skills: _this.props.skills, projects: { toptracks: { skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication." }, tweets: { skills: ["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "tweets hehe" }, d3lifeglobe: { skills: ["javascript", "d3", "html", "css", "node"], src: "public/assets/d3lifeglobe.png", description: "tweets hehe" }, previousprofile: { skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png", description: "tweets hehe" } } };
+		_this.state = { skills: _this.props.skills, projects: { toptracks: { skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication." }, tweets: { skills: ["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "An ongoing project that uses the Twitter API, Google Maps API, and the Natural Language Toolkit to visualize, filter, and analyze linguistic trends. This app was born out of a final project for a college computational linguistics course, in which I analyzed twitter corpora to compare whether the new england vernacular 'wicked' was being used as an adjective or adverb in any given context. 'That party was wicked' (adj) vs. 'She's wicked smart' (adv)." }, d3lifeglobe: { skills: ["javascript", "d3", "html", "css", "node"], src: "public/assets/d3lifeglobe.png", description: "tweets hehe" }, previousprofile: { skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png", description: "My previous profile -- a few d3 data visualizations in there that I'm proud of " } } };
 
 		return _this;
 	}
@@ -20697,7 +20700,7 @@ var ProjectDiv = function (_React$Component) {
 						{ className: 'project-container' },
 						_react2.default.createElement(
 							'div',
-							null,
+							{ className: 'chooseText' },
 							' Choose some skills from above to see how I\'ve used them! '
 						),
 						Object.keys(projects).map(function (key, i) {
@@ -20720,7 +20723,7 @@ var ProjectDiv = function (_React$Component) {
 						{ className: 'project-container' },
 						_react2.default.createElement(
 							'div',
-							null,
+							{ className: 'chooseText' },
 							' Choose some skills from above to see how I\'ve used them! '
 						)
 					);
@@ -20731,7 +20734,7 @@ var ProjectDiv = function (_React$Component) {
 					{ className: 'project-container' },
 					_react2.default.createElement(
 						'div',
-						null,
+						{ className: 'chooseText' },
 						' Choose some skills from above to see how I\'ve used them! '
 					)
 				);

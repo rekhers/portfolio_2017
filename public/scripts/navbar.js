@@ -34,11 +34,11 @@ export class Navbar extends React.Component {
 
             /*
             *
-            * If we've scrolled past a third of the previous component, highlight the next corresponding nav div
+            * In a world where I had made the component sizes all the same this would have worked for all the cases. But alas.
             * 
             */
             for(var id in divs){   
-                    window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/8 && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/3 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
+                    window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/7 && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/7 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
                     }
 
 
@@ -47,7 +47,10 @@ export class Navbar extends React.Component {
             * Special cases handle the less than half page contact component and the highlighting of the name div  
             * 
             */
-             window.pageYOffset > $("#projects").position().top + $("#projects").height()/4 ? $(that.refs.contact).addClass("selected") :$(that.refs.contact).removeClass("selected");
+
+            window.pageYOffset > $("#about").position().top -  $("#about").height() && window.pageYOffset < $("#projects").position().top - $("#about").height()/3 ? $(that.refs.about).addClass("selected") : $(that.refs.about).removeClass("selected");
+
+             window.pageYOffset > $("#projects").position().top + $("#projects").height()/7 ? $(that.refs.contact).addClass("selected") :$(that.refs.contact).removeClass("selected");
 
             window.pageYOffset < $("#about").position().top - $("#about").position().top/5 ? $(".nameTitle").addClass("nameSelect") : $(".nameTitle").removeClass("nameSelect");
                 }) 
