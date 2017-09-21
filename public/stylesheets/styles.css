@@ -129,7 +129,7 @@ body {
   font-size: 1.3rem;
   padding: 4%;
   overflow: scroll;
-  height: auto;
+  height: 50%;
 }
 .project-container .pic {
   width: 16em;
@@ -204,9 +204,9 @@ body {
   width: auto;
   border: 2px solid #FFF;
   border-radius: 5%;
-  padding: .7rem;
-  font-size: 1rem;
-  margin-rght: .5rem;
+  padding: .4rem;
+  font-size: .7rem;
+  margin-right: .5rem;
   margin-bottom: .3rem;
   cursor: pointer;
 }
@@ -229,8 +229,8 @@ body {
 .footer {
   width: auto;
   display: inline-block;
-  padding-left: 30rem;
-  padding-bottom: 3rem;
+  padding-left: 40%;
+  padding-bottom: 5%;
 }
 .footer .cog {
   display: inline-block;
@@ -238,7 +238,7 @@ body {
 }
 .footer .smallText {
   font-family: Montserrat;
-  font-size: 1rem;
+  font-size: 80%;
   display: inline-block;
 }
 @-webkit-keyframes Gradient {

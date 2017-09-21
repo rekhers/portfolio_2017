@@ -7,12 +7,13 @@ export default{
 		backgroundColor: "#333333",
 		fontFamily: 'Montserrat',
 		whiteSpace: "nowrap",
-		padding: "4%",
-		paddingTop: "5%",
+		padding: "2%",
+		paddingTop: "3%",
 		display: "flex",
 		flexDirection: "row",
-		justifyContent: "center"
-
+		justifyContent: "center",
+		borderBottom: "1px solid #FFF",
+		paddingTop: "5%"
 	},
 
 	skillSection:{
@@ -29,21 +30,10 @@ export default{
 	},
 
 
-	skill:{
-		textAlign: "center",
-		width: "auto",
-		border: "2px solid #FFF",
-		borderRadius: "5%",
-		padding: ".7rem",
-		fontSize: '1rem',
-		marginRight: '.5rem',
-		marginBottom: '.3rem',
-		cursor: 'pointer'
-	},
 
 
 	sectionTitle:{
-		fontSize: '1.5rem',
+		fontSize: '1rem',
 		paddingBottom: '1rem',
 		textAlign:'center'
 	}
