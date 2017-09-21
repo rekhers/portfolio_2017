@@ -32,15 +32,30 @@ const Pic = () =>{
 
 
 
-export const About = () => {
+export class About extends React.Component{
+
+
+  constructor(props){
+    super(props);
+  }
+
+
+  render(){
   return (
     <div id="about" > 
       <div style={styles.container}>
-      <Pic />
+      <div style={styles.lilRow}> 
+          <Pic />
           <Bio /> 
+          </div> 
+          <div style={styles.pointDownDiv}> 
+          <div style={styles.text}> click to see my projects below</div> 
+          <div onClick={this.props.onClick()} className="pointDown">☟</div> 
       </div>
     </div> 
+    </div>
     )
+}
 
 }
 

@@ -8,12 +8,18 @@ container:{
   backgroundColor: "#FFF",
   color: "black",
   display: "flex",
-  flexDirection: "row",
+  flexDirection: "column",
   justifyContent: "center",
   alignItems:"center",
   height: "auto",
-  marginTop: '5%',
+  marginTop: '2%',
   marginBottom: '2%'
+},
+
+lilRow:{
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center"
 },
 
 tools:{
@@ -27,6 +33,23 @@ bio:{
   width: "60%",
   marginTop: "2%",
   marginBottom: "5%"
+},
+
+pointDownDiv:{
+  display:"flex",
+  flexDirection: "row",
+  alignItems: "center"
+},
+
+text:{
+  fontFamily: 'Montserrat',
+  fontSize: '1rem',
+},
+
+pointDown:{
+  fontSize: "2.5rem",
+  paddingLeft: '1rem',
+  cursor: "pointer"
 },
 
 pic:{

@@ -210,6 +210,17 @@ body {
   margin-bottom: .3rem;
   cursor: pointer;
 }
+.pointDown {
+  font-size: 2.5rem;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+.pointDown:hover {
+  background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 /*
 *
 * CONTACT -- pointy finger styles

@@ -20211,6 +20211,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.About = undefined;
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(8);
 
 var _react2 = _interopRequireDefault(_react);
@@ -20228,6 +20230,12 @@ var _aboutCss = __webpack_require__(98);
 var _aboutCss2 = _interopRequireDefault(_aboutCss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /*
 *
@@ -20251,18 +20259,51 @@ var Pic = function Pic() {
   );
 };
 
-var About = exports.About = function About() {
-  return _react2.default.createElement(
-    'div',
-    { id: 'about' },
-    _react2.default.createElement(
-      'div',
-      { style: _aboutCss2.default.container },
-      _react2.default.createElement(Pic, null),
-      _react2.default.createElement(Bio, null)
-    )
-  );
-};
+var About = exports.About = function (_React$Component) {
+  _inherits(About, _React$Component);
+
+  function About(props) {
+    _classCallCheck(this, About);
+
+    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this, props));
+  }
+
+  _createClass(About, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { id: 'about' },
+        _react2.default.createElement(
+          'div',
+          { style: _aboutCss2.default.container },
+          _react2.default.createElement(
+            'div',
+            { style: _aboutCss2.default.lilRow },
+            _react2.default.createElement(Pic, null),
+            _react2.default.createElement(Bio, null)
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: _aboutCss2.default.pointDownDiv },
+            _react2.default.createElement(
+              'div',
+              { style: _aboutCss2.default.text },
+              ' click to see my projects below'
+            ),
+            _react2.default.createElement(
+              'div',
+              { onClick: this.props.onClick(), className: 'pointDown' },
+              '\u261F'
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return About;
+}(_react2.default.Component);
 
 /***/ }),
 /* 92 */
@@ -21411,12 +21452,18 @@ exports.default = {
     backgroundColor: "#FFF",
     color: "black",
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     height: "auto",
-    marginTop: '5%',
+    marginTop: '2%',
     marginBottom: '2%'
+  },
+
+  lilRow: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center"
   },
 
   tools: {
@@ -21430,6 +21477,23 @@ exports.default = {
     width: "60%",
     marginTop: "2%",
     marginBottom: "5%"
+  },
+
+  pointDownDiv: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center"
+  },
+
+  text: {
+    fontFamily: 'Montserrat',
+    fontSize: '1rem'
+  },
+
+  pointDown: {
+    fontSize: "2.5rem",
+    paddingLeft: '1rem',
+    cursor: "pointer"
   },
 
   pic: {
@@ -38016,6 +38080,8 @@ var Container = function (_React$Component) {
 				window.scroll({ top: 550, left: 0, behavior: 'smooth' });
 			} else if (event.target.innerText == "☝︎") {
 				document.getElementById("home").scrollIntoView({ behavior: 'smooth' });
+			} else if (event.target.innerText == "☟") {
+				document.getElementById("projects").scrollIntoView({ behavior: 'smooth' });
 			} else {
 				document.querySelector("#" + event.target.innerText).scrollIntoView({ behavior: 'smooth' });
 			}
@@ -38034,7 +38100,9 @@ var Container = function (_React$Component) {
 				_react2.default.createElement(_header.Header, { onClick: function onClick() {
 						return _this2.handleClick;
 					} }),
-				_react2.default.createElement(_about.About, null),
+				_react2.default.createElement(_about.About, { onClick: function onClick() {
+						return _this2.handleClick;
+					} }),
 				_react2.default.createElement(_projects.Projects, null),
 				_react2.default.createElement(_contact.Contact, { onClick: function onClick() {
 						return _this2.handleClick;
