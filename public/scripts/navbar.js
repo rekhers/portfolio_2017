@@ -32,6 +32,10 @@ export class Navbar extends React.Component {
         window.addEventListener("scroll", function(error){
 
 
+            console.log(document.getElementById('project-container').scrollTop);
+
+
+
             /*
             *
             * In a world where I had made the component sizes all the same this would have worked for all the cases. But alas.

@@ -38,6 +38,7 @@ bio:{
 pointDownDiv:{
   display:"flex",
   flexDirection: "row",
+  justifyContent: "flex-start",
   alignItems: "center"
 },
 

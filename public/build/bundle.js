@@ -20247,7 +20247,7 @@ var Bio = function Bio() {
   return _react2.default.createElement(
     'div',
     { style: _aboutCss2.default.bio },
-    ' I\'m a javascript developer excited about visualizing data and thinking about how to do it in a way that might make the world a better place. I\'ve gone down the React rabbit hole this past year, and I\'m a better person for it. Writing code is my vehicle to exploring the things that I\'m passionate about \u2014 music, language, and social justice.'
+    ' I\'m a javascript developer excited about visualizing data and thinking about how to do it in a way that might make the world better. I\'ve gone down the React rabbit hole this past year, and I\'m a better person for it. Writing code is my vehicle to exploring the things that I\'m passionate about \u2014 music, language, and social justice.'
   );
 };
 
@@ -20582,6 +20582,8 @@ var Navbar = exports.Navbar = function (_React$Component) {
 
             window.addEventListener("scroll", function (error) {
 
+                console.log(document.getElementById('project-container').scrollTop);
+
                 /*
                 *
                 * In a world where I had made the component sizes all the same this would have worked for all the cases. But alas.
@@ -20748,12 +20750,7 @@ var ProjectDiv = function (_React$Component) {
 
 					return _react2.default.createElement(
 						'div',
-						{ className: 'project-container' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'chooseText' },
-							' Choose some skills from above to see how I\'ve used them! '
-						),
+						{ id: 'project-container', className: 'project-container' },
 						Object.keys(projects).map(function (key, i) {
 							return _react2.default.createElement(
 								'div',
@@ -20775,7 +20772,7 @@ var ProjectDiv = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							{ className: 'chooseText' },
-							' Choose some skills from above to see how I\'ve used them! '
+							' Choose some skills to see how I\'ve used them! '
 						)
 					);
 				}
@@ -21482,6 +21479,7 @@ exports.default = {
   pointDownDiv: {
     display: "flex",
     flexDirection: "row",
+    justifyContent: "flex-start",
     alignItems: "center"
   },
 
@@ -21647,28 +21645,28 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _container;
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 exports.default = {
 
-	container: _defineProperty({
+	container: (_container = {
 		height: "auto",
 		color: "#FFF",
 		fontSize: '1rem',
 		backgroundColor: "#333333",
 		fontFamily: 'Montserrat',
 		whiteSpace: "nowrap",
-		padding: "2%",
 		paddingTop: "3%",
 		display: "flex",
-		flexDirection: "row",
-		justifyContent: "center",
-		borderBottom: "1px solid #FFF"
-	}, "paddingTop", "5%"),
+		flexDirection: "column",
+		justifyContent: "center"
+	}, _defineProperty(_container, "paddingTop", "5%"), _defineProperty(_container, "width", "20%"), _defineProperty(_container, "paddingLeft", "3%"), _container),
 
 	skillSection: {
-		width: "35rem",
-		marginRight: "5rem"
+		// width: "35rem",
+		marginBottom: "5rem"
 	},
 
 	section: {

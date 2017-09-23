@@ -58,8 +58,7 @@ class ProjectDiv extends React.Component{
 		const projects = this.state.filteredProjects;
 		if(projects.length > 0) {
  
-			return (<div className="project-container">
-				 <div className="chooseText"> Choose some skills from above to see how I've used them! </div> 
+			return (<div id="project-container" className="project-container">
 				{Object.keys(projects).map(function(key, i){ 
 	  					return (<div key={i} className="picHolder">
 	  							<img className="pic" src={projects[key].src}/>
@@ -69,7 +68,7 @@ class ProjectDiv extends React.Component{
   			</div>)
 		}else{
 			return 	(<div className="project-container">
-			<div className="chooseText"> Choose some skills from above to see how I've used them! </div> 
+			<div className="chooseText"> Choose some skills to see how I've used them! </div> 
 			</div>)
 
 		}

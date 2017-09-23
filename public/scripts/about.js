@@ -12,7 +12,7 @@ import styles from '../stylesheets/about.css.js';
 const Bio = () => {
     return <div style={styles.bio}> I'm a javascript developer excited about visualizing data and 
                         
-                        thinking about how to do it in a way that might make the world a better place.
+                        thinking about how to do it in a way that might make the world better.
                                     
                         I've gone down the React rabbit hole this past year, and I'm a better person for it.
                                     

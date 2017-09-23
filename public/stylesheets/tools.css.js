@@ -7,18 +7,18 @@ export default{
 		backgroundColor: "#333333",
 		fontFamily: 'Montserrat',
 		whiteSpace: "nowrap",
-		padding: "2%",
 		paddingTop: "3%",
 		display: "flex",
-		flexDirection: "row",
+		flexDirection: "column",
 		justifyContent: "center",
-		borderBottom: "1px solid #FFF",
-		paddingTop: "5%"
+		paddingTop: "5%",
+		width: "20%",
+		paddingLeft: "3%"
 	},
 
 	skillSection:{
-		width: "35rem",
-		marginRight: "5rem"
+		// width: "35rem",
+		marginBottom: "5rem"
 	},
 
 	section:{
