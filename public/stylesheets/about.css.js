@@ -13,7 +13,8 @@ container:{
   alignItems:"center",
   height: "auto",
   marginTop: '2%',
-  marginBottom: '2%'
+  marginBottom: '2%',
+  padding: "2rem"
 },
 
 lilRow:{
@@ -39,7 +40,8 @@ pointDownDiv:{
   display:"flex",
   flexDirection: "row",
   justifyContent: "flex-start",
-  alignItems: "center"
+  alignItems: "center",
+  marginRight: "17%"
 },
 
 text:{

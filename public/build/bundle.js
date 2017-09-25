@@ -20289,7 +20289,7 @@ var About = exports.About = function (_React$Component) {
             _react2.default.createElement(
               'div',
               { style: _aboutCss2.default.text },
-              ' click to see my projects below'
+              ' check out my projects below'
             ),
             _react2.default.createElement(
               'div',
@@ -20697,7 +20697,7 @@ var ProjectDiv = function (_React$Component) {
 		//list of projects and associated skills, with inherited props list of skills that reflect user's selection
 		var _this = _possibleConstructorReturn(this, (ProjectDiv.__proto__ || Object.getPrototypeOf(ProjectDiv)).call(this, props));
 
-		_this.state = { skills: _this.props.skills, projects: { toptracks: { skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication." }, tweets: { skills: ["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "An ongoing project that uses the Twitter API, Google Maps API, and the Natural Language Toolkit to visualize, filter, and analyze linguistic trends. This app was born out of a final project for a college computational linguistics course, in which I analyzed twitter corpora to compare whether the new england vernacular 'wicked' was being used as an adjective or adverb in any given context. 'That party was wicked' (adj) vs. 'She's wicked smart' (adv)." }, d3lifeglobe: { skills: ["javascript", "d3", "html", "css", "node"], src: "public/assets/d3lifeglobe.png", description: "An animated d3 globe that rotates to a given coordinate and projects a path between the places that I've lived." }, previousprofile: { skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png", description: "My previous profile -- I'm proud of some of the d3 data visualizations that I built for it and not so proud of the lack of responsiveness." }, thisprofile: { skills: ["react", "webpack", "css", "less", "html", "node"], src: "", description: "This single page app was built with react which allowed me to flexibly integrate this filter function class component with other pure component sections. Building this app tested my commitment to inline styles with React. Since many of these components require animation that I'm accustomed to using pseudo selectors and css for, I opted to " } } };
+		_this.state = { skills: _this.props.skills, projects: { toptracks: { skills: ["javascript", "react", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication.", style: { width: "14em" } }, tweets: { skills: ["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "An ongoing project that uses the Twitter API, Google Maps API, and the Natural Language Toolkit to visualize, filter, and analyze linguistic trends. This app was born out of a final project for a college computational linguistics course, in which I analyzed twitter corpora to compare whether the new england vernacular 'wicked' was being used as an adjective or adverb in any given context. 'That party was wicked' (adj) vs. 'She's wicked smart' (adv).", style: { width: "14em" } }, d3lifeglobe: { skills: ["javascript", "d3", "html", "css", "node"], src: "public/assets/d3lifeglobe.png", description: "An animated d3 globe that rotates to a given coordinate and projects a path between the places that I've lived.", style: { width: "15em" } }, previousprofile: { skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png", description: "My previous profile -- I'm proud of some of the d3 data visualizations that I built for it and not so proud of the lack of responsiveness.", style: { width: "12em" } }, thisprofile: { skills: ["react", "webpack", "css", "less", "html", "node"], src: "", description: "This single page app was built with react which allowed me to flexibly integrate this filter function class component with other pure component sections. Building this app tested my commitment to inline styles with React. Since many of these components require animation that I'm accustomed to using pseudo selectors and css for, I opted to ", style: { width: "50rem", color: "#FFF", height: "10rem", padding: "3rem", backgroundColor: "#333333", border: "1px solid #F25F5C" }, text: "this profile :)", display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "center" } } };
 
 		return _this;
 	}
@@ -20752,17 +20752,37 @@ var ProjectDiv = function (_React$Component) {
 						'div',
 						{ id: 'project-container', className: 'project-container' },
 						Object.keys(projects).map(function (key, i) {
-							return _react2.default.createElement(
-								'div',
-								{ key: i, className: 'picHolder' },
-								_react2.default.createElement('img', { className: 'pic', src: projects[key].src }),
-								_react2.default.createElement(
+							if (projects[key].src) {
+								return _react2.default.createElement(
 									'div',
-									{ className: 'description' },
-									' ',
-									projects[key].description
-								)
-							);
+									{ key: i, className: 'picHolder' },
+									_react2.default.createElement('img', { className: 'pic', src: projects[key].src, style: projects[key].style }),
+									_react2.default.createElement(
+										'div',
+										{ className: 'description' },
+										' ',
+										projects[key].description
+									)
+								);
+							} else {
+								return _react2.default.createElement(
+									'div',
+									{ key: i, className: 'picHolder' },
+									_react2.default.createElement(
+										'div',
+										{ style: projects[key].style },
+										' ',
+										projects[key].text,
+										' '
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: 'description' },
+										' ',
+										projects[key].description
+									)
+								);
+							}
 						})
 					);
 				} else {
@@ -21454,7 +21474,8 @@ exports.default = {
     alignItems: "center",
     height: "auto",
     marginTop: '2%',
-    marginBottom: '2%'
+    marginBottom: '2%',
+    padding: "2rem"
   },
 
   lilRow: {
@@ -21480,7 +21501,8 @@ exports.default = {
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-start",
-    alignItems: "center"
+    alignItems: "center",
+    marginRight: "17%"
   },
 
   text: {

@@ -49,7 +49,7 @@ export class About extends React.Component{
           <Bio /> 
           </div> 
           <div style={styles.pointDownDiv}> 
-          <div style={styles.text}> click to see my projects below</div> 
+          <div style={styles.text}> check out my projects below</div> 
           <div onClick={this.props.onClick()} className="pointDown">☟</div> 
       </div>
     </div> 
