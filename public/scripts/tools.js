@@ -81,6 +81,10 @@ export class Tools extends React.Component{
 							grunt
 							</div> 
 
+							<div onClick={this.props.onClick()} id="babel" className="skill"> 
+							babel / es6
+							</div> 
+
 							<div onClick={this.props.onClick()} id="webpack" className="skill"> 
 							webpack
 							</div> 

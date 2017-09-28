@@ -54,7 +54,7 @@ export class Navbar extends React.Component {
 
             window.pageYOffset > $("#about").position().top -  $("#about").height() && window.pageYOffset < $("#projects").position().top - $("#about").height()/3 ? $(that.refs.about).addClass("selected") : $(that.refs.about).removeClass("selected");
 
-             window.pageYOffset > $("#projects").position().top + $("#projects").height()/7 ? $(that.refs.contact).addClass("selected") :$(that.refs.contact).removeClass("selected");
+             window.pageYOffset > $("#projects").position().top + $("#projects").height() / 3 ? $(that.refs.contact).addClass("selected") :$(that.refs.contact).removeClass("selected");
 
             window.pageYOffset < $("#about").position().top - $("#about").position().top/5 ? $(".nameTitle").addClass("nameSelect") : $(".nameTitle").removeClass("nameSelect");
                 }) 
