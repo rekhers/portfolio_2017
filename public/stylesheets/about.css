@@ -1,4 +1,17 @@
 @media (min-width: 800px) {
+  .pointDown {
+    font-size: 2.5rem;
+    padding-left: 1rem;
+    cursor: pointer;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+  .pointDown:hover {
+    background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   .aboutContainer {
     background-color: #333333;
     color: #ffffff;
@@ -33,6 +46,19 @@
   }
 }
 @media (max-width: 800px) {
+  .pointDown {
+    font-size: 2.5rem;
+    padding-left: 1rem;
+    cursor: pointer;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+  .pointDown:hover {
+    background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   .aboutContainer {
     background-color: #333333;
     color: #ffffff;
@@ -45,7 +71,7 @@
   .aboutContainer .bio {
     font-family: Montserrat;
     letter-spacing: 0.1rem;
-    font-size: .9rem;
+    font-size: .85rem;
     line-height: 2em;
     color: #ffffff;
     width: auto;
@@ -59,10 +85,48 @@
   }
   .aboutContainer .aboutNavText {
     font-family: Roboto;
+    font-size: 1.3rem;
+    letter-spacing: 0.3rem;
+    color: #ffffff;
+    background-color: #f25f5c;
+    padding: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .aboutContainer {
+    background-color: #333333;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
+  }
+  .aboutContainer .bio {
+    font-family: Montserrat;
+    letter-spacing: 0.1rem;
+    font-size: .85rem;
+    line-height: 2em;
+    color: #ffffff;
+    width: auto;
+    padding: 2rem;
+  }
+  .pointDown {
+    display: none;
+  }
+  .pointDownDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .aboutNavText {
+    font-family: Roboto;
     font-size: 1rem;
     letter-spacing: 0.2rem;
     color: #ffffff;
     background-color: #f25f5c;
     padding: 1rem;
+    margin-bottom: 3rem;
   }
 }

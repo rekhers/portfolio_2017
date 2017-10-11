@@ -145,23 +145,9 @@
 
 
 
-.toolContainer{
-		height: auto;
-		color: black;
-		font-size: 1rem;
-		background-color: #FFF;
-		font-family: Montserrat;
-		white-space: nowrap;
-		padding-top: 3%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		padding-top: 5%;
-		padding-left: 3%;
-		width:20%;
+
 
 	.skillSection{
-		// width: "35rem",
 		margin-bottom: 5rem;
 	}
 
@@ -182,28 +168,30 @@
 		text-align: center;
 	}
 
-}
+
 
 
 //belongs to about section -- move 
-.pointDown{
-  font-size: 2.5rem;
-  padding-left: 1rem;
-  cursor: pointer;
-    -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
 
-
-   &:hover{
-   		background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
-			background-size: 200% 200%;              
-			-webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-   }
-}
 
 
 @media (min-width: 800px){
+
+	.toolContainer{
+		height: auto;
+		color: black;
+		font-size: 1rem;
+		background-color: #FFF;
+		font-family: Montserrat;
+		white-space: nowrap;
+		padding-top: 3%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-top: 5%;
+		padding-left: 3%;
+		width:20%;
+	}
 	
 	#projects{
 	display: flex;
@@ -247,6 +235,21 @@
 
 
 @media (max-width: 800px) {
+
+	.toolContainer{
+		padding: 2rem;
+
+		height: auto;
+		color: black;
+		font-size: 1rem;
+		background-color: #FFF;
+		font-family: Montserrat;
+		white-space: nowrap;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		
+	}
 
 		#projects{
 			height: auto;

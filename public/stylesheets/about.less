@@ -1,7 +1,26 @@
 
+//animated bouncy finger 
 
 
 @media (min-width: 800px){
+
+	.pointDown{
+  font-size: 2.5rem;
+  padding-left: 1rem;
+  cursor: pointer;
+    -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+
+
+   &:hover{
+   		background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
+			background-size: 200% 200%;              
+			-webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+   }
+}
+
+
 	.aboutContainer{
 		   
 		    background-color: rgb(51, 51, 51);
@@ -49,6 +68,23 @@
 
 
 @media (max-width: 800px) {
+
+	.pointDown{
+  font-size: 2.5rem;
+  padding-left: 1rem;
+  cursor: pointer;
+    -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+
+
+   &:hover{
+   		background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
+			background-size: 200% 200%;              
+			-webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+   }
+}
+
 		.aboutContainer{
 			
 		    background-color: rgb(51, 51, 51);
@@ -57,12 +93,12 @@
 		    flex-direction: column;
 		    align-items: center;
 		    justify-content: space-evenly;
-			    height: auto;
+			 height: auto;
 		   
 		.bio{
 			   font-family: Montserrat;
 			    letter-spacing: 0.1rem;
-			    font-size: .9rem;
+			    font-size: .85rem;
 			    line-height: 2em;
 			    color: rgb(255, 255, 255);
 			    width: auto;
@@ -81,15 +117,61 @@
 
 		.aboutNavText{
 			    font-family: Roboto;
-			    font-size: 1rem;
-			    letter-spacing: 0.2rem;
+			    font-size: 1.3rem;
+			    letter-spacing: 0.3rem;
 			    color: rgb(255, 255, 255);
 			    background-color: rgb(242, 95, 92);
 			    padding: 1rem;
 		}
 
 
+
 	}
 
+}
+
+
+@media(max-width:600px){
+	.aboutContainer{
+			
+		    background-color: rgb(51, 51, 51);
+		    color: rgb(255, 255, 255);
+		    display: flex;
+		    flex-direction: column;
+		    align-items: center;
+		    justify-content: space-evenly;
+			 height: auto;
+		   
+		.bio{
+			   font-family: Montserrat;
+			    letter-spacing: 0.1rem;
+			    font-size: .85rem;
+			    line-height: 2em;
+			    color: rgb(255, 255, 255);
+			    width: auto;
+			    padding: 2rem;
+		}
+	}
+	.pointDown{
+		display: none;
+	}
+
+		.pointDownDiv{
+			    display: flex;
+			    flex-direction: row;
+			    align-items: center;
+			    justify-content: space-between;
+
+		}
+
+		.aboutNavText{
+			    font-family: Roboto;
+			    font-size: 1rem;
+			    letter-spacing: 0.2rem;
+			    color: rgb(255, 255, 255);
+			    background-color: rgb(242, 95, 92);
+			    padding: 1rem;
+			    margin-bottom: 3rem;
+		}
 }
 
