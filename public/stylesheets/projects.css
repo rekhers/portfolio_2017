@@ -145,6 +145,36 @@
   margin-bottom: .3rem;
   cursor: pointer;
 }
+.toolContainer {
+  height: auto;
+  color: black;
+  font-size: 1rem;
+  background-color: #FFF;
+  font-family: Montserrat;
+  white-space: nowrap;
+  padding-top: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 5%;
+  padding-left: 3%;
+  width: 20%;
+}
+.toolContainer .skillSection {
+  margin-bottom: 5rem;
+}
+.toolContainer .section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.toolContainer .sectionTitle {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
 .pointDown {
   font-size: 2.5rem;
   padding-left: 1rem;

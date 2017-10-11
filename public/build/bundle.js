@@ -21656,10 +21656,6 @@ var _jquery = __webpack_require__(21);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _toolsCss = __webpack_require__(103);
-
-var _toolsCss2 = _interopRequireDefault(_toolsCss);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21680,10 +21676,7 @@ var Tools = exports.Tools = function (_React$Component) {
 	function Tools(props) {
 		_classCallCheck(this, Tools);
 
-		var _this = _possibleConstructorReturn(this, (Tools.__proto__ || Object.getPrototypeOf(Tools)).call(this, props));
-
-		_this.state = {};
-		return _this;
+		return _possibleConstructorReturn(this, (Tools.__proto__ || Object.getPrototypeOf(Tools)).call(this, props));
 	}
 
 	_createClass(Tools, [{
@@ -21710,18 +21703,18 @@ var Tools = exports.Tools = function (_React$Component) {
 		value: function render() {
 			return _react2.default.createElement(
 				'div',
-				{ id: 'tools', style: _toolsCss2.default.container },
+				{ id: 'tools', className: 'toolContainer' },
 				_react2.default.createElement(
 					'div',
-					{ id: 'client', style: _toolsCss2.default.skillSection },
+					{ id: 'client', className: 'skillSection' },
 					_react2.default.createElement(
 						'div',
-						{ style: _toolsCss2.default.sectionTitle },
+						{ className: 'sectionTitle' },
 						' Client '
 					),
 					_react2.default.createElement(
 						'div',
-						{ className: 'section', style: _toolsCss2.default.section },
+						{ className: 'section' },
 						_react2.default.createElement(
 							'div',
 							{ onClick: this.props.onClick(), id: 'javascript', className: 'skill' },
@@ -21776,15 +21769,15 @@ var Tools = exports.Tools = function (_React$Component) {
 				),
 				_react2.default.createElement(
 					'div',
-					{ id: 'server', style: _toolsCss2.default.skillSection },
+					{ id: 'server', className: 'skillSection' },
 					_react2.default.createElement(
 						'div',
-						{ style: _toolsCss2.default.sectionTitle },
+						{ className: 'sectionTitle' },
 						' Server '
 					),
 					_react2.default.createElement(
 						'div',
-						{ className: 'section', style: _toolsCss2.default.section },
+						{ className: 'section' },
 						_react2.default.createElement(
 							'div',
 							{ onClick: this.props.onClick(), id: 'node', className: 'skill' },
@@ -21804,15 +21797,15 @@ var Tools = exports.Tools = function (_React$Component) {
 				),
 				_react2.default.createElement(
 					'div',
-					{ id: 'database', style: _toolsCss2.default.skillSection },
+					{ id: 'database', className: 'skillSection' },
 					_react2.default.createElement(
 						'div',
-						{ style: _toolsCss2.default.sectionTitle },
+						{ className: 'sectionTitle' },
 						' Database '
 					),
 					_react2.default.createElement(
 						'div',
-						{ className: 'section', style: _toolsCss2.default.section },
+						{ className: 'section' },
 						_react2.default.createElement(
 							'div',
 							{ id: 'mysql', onClick: this.props.onClick(), className: 'skill' },
@@ -21915,8 +21908,6 @@ exports.default = {
     borderRadius: "50%",
     marginRight: '5%'
   }
-
-  //14B97D
 
 };
 
@@ -22036,57 +22027,7 @@ exports.default = {
    */
 
 /***/ }),
-/* 103 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _container;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-exports.default = {
-
-	container: (_container = {
-		height: "auto",
-		color: "black",
-		fontSize: '1rem',
-		backgroundColor: "#FFF",
-		fontFamily: 'Montserrat',
-		whiteSpace: "nowrap",
-		paddingTop: "3%",
-		display: "flex",
-		flexDirection: "column",
-		justifyContent: "center"
-	}, _defineProperty(_container, "paddingTop", "5%"), _defineProperty(_container, "paddingLeft", "3%"), _container),
-
-	skillSection: {
-		// width: "35rem",
-		marginBottom: "5rem"
-	},
-
-	section: {
-		display: "flex",
-		flexDirection: "row",
-		justifyContent: "space-around",
-		textAlign: 'center',
-		flexWrap: 'wrap'
-	},
-
-	sectionTitle: {
-		fontSize: '1rem',
-		paddingBottom: '1rem',
-		textAlign: 'center'
-	}
-
-};
-
-/***/ }),
+/* 103 */,
 /* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 

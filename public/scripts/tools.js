@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import styles from '../stylesheets/tools.css.js';
 
 
 /*
@@ -14,9 +13,7 @@ export class Tools extends React.Component{
 	constructor(props){
 		super(props);
 
-		this.state = {
-		
-		} 
+	
 	}
 
 	componentDidMount(){
@@ -41,13 +38,13 @@ export class Tools extends React.Component{
 
 	render(){
 		return( 
-			<div id="tools" style={styles.container}>
+			<div id="tools" className="toolContainer">
 
-				<div id="client" style={styles.skillSection}> 
+				<div id="client" className="skillSection"> 
 					
-					<div style={styles.sectionTitle}> Client </div>
+					<div className="sectionTitle"> Client </div>
 
-					<div className="section" style={styles.section}>
+					<div className="section">
 
 							<div onClick={this.props.onClick()} id="javascript" className="skill">   
 								javascript 
@@ -92,11 +89,11 @@ export class Tools extends React.Component{
 
 				</div>
 
-				<div id="server" style={styles.skillSection}> 
+				<div id="server" className="skillSection"> 
 
-					<div style={styles.sectionTitle}> Server </div>
+					<div className="sectionTitle"> Server </div>
 
-						<div className="section" style={styles.section}>
+						<div className="section">
 
 								<div onClick={this.props.onClick()} id="node" className="skill"> 
 										 node.js 
@@ -115,10 +112,10 @@ export class Tools extends React.Component{
 
 				</div>
 
-				<div id="database" style={styles.skillSection}> 
-					<div style={styles.sectionTitle}> Database </div>
+				<div id="database" className="skillSection"> 
+					<div className="sectionTitle"> Database </div>
 
-					<div className="section" style={styles.section}>
+					<div className="section">
 
 							<div id="mysql" onClick={this.props.onClick()} className="skill"> 
 									MySQL 
