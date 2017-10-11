@@ -1,0 +1,160 @@
+#projects {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+/*
+*
+* PROJECTS 
+*
+*/
+.project-container {
+  background: #fff;
+  color: black;
+  font-family: Montserrat;
+  font-size: 1.3rem;
+  overflow: scroll;
+  width: 100%;
+}
+.project-container .pic {
+  width: 16em;
+  height: 12em;
+  border: 2px solid black;
+}
+.project-container .text {
+  font-family: Roboto;
+  line-height: 180%;
+  padding: 5%;
+  display: none;
+}
+.project-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  font-family: Space Mono;
+  opacity: 0;
+  line-height: 200%;
+  font-size: .8em;
+  overflow-y: scroll;
+}
+.project-container .overlay:hover {
+  opacity: .87;
+}
+.project-container .chooseText {
+  margin-left: 7%;
+  margin-top: 10%;
+}
+.project-container .projectTitle {
+  font-size: 2rem;
+  padding: 1rem;
+  justify-content: space-evenly;
+  font-family: Roboto;
+  color: #333333;
+}
+.project-container .description {
+  margin-right: 1rem;
+  width: 25em;
+  padding: 1rem;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  text-overflow: ellipsis;
+}
+.project-container .description .descText {
+  line-height: 2rem;
+  color: black;
+  font-size: .98rem;
+  padding: 1.5rem;
+}
+.project-container .description .skillTags {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.project-container .description .skillTags .tag {
+  width: auto;
+  border: 1px solid #222;
+  padding: .7rem;
+  font-size: .7rem;
+  margin: .5rem;
+}
+.project-container .picHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2%;
+  margin-left: 3%;
+}
+.project-container .picHolder a {
+  text-decoration: none;
+  border: 2px solid #FFF;
+  background-color: #FFF;
+  color: #333333;
+}
+.project-container .picHolder a:hover {
+  color: red;
+}
+.project-container .titleRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.project-container .picRow {
+  display: flex;
+  flex-direction: row;
+}
+.project-container .picHolderMedium {
+  margin: 5%;
+  background-color: black;
+  position: relative;
+  width: 16em;
+  height: 10em;
+}
+.project-container .thinpic {
+  width: 10em;
+  height: 10em;
+  border: 2px solid black;
+}
+.project-container .mediumpic {
+  width: 16em;
+  height: 10em;
+  border: 2px solid black;
+}
+.clicked {
+  background-color: #222;
+  color: #fff;
+}
+.skill {
+  text-align: center;
+  width: auto;
+  border: 2px solid black;
+  border-radius: 5%;
+  padding: .4rem;
+  font-size: .7rem;
+  margin-right: .5rem;
+  margin-bottom: .3rem;
+  cursor: pointer;
+}
+.pointDown {
+  font-size: 2.5rem;
+  padding-left: 1rem;
+  cursor: pointer;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+.pointDown:hover {
+  background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

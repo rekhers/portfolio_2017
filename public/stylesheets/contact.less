@@ -1,0 +1,38 @@
+/*
+*
+* CONTACT -- pointy finger styles
+*
+*/
+.pointy{
+	font-size: 2em;
+	cursor:pointer;
+	padding-left: 87%;
+	color:#FFF;
+	&:hover{
+			background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
+			background-size: 200% 200%;              
+			-webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+	}
+}
+
+
+//when I use flexbox for this it changes the cog animation to an orbit instead of a spin
+.footer{
+ width: auto;
+ display: inline-block;
+ padding-left: 40%;
+ // padding-bottom: 2%;
+ margin: 0;
+
+	.cog{
+		display:inline-block;
+		margin-right: 2%;
+	}
+
+	.smallText{
+		font-family: Montserrat;
+		font-size: 80%;
+		display: inline-block;
+	}
+}

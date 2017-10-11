@@ -1,0 +1,49 @@
+/*
+*
+* HEADER -- Chevron styles / animation
+*
+*/
+#chevronHolder {
+  height: auto;
+  font-size: 100px;
+  width: auto;
+  text-align: center;
+  cursor: pointer;
+  padding-top: 10%;
+}
+#chevronHolder:hover .chevron {
+  border-width: 0.1em 0.1em 0 0;
+  color: #FFF;
+}
+#chevronHolder:hover .blue {
+  color: #F25F5C;
+}
+#chevronHolder:hover .yellow {
+  color: #F25F5C;
+}
+#chevronHolder .chevron:before {
+  border-style: solid;
+  border-width: 0.02em 0.02em 0 0;
+  content: '';
+  display: inline-block;
+  height: 0.45em;
+  left: 0.15em;
+  position: relative;
+  transform: rotate(-45deg);
+  vertical-align: top;
+  width: 0.45em;
+  padding-top: -5em;
+  transform: rotate(135deg);
+}
+#chevronHolder .chevron {
+  margin-top: -40px;
+}
+#chevronHolder .blue {
+  color: #FFF;
+}
+#chevronHolder .red {
+  color: #F25F5C;
+}
+#chevronHolder .yellow {
+  color: #FFF;
+}

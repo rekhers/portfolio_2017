@@ -35,6 +35,7 @@ text:{
   fontSize: '2.5rem',
   width: "auto",
     border: '1px solid #FFF',
+    marginTop: '2rem',
     padding: '3rem'
 
 },
