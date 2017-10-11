@@ -18,19 +18,27 @@ html, body{
 *
 */
 #chevronHolder{
-	width: auto;
 	height:auto;
 	font-size: 100px;
-	margin-left: 50%;
-	padding-top: 35%;
+	 width: auto;
+	 text-align: center;
 	cursor:pointer;
+	padding-top: 10%;
 
 	&:hover{
 
 		.chevron{
-			margin-top: -30px;
 			border-width: 0.1em 0.1em 0 0;
 			color:#FFF;
+		}
+
+		.blue{
+			color: #F25F5C;
+
+		}
+
+		.yellow{
+			color: #F25F5C;
 		}
 	}
 
@@ -56,7 +64,7 @@ html, body{
 
 
 		.blue{
-			color: #247BA0;
+			color: #FFF;
 		}
 
 		.red{
@@ -64,7 +72,7 @@ html, body{
 		}
 
 		.yellow{
-			color:#FFE066;
+			color:#FFF;
 		}
 
 
@@ -89,26 +97,33 @@ html, body{
   	flex-flow: row;
   	justify-content: space-between;
 
+
+	  
+
+
   	.nameTitle{
+  		display: flex;
+  		flex-direction: row;
+  		justify-content: space-between;
+  		align-items: center;
+  		flex-wrap: nowrap;
+  		padding-right: 1rem;
+  		 padding-left: 1rem;
+
+
+  	.navPic{
+  		width: 2rem;
+  		height: 2rem;
+  		border-radius: 50%;
+  		margin-right: 1rem;
+	 }
+
+
             font-family: 'Montserrat';
-              font-size: 1.4em;
+              font-size: 1.2em;
               cursor:pointer;
-               	background: linear-gradient(130deg, #F25F5C, #FFE066);
-				background-size: 200% 200%;              
-			   -webkit-background-clip: text;
-               -webkit-text-fill-color: transparent;
-				padding-left: 5%;
-				padding-right: 10%;
-				padding-top: 1rem;
-				padding-bottom: 1%;
-    			white-space: nowrap;
 
 
-				       &:hover{
-				         cursor:pointer;
-	              		 background: #F25F5C;
-	           			 -webkit-text-fill-color: #FFF;
-	             	 }
             }
 
         	.nameSelect{
@@ -129,10 +144,11 @@ html, body{
 		padding-right: 5%;
 
 		.links{
-			background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
-			background-size: 200% 200%;              
-			-webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+			// background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
+			// background-size: 200% 200%;              
+			// -webkit-background-clip: text;
+   //          -webkit-text-fill-color: transparent;
+   color: #333333;
 			padding: 1rem;
 
 			&:hover{
@@ -162,8 +178,8 @@ html, body{
 #projects{
 	display: flex;
 		flex-direction: row;
-		height: 120%;
 		width: 100%;
+		height: 100%;
 }
 
 /*
@@ -172,8 +188,8 @@ html, body{
 *
 */
  .project-container{
-		background: #333333;
-		color: #FFF;
+		background: #fff;
+		color: black;
 		font-family: Montserrat;
 		font-size: 1.3rem;
 		overflow: scroll;
@@ -218,26 +234,36 @@ html, body{
 	margin-top: 10%;
 }
 
+.projectTitle{
+	font-size: 2rem;
+	padding: 1rem;
+	justify-content: center;
+	align-items: center;
+	font-family: Montserrat;
+}
+
 
 .description{
-	height: 13em;
-	margin-left: 3rem;
+	// height: 13em;
+	// margin-left: 3rem;
 	margin-right: 1rem;
-	width: 20em;
-
-	background-color: #333333;
-	border: 1px solid #F25F5C;
+	width: 25em;
+	padding: 1rem;
+	background-color: #FFF;
+	// border: 1px solid #F25F5C;
 	
 	  display: flex;
 	  justify-content: center;
 	  flex-direction: column;
 	  align-items: center;
-	  overflow: auto;
+		  overflow: auto;
+		  text-overflow: ellipsis;
+
 
 
 	  .descText{
 		  line-height: 2rem;
-		color: #FFF;
+		color: black;
 		font-size: .98rem;
 		padding: 1.5rem;
 	  }
@@ -251,7 +277,7 @@ html, body{
 
 	  	.tag{
 	  		width: auto;
-	  		border: 1px solid #FFF;
+	  		border: 1px solid #222;
 	  		padding: .7rem;
 	  		font-size: .7rem;
 	  		margin: .5rem;
@@ -263,11 +289,35 @@ html, body{
 
 
 .picHolder{
- 	padding: 3rem;
+ 	// padding: 3rem;
  	display: flex;
- 	flex-direction: row;
+ 	flex-direction: column;
  	justify-content: space-around;
  	align-items: center;
+ 	// border-bottom: 1px solid #F25F5C;
+ 	padding: 2%;
+ 	margin-left: 3%;
+
+ 	a{
+ 		text-decoration: none;
+ 		border: 2px solid #FFF;
+ 		background-color: #FFF;
+ 		color:#333333;
+ 		&:hover{
+ 			color: red;
+ 		}
+ 	}
+}
+
+.titleRow{
+	display: flex;
+	flex-direction: row; 
+	align-items: center;
+}
+
+.picRow{
+	display: flex;
+	flex-direction: row;
 }
 
 .picHolderMedium{
@@ -297,8 +347,8 @@ html, body{
 
 
 .clicked{
-	background-color: #FFF;
-	color:#333333;
+	background-color: #222;
+	color:#fff;
 
 }
 
@@ -306,7 +356,7 @@ html, body{
 		.skill{
 				text-align: center;
 					width: auto;
-					border: 2px solid #FFF;
+					border: 2px solid black;
 					border-radius: 5%;
 					padding: .4rem;
 					font-size: .7rem;
@@ -314,6 +364,8 @@ html, body{
 					margin-bottom: .3rem;
 					cursor: pointer;
 				}
+
+
 
 
 .pointDown{
@@ -332,6 +384,7 @@ html, body{
    }
 }
 
+
 /*
 *
 * CONTACT -- pointy finger styles
@@ -341,6 +394,7 @@ html, body{
 	font-size: 2em;
 	cursor:pointer;
 	padding-left: 87%;
+	color:#FFF;
 	&:hover{
 			background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
 			background-size: 200% 200%;              
@@ -355,7 +409,8 @@ html, body{
  width: auto;
  display: inline-block;
  padding-left: 40%;
- padding-bottom: 2%;
+ // padding-bottom: 2%;
+ margin: 0;
 
 	.cog{
 		display:inline-block;
@@ -369,24 +424,42 @@ html, body{
 	}
 }
 
+.lines{
+	display:none;
+}
 
-@media screen and (max-width:480px) {
-    #pagina {
-        width: 100%;
-    }
-    .btn-menu {
-        display: block;
-        background-color: #333;
-    }
-    #submenu {
-        display: none;
-    }
-    .lista-menu li {
-        display: block;
-        float: none;
-        width: 100%;
-        border-bottom: 1px solid #7E7E7E;
-    }
+
+@media screen and (max-width: 600px) {
+	.links{
+		display: none;
+	}
+	.lines{
+		display: flex;
+		justify-content: flex-end;
+		margin: 0;
+		color: #F25F5C;
+		font-size: 3.5rem;
+		padding-right: 1rem;
+			padding-left: 1rem;
+
+		.navbar{
+			background-color: #F25F5C;
+		}
+
+		&:hover{
+			color: #FFF;
+			cursor:pointer;
+
+			background-color: #F25F5C;
+			
+
+		}
+	}
+
+	.nameTitle{
+		font-size: 1rem;
+}
+
 }
 
 @-webkit-keyframes bounce {

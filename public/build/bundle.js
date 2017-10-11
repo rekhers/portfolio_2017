@@ -20427,7 +20427,6 @@ var About = exports.About = function (_React$Component) {
           _react2.default.createElement(
             'div',
             { style: _aboutCss2.default.lilRow },
-            _react2.default.createElement(Pic, null),
             _react2.default.createElement(Bio, null)
           ),
           _react2.default.createElement(
@@ -20436,7 +20435,7 @@ var About = exports.About = function (_React$Component) {
             _react2.default.createElement(
               'div',
               { style: _aboutCss2.default.text },
-              ' check out my projects below'
+              ' Download my resume and see my projects below '
             ),
             _react2.default.createElement(
               'div',
@@ -20618,22 +20617,31 @@ var Header = exports.Header = function (_React$Component) {
           _react2.default.createElement(
             'div',
             null,
-            ' hey, i\'m rekha. '
+            ' hey, i\'m ',
+            _react2.default.createElement(
+              'span',
+              { style: _headerCss2.default.name },
+              'rekha'
+            )
           ),
           _react2.default.createElement(
             'div',
-            { style: _headerCss2.default.ling },
-            ' linguist,  '
-          ),
-          _react2.default.createElement(
-            'div',
-            { style: _headerCss2.default.dev },
-            ' developer, '
-          ),
-          _react2.default.createElement(
-            'div',
-            { style: _headerCss2.default.dataVis },
-            ' data visualizer.'
+            { style: _headerCss2.default.titleBlock },
+            _react2.default.createElement(
+              'div',
+              { style: _headerCss2.default.ling },
+              ' linguist,  '
+            ),
+            _react2.default.createElement(
+              'div',
+              { style: _headerCss2.default.dev },
+              ' developer, '
+            ),
+            _react2.default.createElement(
+              'div',
+              { style: _headerCss2.default.dataVis },
+              ' data visualizer.'
+            )
           )
         ),
         _react2.default.createElement(
@@ -20767,7 +20775,16 @@ var Navbar = exports.Navbar = function (_React$Component) {
                 _react2.default.createElement(
                     'div',
                     { onClick: this.props.onClick(), ref: 'home', className: 'nameTitle nameSelect' },
-                    'rekha tenjarla'
+                    _react2.default.createElement('img', { className: 'navPic', src: 'public/assets/circle_face.gif' }),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'nameText' },
+                        _react2.default.createElement(
+                            'div',
+                            null,
+                            ' rekha tenjarla '
+                        )
+                    )
                 ),
                 _react2.default.createElement(
                     'div',
@@ -20850,7 +20867,17 @@ var ProjectDiv = function (_React$Component) {
 		//list of projects and associated skills, with inherited props list of skills that reflect user's selection
 		var _this = _possibleConstructorReturn(this, (ProjectDiv.__proto__ || Object.getPrototypeOf(ProjectDiv)).call(this, props));
 
-		_this.state = { skills: _this.props.skills, projects: { toptracks: { skills: ["javascript", "react", "babel", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication.", style: { width: "14em" } }, tweets: { skills: ["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "An ongoing project that uses the Twitter API, Google Maps API, and the Natural Language Toolkit to visualize, filter, and analyze linguistic trends. This app was born out of a final project for a college computational linguistics course, in which I analyzed twitter corpora to compare whether the new england vernacular 'wicked' was being used as an adjective or adverb in any given context. 'That party was wicked' (adj) vs. 'She's wicked smart' (adv).", style: { width: "14em" } }, d3lifeglobe: { skills: ["javascript", "d3", "html", "css", "node"], src: "public/assets/d3lifeglobe.png", description: "An animated d3 globe that rotates to a given coordinate and projects a path between the places that I've lived.", style: { width: "15em" } }, previousprofile: { skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png", description: "My previous profile -- I'm proud of some of the d3 data visualizations that I built for it and not so proud of the lack of responsiveness.", style: { width: "12em" } }, thisprofile: { skills: ["react", "babel", "webpack", "css", "less", "html", "node"], src: "", description: "This single page app was built with react which allowed me to flexibly integrate this filter function class component with other pure component sections. Building this app tested my commitment to inline styles with React. Since many of these components require animation that I'm accustomed to using pseudo selectors and css for, I opted to ", style: _defineProperty({ width: "10rem", color: "#FFF", height: "10rem", padding: "3rem", backgroundColor: "#333333", border: "1px solid #F25F5C", display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "center" }, 'padding', ".7rem"), text: "this profile :)" } } };
+		_this.state = { skills: _this.props.skills,
+			projects: { toptracks: { title: "top tracks", skills: ["javascript", "react", "babel", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication.", style: { width: "14em" }, code: '', demo: '' },
+
+				tweets: { title: "tweetmaps", skills: ["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "An ongoing project that uses the Twitter API, Google Maps API, and the Natural Language Toolkit to visualize, filter, and analyze linguistic trends. This app was born out of a final project for a college computational linguistics course, in which I analyzed twitter corpora to compare whether the new england vernacular 'wicked' was being used as an adjective or adverb in any given context. 'That party was wicked' (adj) vs. 'She's wicked smart' (adv).", style: { width: "14em" }, codeDemo: '<div> <a href="https://github.com/rekhers/d3_life_globe">code</a></div>' },
+
+				d3lifeglobe: { title: "d3 life globe", skills: ["javascript", "d3", "html", "css", "node", "grunt", "less"], src: "public/assets/d3lifeglobe.png", description: "An animated d3 globe that rotates to a given coordinate and projects a path between the places that I've lived.", style: { width: "15em" }, codeDemo: '<div> <a href="https://github.com/rekhers/d3_life_globe">code</a></div>' },
+				previousprofile: { title: "my previous profile", skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png", description: "My previous profile -- I'm proud of some of the d3 data visualizations that I built for it and not so proud of the lack of responsiveness.", style: { width: "12em" }, codeDemo: '<div> <a href="https://github.com/rekhers/rekha_site">code</a></div><div> <a href="http://rekha-site-316.herokuapp.com/">demo</a></div>' },
+
+				thisprofile: { title: "this profile", skills: ["react", "babel", "webpack", "css", "less", "html", "node"], src: "", description: "This single page app was built with react which allowed me to flexibly integrate this filter function class component with other pure component sections. Building this app tested my commitment to inline styles with React. Since many of these components require animation that I'm accustomed to using pseudo selectors and css for, I opted to ", style: _defineProperty({ width: "10rem", color: "#FFF", height: "10rem", padding: "3rem", backgroundColor: "#333333", border: "1px solid #F25F5C", display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "center" }, 'padding', ".7rem"), text: "this profile :)", codeDemo: '<div> <a href="https://github.com/rekhers/portfolio_2017">code</a></div>' }
+			}
+		};
 
 		return _this;
 	}
@@ -20914,28 +20941,43 @@ var ProjectDiv = function (_React$Component) {
 								return _react2.default.createElement(
 									'div',
 									{ key: i, className: 'picHolder' },
-									_react2.default.createElement('img', { className: 'pic', src: projects[key].src, style: projects[key].style }),
 									_react2.default.createElement(
 										'div',
-										{ className: 'description' },
+										{ className: 'titleRow' },
 										_react2.default.createElement(
 											'div',
-											{ className: 'descText' },
+											{ className: 'projectTitle' },
 											' ',
-											projects[key].description,
+											projects[key].title,
 											' '
-										),
+										)
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: 'picRow' },
+										_react2.default.createElement('img', { className: 'pic', src: projects[key].src, style: projects[key].style }),
 										_react2.default.createElement(
 											'div',
-											{ className: 'skillTags' },
-											Object.keys(_underscore2.default.intersection(projects[key].skills, skills)).map(function (k, i) {
-												return _react2.default.createElement(
-													'div',
-													{ className: 'tag', key: i },
-													_underscore2.default.intersection(projects[key].skills, skills)[k],
-													' '
-												);
-											})
+											{ className: 'description' },
+											_react2.default.createElement(
+												'div',
+												{ className: 'descText' },
+												' ',
+												projects[key].description,
+												' '
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'skillTags' },
+												Object.keys(_underscore2.default.intersection(projects[key].skills, skills)).map(function (k, i) {
+													return _react2.default.createElement(
+														'div',
+														{ className: 'tag', key: i },
+														_underscore2.default.intersection(projects[key].skills, skills)[k],
+														' '
+													);
+												})
+											)
 										)
 									)
 								);
@@ -20945,32 +20987,36 @@ var ProjectDiv = function (_React$Component) {
 									{ key: i, className: 'picHolder' },
 									_react2.default.createElement(
 										'div',
-										{ style: projects[key].style },
+										{ className: 'projectTitle' },
 										' ',
-										projects[key].text,
+										projects[key].title,
 										' '
 									),
 									_react2.default.createElement(
 										'div',
-										{ className: 'description' },
+										{ className: 'picRow' },
 										_react2.default.createElement(
 											'div',
-											{ className: 'descText' },
-											' ',
-											projects[key].description,
-											' '
-										),
-										_react2.default.createElement(
-											'div',
-											{ className: 'skillTags' },
-											Object.keys(_underscore2.default.intersection(projects[key].skills, skills)).map(function (k, i) {
-												return _react2.default.createElement(
-													'div',
-													{ className: 'tag', key: i },
-													_underscore2.default.intersection(projects[key].skills, skills)[k],
-													' '
-												);
-											})
+											{ className: 'description' },
+											_react2.default.createElement(
+												'div',
+												{ className: 'descText' },
+												' ',
+												projects[key].description,
+												' '
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'skillTags' },
+												Object.keys(_underscore2.default.intersection(projects[key].skills, skills)).map(function (k, i) {
+													return _react2.default.createElement(
+														'div',
+														{ className: 'tag', key: i },
+														_underscore2.default.intersection(projects[key].skills, skills)[k],
+														' '
+													);
+												})
+											)
 										)
 									)
 								);
@@ -21604,22 +21650,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = {
 
   container: {
-    backgroundColor: "#FFF",
-    color: "black",
+    backgroundColor: "#333333",
+    color: "#FFF",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    height: "auto",
-    marginTop: '2%',
-    marginBottom: '2%',
-    padding: "2rem"
+    height: "100%"
   },
 
   lilRow: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "center"
+    justifyContent: "center",
+    flexWrap: "wrap"
   },
 
   tools: {
@@ -21628,24 +21672,29 @@ exports.default = {
 
   bio: {
     fontFamily: 'Montserrat',
-    fontSize: '1rem',
-    lineHeight: '2.3em',
-    width: "60%",
-    marginTop: "2%",
-    marginBottom: "5%"
+    letterSpacing: '.2rem',
+    fontSize: '1.1rem',
+    lineHeight: '2em',
+    width: "50%",
+    marginBottom: "auto",
+    color: "#fff",
+    padding: '3rem'
   },
 
   pointDownDiv: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "flex-start",
     alignItems: "center",
-    marginRight: "17%"
+    justifyContent: "space-between"
   },
 
   text: {
-    fontFamily: 'Montserrat',
-    fontSize: '1rem'
+    fontFamily: 'Roboto',
+    fontSize: '1.4rem',
+    letterSpacing: '.2rem',
+    color: "#fff",
+    backgroundColor: "#F25F5C",
+    padding: '1rem'
   },
 
   pointDown: {
@@ -21664,11 +21713,9 @@ exports.default = {
     width: "10rem",
     height: "10rem",
     padding: ".3rem",
-    background: '#247BA0',
-    //  background: 'linear-gradient(to right, #0865F1 0%, #C704F6 100%)',
+    background: '#F25F5C',
     borderRadius: "50%",
     marginRight: '5%'
-
   }
 
   //14B97D
@@ -21697,8 +21744,7 @@ exports.default = {
 
 	container: {
 		height: "30%",
-		backgroundColor: "#FFF",
-		borderTop: "2px solid #F25F5C",
+		backgroundColor: "#222",
 		display: "flex",
 		flexDirection: "column"
 	},
@@ -21706,7 +21752,7 @@ exports.default = {
 	icons: {
 		fontSize: "3rem",
 		cursor: "pointer",
-		color: "#247BA0"
+		color: "#fff"
 	},
 
 	iconRow: {
@@ -21721,12 +21767,14 @@ exports.default = {
 		fontFamily: 'Montserrat',
 		fontSize: '.7rem',
 		paddingLeft: "80rem",
-		paddingTop: "10rem"
+		paddingTop: "10rem",
+		color: '#FFF'
 	},
 
 	pointy: {
 		paddingLeft: "75rem",
-		fontSize: "2em"
+		fontSize: "2em",
+		color: "#FFF"
 	}
 
 };
@@ -21751,40 +21799,34 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = {
 
   container: {
-    margin: '0, auto',
-    backgroundColor: "#50514F",
-    height: '100%'
+
+    backgroundColor: "#333333",
+    height: '100%',
+    width: '100%',
+    display: "flex",
+    flexDirection: 'column',
+    justifyContent: "center",
+    alignItems: "center"
   },
 
-  ling: {
-    color: "#247BA0"
+  titleBlock: {
+    color: "#fff",
+    lineHeight: '3rem'
   },
 
-  dev: {
+  name: {
     color: "#F25F5C"
-  },
 
-  dataVis: {
-    color: "#FFE066"
   },
 
   text: {
     color: '#FFF',
     fontFamily: 'Montserrat',
+    lineHeight: '3rem',
     fontSize: '2.5rem',
-    float: 'left',
-    paddingTop: '12%',
-    paddingLeft: '5%',
-    whiteSpace: "no-wrap"
-
-  },
-
-  byline: {
-    fontFamily: 'Anonymous Pro',
-    fontSize: '1.975vw',
-    fontWeight: '300',
-    textAlign: 'center',
-    color: '#FFF'
+    width: "auto",
+    border: '1px solid #FFF',
+    padding: '3rem'
 
   }
 
@@ -21813,9 +21855,9 @@ exports.default = {
 
 	container: (_container = {
 		height: "auto",
-		color: "#FFF",
+		color: "black",
 		fontSize: '1rem',
-		backgroundColor: "#333333",
+		backgroundColor: "#FFF",
 		fontFamily: 'Montserrat',
 		whiteSpace: "nowrap",
 		paddingTop: "3%",
@@ -38055,6 +38097,10 @@ var _projects = __webpack_require__(96);
 
 var _contact = __webpack_require__(93);
 
+var _reactFavicon = __webpack_require__(207);
+
+var _reactFavicon2 = _interopRequireDefault(_reactFavicon);
+
 var _jquery = __webpack_require__(21);
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -38105,6 +38151,7 @@ var Container = function (_React$Component) {
 			return _react2.default.createElement(
 				'div',
 				null,
+				_react2.default.createElement(_reactFavicon2.default, { url: 'favicon.ico' }),
 				_react2.default.createElement(_navbar.Navbar, { onClick: function onClick() {
 						return _this2.handleClick;
 					} }),
@@ -38114,10 +38161,7 @@ var Container = function (_React$Component) {
 				_react2.default.createElement(_about.About, { onClick: function onClick() {
 						return _this2.handleClick;
 					} }),
-				_react2.default.createElement(_projects.Projects, null),
-				_react2.default.createElement(_contact.Contact, { onClick: function onClick() {
-						return _this2.handleClick;
-					} })
+				_react2.default.createElement(_projects.Projects, null)
 			);
 		}
 	}]);
@@ -38128,6 +38172,204 @@ var Container = function (_React$Component) {
 var container = document.getElementById("container");
 
 _reactDom2.default.render(_react2.default.createElement(Container, null), container);
+
+/***/ }),
+/* 207 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(8);
+var linkEl;
+
+function drawIcon(src, num, cb) {
+  var img = document.createElement('img');
+  img.onload = function () {
+    var canvas = document.createElement('canvas');
+    canvas.width = img.width;
+    canvas.height = img.height;
+
+    var context = canvas.getContext('2d');
+    context.clearRect(0, 0, img.width, img.height);
+    context.drawImage(img, 0, 0);
+
+    var top = img.height - 9,
+        left = img.width - 7 - 1,
+        bottom = 16,
+        right = 16,
+        radius = 2;
+
+    context.fillStyle = '#F03D25';
+    context.strokeStyle = '#F03D25';
+    context.lineWidth = 1;
+
+    context.beginPath();
+    context.moveTo(left + radius, top);
+    context.quadraticCurveTo(left, top, left, top + radius);
+    context.lineTo(left, bottom - radius);
+    context.quadraticCurveTo(left, bottom, left + radius, bottom);
+    context.lineTo(right - radius, bottom);
+    context.quadraticCurveTo(right, bottom, right, bottom - radius);
+    context.lineTo(right, top + radius);
+    context.quadraticCurveTo(right, top, right - radius, top);
+    context.closePath();
+    context.fill();
+
+    context.font = 'bold 10px arial';
+    context.fillStyle = '#FFF';
+    context.textAlign = 'right';
+    context.textBaseline = 'top';
+    context.fillText(num, 15, 6);
+
+    cb(null, context.canvas.toDataURL());
+  };
+  img.src = src;
+}
+
+var Favicon = function (_React$Component) {
+  _inherits(Favicon, _React$Component);
+
+  function Favicon() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Favicon);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Favicon.__proto__ || Object.getPrototypeOf(Favicon)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      animationIndex: 0,
+      animationLoop: null,
+      animationRunning: false
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Favicon, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      Favicon.mountedInstances.push(this);
+      Favicon.update();
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      var activeInstance = Favicon.getActiveInstance();
+      clearInterval(activeInstance.state.animationLoop);
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(prevProps) {
+      if (prevProps.url === this.props.url && prevProps.animated === this.props.animated && prevProps.alertCount === this.props.alertCount && prevProps.keepIconLink === this.props.keepIconLink) return;
+
+      Favicon.update();
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return null;
+    }
+  }], [{
+    key: 'getActiveInstance',
+    value: function getActiveInstance() {
+      return Favicon.mountedInstances[Favicon.mountedInstances.length - 1];
+    }
+  }, {
+    key: 'draw',
+    value: function draw() {
+      if (typeof document === 'undefined') return;
+
+      var activeInstance = Favicon.getActiveInstance();
+      if (typeof linkEl === 'undefined') {
+        var head = document.getElementsByTagName('head')[0];
+        linkEl = document.createElement('link');
+        linkEl.type = 'image/x-icon';
+        linkEl.rel = 'icon';
+
+        // remove existing favicons
+        var links = head.getElementsByTagName("link");
+        for (var i = links.length; --i >= 0;) {
+          if (/\bicon\b/i.test(links[i].getAttribute("rel")) && !activeInstance.props.keepIconLink(links[i])) {
+            head.removeChild(links[i]);
+          }
+        }
+
+        head.appendChild(linkEl);
+      }
+
+      var currentUrl;
+
+      if (activeInstance.props.url instanceof Array) {
+        currentUrl = activeInstance.props.url[activeInstance.state.animationIndex];
+      } else {
+        currentUrl = activeInstance.props.url;
+      }
+
+      if (activeInstance.props.alertCount) {
+        drawIcon(currentUrl, activeInstance.props.alertCount, function (err, url) {
+          linkEl.href = url;
+        });
+      } else {
+        linkEl.href = currentUrl;
+      }
+    }
+  }, {
+    key: 'update',
+    value: function update() {
+      if (typeof document === 'undefined') return;
+
+      var activeInstance = Favicon.getActiveInstance();
+      var isAnimated = activeInstance.props.url instanceof Array && activeInstance.props.animated;
+
+      // clear any running animations
+      var intervalId = null;
+      clearInterval(activeInstance.state.animationLoop);
+
+      if (isAnimated) {
+        var animateFavicon = function animateFavicon() {
+          var nextAnimationIndex = (activeInstance.state.animationIndex + 1) % activeInstance.props.url.length;
+          Favicon.draw();
+          activeInstance.setState({ animationIndex: nextAnimationIndex });
+        };
+        intervalId = setInterval(animateFavicon, activeInstance.props.animationDelay);
+        animateFavicon();
+      } else {
+        Favicon.draw();
+      }
+
+      activeInstance.setState({ animationLoop: intervalId });
+    }
+  }]);
+
+  return Favicon;
+}(React.Component);
+
+Favicon.displayName = 'Favicon';
+Favicon.defaultProps = {
+  alertCount: null,
+  animated: true,
+  animationDelay: 500,
+  keepIconLink: function keepIconLink() {
+    return false;
+  }
+};
+Favicon.mountedInstances = [];
+
+
+module.exports = Favicon;
+
+
 
 /***/ })
 /******/ ]);

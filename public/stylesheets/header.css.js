@@ -8,43 +8,39 @@ import React from 'react';
 export default{
 
 container:{
-  margin: '0, auto',
-  backgroundColor: "#50514F",
-  height: '100%'
+
+backgroundColor: "#333333",
+  height: '100%',
+  width: '100%',
+  display: "flex",
+  flexDirection: 'column',
+  justifyContent: "center",
+  alignItems: "center"
 },
 
-ling:{
-  color: "#247BA0"
+titleBlock:{
+  color:"#fff",
+  lineHeight: '3rem',
 },
 
-dev:{
-  color: "#F25F5C"
-},
+name:{
+  color:"#F25F5C"
 
-dataVis:{
-  color: "#FFE066"
 },
 
 text:{
   color: '#FFF',
   fontFamily: 'Montserrat',
+  lineHeight: '3rem',
   fontSize: '2.5rem',
-  float: 'left',
-  paddingTop: '12%',
-  paddingLeft:'5%',
-  whiteSpace: "no-wrap"
+  width: "auto",
+    border: '1px solid #FFF',
+    padding: '3rem'
 
 },
 
 
-byline: {
-    fontFamily: 'Anonymous Pro',
-    fontSize: '1.975vw',
-    fontWeight: '300',
-    textAlign: 'center',
-    color: '#FFF'
 
-}
 
 }
 

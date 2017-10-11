@@ -6,8 +6,7 @@ export default{
 
 	container:{
 	height: "30%",
-	 backgroundColor: "#FFF",
-	 borderTop: "2px solid #F25F5C",
+	 backgroundColor: "#222",
 	 display: "flex",
 	 flexDirection: "column"
 	},
@@ -16,7 +15,7 @@ export default{
 	icons:{
 			fontSize: "3rem",
 		  	cursor:"pointer",
-		  	color: "#247BA0"
+		  	color: "#fff"
 	},
 
 	iconRow:{
@@ -31,13 +30,15 @@ export default{
 		fontFamily: 'Montserrat',
 		fontSize: '.7rem',
 		paddingLeft: "80rem",
-		paddingTop:"10rem"
+		paddingTop:"10rem",
+		color:'#FFF'
 	},
 
 	
 	pointy: {		
 		paddingLeft: "75rem",
-		fontSize: "2em"
+		fontSize: "2em",
+		color:"#FFF"
 	}
 
 }

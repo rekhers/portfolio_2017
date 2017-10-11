@@ -2,9 +2,9 @@ export default{
 	
 	container:{
 		height: "auto",
-		color: "#FFF",
+		color: "black",
 		fontSize: '1rem',
-		backgroundColor: "#333333",
+		backgroundColor: "#FFF",
 		fontFamily: 'Montserrat',
 		whiteSpace: "nowrap",
 		paddingTop: "3%",
@@ -12,7 +12,6 @@ export default{
 		flexDirection: "column",
 		justifyContent: "center",
 		paddingTop: "5%",
-		width: "20%",
 		paddingLeft: "3%"
 	},
 

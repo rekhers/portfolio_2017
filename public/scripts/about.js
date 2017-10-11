@@ -45,11 +45,10 @@ export class About extends React.Component{
     <div id="about" > 
       <div style={styles.container}>
       <div style={styles.lilRow}> 
-          <Pic />
           <Bio /> 
           </div> 
           <div style={styles.pointDownDiv}> 
-          <div style={styles.text}> check out my projects below</div> 
+          <div style={styles.text}> Download my resume and see my projects below </div> 
           <div onClick={this.props.onClick()} className="pointDown">☟</div> 
       </div>
     </div> 

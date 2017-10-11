@@ -21,11 +21,12 @@ render(){
 
       <div style={styles.text}>
         
-      <div> hey, i'm rekha. </div>
+      <div> hey, i'm <span style={styles.name}>rekha</span></div>
+      <div style={styles.titleBlock}>
       <div style={styles.ling}> linguist,  </div> 
       <div style={styles.dev}> developer, </div>
       <div style={styles.dataVis}> data visualizer.</div> 
-     
+     </div>
         </div> 
 
 

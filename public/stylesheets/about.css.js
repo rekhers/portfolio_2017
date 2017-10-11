@@ -5,48 +5,54 @@ import React from 'react';
 export default{
 
 container:{
-  backgroundColor: "#FFF",
-  color: "black",
+  backgroundColor: "#333333",
+  color: "#FFF",
   display: "flex",
-  flexDirection: "column",
+  flexDirection:"column",
   justifyContent: "center",
   alignItems:"center",
-  height: "auto",
-  marginTop: '2%',
-  marginBottom: '2%',
-  padding: "2rem"
+  height: "100%",
 },
 
 lilRow:{
   display: "flex",
   flexDirection: "row",
-  justifyContent: "center"
+  justifyContent: "center",
+  flexWrap: "wrap"
 },
 
 tools:{
   background: 'linear-gradient(145deg,#c3f0c8,#509bf5)'
 },
 
+
 bio:{
   fontFamily: 'Montserrat',
-  fontSize: '1rem',
-  lineHeight: '2.3em',
-  width: "60%",
-  marginTop: "2%",
-  marginBottom: "5%"
+  letterSpacing: '.2rem',
+  fontSize: '1.1rem',
+  lineHeight: '2em',
+  width:"50%",
+  marginBottom: "auto",
+  color:"#fff",
+  padding: '3rem'
 },
+
+
 
 pointDownDiv:{
   display:"flex",
   flexDirection: "row",
-  justifyContent: "flex-start",
   alignItems: "center",
-  marginRight: "17%"
+  justifyContent: "space-between",
 },
 
 text:{
-  fontFamily: 'Montserrat',
-  fontSize: '1rem',
+  fontFamily: 'Roboto',
+  fontSize: '1.4rem',
+  letterSpacing: '.2rem',
+  color:"#fff",
+  backgroundColor: "#F25F5C",
+  padding: '1rem'
 },
 
 pointDown:{
@@ -65,13 +71,10 @@ cont:{
     width: "10rem",
     height: "10rem",
     padding: ".3rem",
-    background: '#247BA0',
-   //  background: 'linear-gradient(to right, #0865F1 0%, #C704F6 100%)',
-   borderRadius: "50%",
-   marginRight: '5%'
-
-
-}
+    background: '#F25F5C',
+    borderRadius: "50%",
+    marginRight: '5%'
+  }
 
 
 

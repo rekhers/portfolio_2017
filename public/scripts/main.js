@@ -5,6 +5,8 @@ import { About } from '../scripts/about.js';
 import { Navbar } from '../scripts/navbar.js';
 import { Projects } from '../scripts/projects.js';
 import { Contact } from '../scripts/contact.js';
+import Favicon from 'react-favicon';
+
 
 import $ from 'jquery';
 const scroll = require('smoothscroll-polyfill').polyfill();
@@ -17,7 +19,6 @@ class Container extends React.Component{
 	}
 
 	componentDidMount(){	
-		
 	}
 
 	handleClick(event){
@@ -41,11 +42,11 @@ class Container extends React.Component{
 
 	render(){
 		return(<div>
+			    <Favicon url="favicon.ico" />
 				<Navbar onClick={() => this.handleClick}/>
                 <Header onClick={() => this.handleClick}/>
                  <About onClick={() => this.handleClick}/>
                  <Projects/>
-                 <Contact onClick={() => this.handleClick}/>
                 </div>)
 	}
 
