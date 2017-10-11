@@ -24,7 +24,7 @@ render(){
       <div className="titleBlock">
       <div> linguist,  </div> 
       <div > developer, </div>
-      <div > data visualizer.</div> 
+      <div > data visualizer</div> 
      </div>
         </div> 
 

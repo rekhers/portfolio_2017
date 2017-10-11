@@ -10,7 +10,7 @@ import styles from '../stylesheets/about.css.js';
 */
 
 const Bio = () => {
-    return <div style={styles.bio}> I'm a javascript developer excited about visualizing data and 
+    return <div style={styles.bio}> i'm a javascript developer excited about visualizing data and 
                         
                         thinking about how to do it in a way that might make the world better.
                                     
@@ -48,7 +48,7 @@ export class About extends React.Component{
           <Bio /> 
           </div> 
           <div style={styles.pointDownDiv}> 
-          <div style={styles.text}> Download my resume and see my projects below </div> 
+          <div style={styles.text}> download my resume and see my projects below </div> 
           <div onClick={this.props.onClick()} className="pointDown">☟</div> 
       </div>
     </div> 

@@ -95,7 +95,7 @@
   flex-direction: column;
   align-items: flex-end;
   padding: 2%;
-  margin-left: 3%;
+  margin-right: 3rem;
 }
 .project-container .picHolder a {
   text-decoration: none;
@@ -109,7 +109,8 @@
 .project-container .picRow {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
 }
 .project-container .picHolderMedium {
   margin: 5%;
@@ -185,4 +186,14 @@
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media (max-width: 800px) {
+  #projects {
+    height: auto;
+    flex-direction: column;
+  }
+  .toolContainer {
+    width: 100%;
+    height: 20%;
+  }
 }

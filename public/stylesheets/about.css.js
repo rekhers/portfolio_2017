@@ -48,8 +48,8 @@ pointDownDiv:{
 
 text:{
   fontFamily: 'Roboto',
-  fontSize: '1.4rem',
-  letterSpacing: '.2rem',
+  fontSize: '1.3rem',
+  letterSpacing: '.3rem',
   color:"#fff",
   backgroundColor: "#F25F5C",
   padding: '1rem'

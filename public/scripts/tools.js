@@ -18,12 +18,6 @@ export class Tools extends React.Component{
 
 	componentDidMount(){
 		
-		// $(".section div").hover(function(e){
-		// 	$(this).css("background-color", "#FFF").css("color", "black");
-		// }, function(){
-		// 	$(this).css("background-color", "#333333").css("color", "#FFF");
-		// })
-
 
 		$(".skill").click(function(){
 			if($(this).hasClass("clicked")){

@@ -6,12 +6,13 @@ import { Navbar } from '../scripts/navbar.js';
 import { Projects } from '../scripts/projects.js';
 import { Contact } from '../scripts/contact.js';
 import Favicon from 'react-favicon';
-
-
 import $ from 'jquery';
+
 const scroll = require('smoothscroll-polyfill').polyfill();
 
 
+//TODO: * fix navbar scroll now that we're back at 100% height 
+//		* set favicon to circle face pic
 class Container extends React.Component{
 	
 	constructor(){

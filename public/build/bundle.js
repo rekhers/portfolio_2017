@@ -20394,7 +20394,7 @@ var Bio = function Bio() {
   return _react2.default.createElement(
     'div',
     { style: _aboutCss2.default.bio },
-    ' I\'m a javascript developer excited about visualizing data and thinking about how to do it in a way that might make the world better. I\'ve gone down the React rabbit hole this past year, and I\'m a better person for it. Writing code is my vehicle to exploring the things that I\'m passionate about \u2014 music, language, and social justice.'
+    ' i\'m a javascript developer excited about visualizing data and thinking about how to do it in a way that might make the world better. I\'ve gone down the React rabbit hole this past year, and I\'m a better person for it. Writing code is my vehicle to exploring the things that I\'m passionate about \u2014 music, language, and social justice.'
   );
 };
 
@@ -20435,7 +20435,7 @@ var About = exports.About = function (_React$Component) {
             _react2.default.createElement(
               'div',
               { style: _aboutCss2.default.text },
-              ' Download my resume and see my projects below '
+              ' download my resume and see my projects below '
             ),
             _react2.default.createElement(
               'div',
@@ -20636,7 +20636,7 @@ var Header = exports.Header = function (_React$Component) {
             _react2.default.createElement(
               'div',
               null,
-              ' data visualizer.'
+              ' data visualizer'
             )
           )
         ),
@@ -20854,6 +20854,12 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+/*
+*
+* TODOS: add demos and code links
+* 
+*/
+
 var ProjectDiv = function (_React$Component) {
 	_inherits(ProjectDiv, _React$Component);
 
@@ -20864,12 +20870,16 @@ var ProjectDiv = function (_React$Component) {
 		var _this = _possibleConstructorReturn(this, (ProjectDiv.__proto__ || Object.getPrototypeOf(ProjectDiv)).call(this, props));
 
 		_this.state = { skills: _this.props.skills,
-			projects: { toptracks: { title: "top tracks", skills: ["javascript", "react", "babel", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication.", style: { width: "14em" }, code: '', demo: '' },
+			projects: { toptracks: { title: "top tracks", skills: ["javascript", "react", "babel", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication.", style: { height: '10rem', width: "12rem" }, code: '', demo: '' },
 
-				tweets: { title: "tweetmaps", skills: ["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "An ongoing project that uses the Twitter API, Google Maps API, and the Natural Language Toolkit to visualize, filter, and analyze linguistic trends. This app was born out of a final project for a college computational linguistics course, in which I analyzed twitter corpora to compare whether the new england vernacular 'wicked' was being used as an adjective or adverb in any given context. 'That party was wicked' (adj) vs. 'She's wicked smart' (adv).", style: { width: "14em" }, codeDemo: '<div> <a href="https://github.com/rekhers/d3_life_globe">code</a></div>' },
+				tweets: { title: "tweetmaps", skills: ["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "An ongoing series of related projects that use the Twitter API, Google Maps API, and the Natural Language Toolkit to visualize, filter, and analyze linguistic trends. This app was born out of a final project for a college computational linguistics course, in which I analyzed twitter corpora to compare whether the new england vernacular 'wicked' was being used as an adjective or adverb in any given context. 'That party was wicked' (adj) vs. 'She's wicked smart' (adv).", style: { width: "12em", height: "10rem" }, codeDemo: '<div> <a href="https://github.com/rekhers/d3_life_globe">code</a></div>' },
 
-				d3lifeglobe: { title: "d3 life globe", skills: ["javascript", "d3", "html", "css", "node", "grunt", "less"], src: "public/assets/d3lifeglobe.png", description: "An animated d3 globe that rotates to a given coordinate and projects a path between the places that I've lived.", style: { width: "15em" }, codeDemo: '<div> <a href="https://github.com/rekhers/d3_life_globe">code</a></div>' },
-				previousprofile: { title: "my previous profile", skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png", description: "My previous profile -- I'm proud of some of the d3 data visualizations that I built for it and not so proud of the lack of responsiveness.", style: { width: "12em" }, codeDemo: '<div> <a href="https://github.com/rekhers/rekha_site">code</a></div><div> <a href="http://rekha-site-316.herokuapp.com/">demo</a></div>' },
+				d3lifeglobe: { title: "d3 life globe", skills: ["javascript", "d3", "html", "css", "node", "grunt", "less"], src: "public/assets/d3lifeglobe.png", description: "An animated d3 globe that rotates to a given coordinate and projects a path between the places that I've lived.", style: { width: "13rem", height: "10rem" }, codeDemo: '<div> <a href="https://github.com/rekhers/d3_life_globe">code</a></div>' },
+
+				previousprofile: { title: "my previous profile", skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png", description: "My previous profile -- I'm proud of some of the d3 data visualizations that I built for it and not so proud of the lack of responsiveness.", style: { width: "10rem", height: "10rem" }, codeDemo: '<div> <a href="https://github.com/rekhers/rekha_site">code</a></div><div> <a href="http://rekha-site-316.herokuapp.com/">demo</a></div>' },
+
+				weatherapp: { title: "weather app", skills: ["javascript", "react", "html", "node", "babel", "webpack", "css"], src: "", description: "hehe weather app darsky api navigator instance google maps", style: { width: 'auto' }
+				},
 
 				thisprofile: { title: "this profile", skills: ["react", "babel", "webpack", "css", "less", "html", "node"], src: "", description: "This single page app was built with react which allowed me to flexibly integrate this filter function class component with other pure component sections. Building this app tested my commitment to inline styles with React. Since many of these components require animation that I'm accustomed to using pseudo selectors and css for, I opted to ", style: _defineProperty({ width: "10rem", color: "#FFF", height: "10rem", padding: "3rem", backgroundColor: "#333333", border: "1px solid #F25F5C", display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "center" }, 'padding', ".7rem"), text: "this profile :)", codeDemo: '<div> <a href="https://github.com/rekhers/portfolio_2017">code</a></div>' }
 			}
@@ -21047,6 +21057,14 @@ var ProjectDiv = function (_React$Component) {
 	return ProjectDiv;
 }(_react2.default.Component);
 
+/*
+*
+* This projects class serves as the parent component for our tools and projects sections, where it passes an updated list of skills 
+* between the two 
+*
+*/
+
+
 var Projects = exports.Projects = function (_React$Component2) {
 	_inherits(Projects, _React$Component2);
 
@@ -21071,9 +21089,6 @@ var Projects = exports.Projects = function (_React$Component2) {
 			} else {
 				skills.push(id);
 			}
-
-			console.log("current skills");
-			console.log(skills);
 
 			this.setState({ skills: skills });
 		}
@@ -21679,13 +21694,6 @@ var Tools = exports.Tools = function (_React$Component) {
 		key: 'componentDidMount',
 		value: function componentDidMount() {
 
-			// $(".section div").hover(function(e){
-			// 	$(this).css("background-color", "#FFF").css("color", "black");
-			// }, function(){
-			// 	$(this).css("background-color", "#333333").css("color", "#FFF");
-			// })
-
-
 			(0, _jquery2.default)(".skill").click(function () {
 				if ((0, _jquery2.default)(this).hasClass("clicked")) {
 					(0, _jquery2.default)(this).removeClass("clicked");
@@ -21877,8 +21885,8 @@ exports.default = {
 
   text: {
     fontFamily: 'Roboto',
-    fontSize: '1.4rem',
-    letterSpacing: '.2rem',
+    fontSize: '1.3rem',
+    letterSpacing: '.3rem',
     color: "#fff",
     backgroundColor: "#F25F5C",
     padding: '1rem'
@@ -38191,6 +38199,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var scroll = __webpack_require__(98).polyfill();
+
+//TODO: * fix navbar scroll now that we're back at 100% height 
+//		* set favicon to circle face pic
 
 var Container = function (_React$Component) {
 	_inherits(Container, _React$Component);
