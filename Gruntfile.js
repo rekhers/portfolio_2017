@@ -12,7 +12,9 @@ module.exports = function(grunt) {
                  "./public/stylesheets/navbar.css": "./public/stylesheets/navbar.less",
                  "./public/stylesheets/projects.css": "./public/stylesheets/projects.less",
                 "./public/stylesheets/header.css": "./public/stylesheets/header.less",
-                "./public/stylesheets/contact.css": "./public/stylesheets/contact.less"
+                "./public/stylesheets/contact.css": "./public/stylesheets/contact.less",
+                "./public/stylesheets/about.css": "./public/stylesheets/about.less"
+
 
             }
         }

@@ -32,9 +32,8 @@ export class Navbar extends React.Component {
         window.addEventListener("scroll", function(error){
 
 
-            console.log(document.getElementById('project-container').scrollTop);
-
-
+            console.log(d);
+            console.log(divs);
 
             /*
             *
@@ -42,7 +41,8 @@ export class Navbar extends React.Component {
             * 
             */
             for(var id in divs){   
-                    window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/7 && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/3 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
+                console.log(id);
+                    window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/3 && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/4 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
                     }
 
 
@@ -52,9 +52,9 @@ export class Navbar extends React.Component {
             * 
             */
 
-            window.pageYOffset > $("#about").position().top -  $("#about").height() && window.pageYOffset < $("#projects").position().top - $("#about").height()/3 ? $(that.refs.about).addClass("selected") : $(that.refs.about).removeClass("selected");
+            // window.pageYOffset > $("#about").position().top -  $("#about").height() && window.pageYOffset < $("#projects").position().top - $("#about").height()/3 ? $(that.refs.about).addClass("selected") : $(that.refs.about).removeClass("selected");
 
-             window.pageYOffset > $("#projects").position().top + $("#projects").height() / 3 ? $(that.refs.contact).addClass("selected") :$(that.refs.contact).removeClass("selected");
+            //  window.pageYOffset > $("#projects").position().top + $("#projects").height() / 3 ? $(that.refs.contact).addClass("selected") :$(that.refs.contact).removeClass("selected");
 
             window.pageYOffset < $("#about").position().top - $("#about").position().top/5 ? $(".nameTitle").addClass("nameSelect") : $(".nameTitle").removeClass("nameSelect");
                 }) 
@@ -69,7 +69,7 @@ export class Navbar extends React.Component {
 
     render(){
         return (<div id="navbar" className="navbar"> 
-            <div onClick={this.props.onClick()} ref="home" className="nameTitle nameSelect">
+            <div onClick={this.props.onClick()} ref="home" className="nameTitle">
             
             <img className="navPic" src='public/assets/circle_face.gif'/>
 
@@ -81,7 +81,6 @@ export class Navbar extends React.Component {
              <div className="navLink" onClick={this.props.onClick()}>
                  <div className="links" ref="about" > about </div>
                  <div className="links"> projects </div>
-                 <div ref="contact" className="links contact"> contact </div>
              </div>
          </div>)
     }

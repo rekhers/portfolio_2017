@@ -28,12 +28,12 @@ class ProjectDiv extends React.Component{
 
 								previousprofile: {title: "my previous profile", skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png",  description: "My previous profile -- I'm proud of some of the d3 data visualizations that I built for it and not so proud of the lack of responsiveness.", style: {width: "10rem", height: "10rem"}, codeDemo: '<div> <a href="https://github.com/rekhers/rekha_site">code</a></div><div> <a href="http://rekha-site-316.herokuapp.com/">demo</a></div>'}, 
 
-								weatherapp:{title: "weather app", skills:["javascript", "react", "html", "node", "babel", "webpack","css"], src:"", description: "hehe weather app darsky api navigator instance google maps", style: {width: 'auto'}
+								weatherapp:{title: "weather app", skills:["javascript", "react", "html", "node", "babel", "webpack","css"], src:"", description: "Hopefully will one day be part of a chrome extension, this react app uses the browser's Navigator instance to retrieve location data and uses the DarkSky API and Google Maps geocoding/geolocation features to display the user's forecast and  location", style: {width: 'auto'}
 									},
 
 								
 
-								thisprofile: {title: "this profile", skills: ["react", "babel","webpack", "css", "less", "html", "node"], src: "",  description: "This single page app was built with react which allowed me to flexibly integrate this filter function class component with other pure component sections. Building this app tested my commitment to inline styles with React. Since many of these components require animation that I'm accustomed to using pseudo selectors and css for, I opted to ", style: {width: "10rem", color:"#FFF", height: "10rem", padding: "3rem", backgroundColor: "#333333", border: "1px solid #F25F5C", display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "center", padding: ".7rem"}, text:"this profile :)", codeDemo: '<div> <a href="https://github.com/rekhers/portfolio_2017">code</a></div>'}
+								thisprofile: {title: "this profile", skills: ["react", "babel","webpack", "css", "less", "html", "node"], src: "",  description: "This single page app was built compositionally with react which allowed me to flexibly integrate this filter function class component with other pure component sections. Building this app effectively ended my love for inline styling with react. Don't get me wrong, they're great for dynamic components but a huge pain for custom content", style: {width: "10rem", color:"#FFF", height: "10rem", padding: "3rem", backgroundColor: "#333333", border: "1px solid #F25F5C", display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "center", padding: ".7rem"}, text:"this profile :)", codeDemo: '<div> <a href="https://github.com/rekhers/portfolio_2017">code</a></div>'}
 								}
 							}
 

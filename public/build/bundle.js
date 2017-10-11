@@ -20372,10 +20372,6 @@ var _jquery = __webpack_require__(21);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _aboutCss = __webpack_require__(100);
-
-var _aboutCss2 = _interopRequireDefault(_aboutCss);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20393,16 +20389,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Bio = function Bio() {
   return _react2.default.createElement(
     'div',
-    { style: _aboutCss2.default.bio },
+    { className: 'bio' },
     ' i\'m a javascript developer excited about visualizing data and thinking about how to do it in a way that might make the world better. I\'ve gone down the React rabbit hole this past year, and I\'m a better person for it. Writing code is my vehicle to exploring the things that I\'m passionate about \u2014 music, language, and social justice.'
-  );
-};
-
-var Pic = function Pic() {
-  return _react2.default.createElement(
-    'div',
-    { style: _aboutCss2.default.cont },
-    _react2.default.createElement('img', { style: _aboutCss2.default.pic, src: 'public/assets/circle_face.gif' })
   );
 };
 
@@ -20423,18 +20411,14 @@ var About = exports.About = function (_React$Component) {
         { id: 'about' },
         _react2.default.createElement(
           'div',
-          { style: _aboutCss2.default.container },
+          { className: 'aboutContainer' },
+          _react2.default.createElement(Bio, null),
           _react2.default.createElement(
             'div',
-            { style: _aboutCss2.default.lilRow },
-            _react2.default.createElement(Bio, null)
-          ),
-          _react2.default.createElement(
-            'div',
-            { style: _aboutCss2.default.pointDownDiv },
+            { className: 'pointDownDiv' },
             _react2.default.createElement(
               'div',
-              { style: _aboutCss2.default.text },
+              { className: 'aboutNavText' },
               ' download my resume and see my projects below '
             ),
             _react2.default.createElement(
@@ -20733,7 +20717,8 @@ var Navbar = exports.Navbar = function (_React$Component) {
 
             window.addEventListener("scroll", function (error) {
 
-                console.log(document.getElementById('project-container').scrollTop);
+                console.log(d);
+                console.log(divs);
 
                 /*
                 *
@@ -20741,7 +20726,8 @@ var Navbar = exports.Navbar = function (_React$Component) {
                 * 
                 */
                 for (var id in divs) {
-                    window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 7 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 3 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
+                    console.log(id);
+                    window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 3 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 4 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
                 }
 
                 /*
@@ -20750,9 +20736,9 @@ var Navbar = exports.Navbar = function (_React$Component) {
                 * 
                 */
 
-                window.pageYOffset > (0, _jquery2.default)("#about").position().top - (0, _jquery2.default)("#about").height() && window.pageYOffset < (0, _jquery2.default)("#projects").position().top - (0, _jquery2.default)("#about").height() / 3 ? (0, _jquery2.default)(that.refs.about).addClass("selected") : (0, _jquery2.default)(that.refs.about).removeClass("selected");
+                // window.pageYOffset > $("#about").position().top -  $("#about").height() && window.pageYOffset < $("#projects").position().top - $("#about").height()/3 ? $(that.refs.about).addClass("selected") : $(that.refs.about).removeClass("selected");
 
-                window.pageYOffset > (0, _jquery2.default)("#projects").position().top + (0, _jquery2.default)("#projects").height() / 3 ? (0, _jquery2.default)(that.refs.contact).addClass("selected") : (0, _jquery2.default)(that.refs.contact).removeClass("selected");
+                //  window.pageYOffset > $("#projects").position().top + $("#projects").height() / 3 ? $(that.refs.contact).addClass("selected") :$(that.refs.contact).removeClass("selected");
 
                 window.pageYOffset < (0, _jquery2.default)("#about").position().top - (0, _jquery2.default)("#about").position().top / 5 ? (0, _jquery2.default)(".nameTitle").addClass("nameSelect") : (0, _jquery2.default)(".nameTitle").removeClass("nameSelect");
             });
@@ -20770,7 +20756,7 @@ var Navbar = exports.Navbar = function (_React$Component) {
                 { id: 'navbar', className: 'navbar' },
                 _react2.default.createElement(
                     'div',
-                    { onClick: this.props.onClick(), ref: 'home', className: 'nameTitle nameSelect' },
+                    { onClick: this.props.onClick(), ref: 'home', className: 'nameTitle' },
                     _react2.default.createElement('img', { className: 'navPic', src: 'public/assets/circle_face.gif' }),
                     _react2.default.createElement(
                         'div',
@@ -20794,11 +20780,6 @@ var Navbar = exports.Navbar = function (_React$Component) {
                         'div',
                         { className: 'links' },
                         ' projects '
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { ref: 'contact', className: 'links contact' },
-                        ' contact '
                     )
                 )
             );
@@ -20878,10 +20859,10 @@ var ProjectDiv = function (_React$Component) {
 
 				previousprofile: { title: "my previous profile", skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png", description: "My previous profile -- I'm proud of some of the d3 data visualizations that I built for it and not so proud of the lack of responsiveness.", style: { width: "10rem", height: "10rem" }, codeDemo: '<div> <a href="https://github.com/rekhers/rekha_site">code</a></div><div> <a href="http://rekha-site-316.herokuapp.com/">demo</a></div>' },
 
-				weatherapp: { title: "weather app", skills: ["javascript", "react", "html", "node", "babel", "webpack", "css"], src: "", description: "hehe weather app darsky api navigator instance google maps", style: { width: 'auto' }
+				weatherapp: { title: "weather app", skills: ["javascript", "react", "html", "node", "babel", "webpack", "css"], src: "", description: "Hopefully will one day be part of a chrome extension, this react app uses the browser's Navigator instance to retrieve location data and uses the DarkSky API and Google Maps geocoding/geolocation features to display the user's forecast and  location", style: { width: 'auto' }
 				},
 
-				thisprofile: { title: "this profile", skills: ["react", "babel", "webpack", "css", "less", "html", "node"], src: "", description: "This single page app was built with react which allowed me to flexibly integrate this filter function class component with other pure component sections. Building this app tested my commitment to inline styles with React. Since many of these components require animation that I'm accustomed to using pseudo selectors and css for, I opted to ", style: _defineProperty({ width: "10rem", color: "#FFF", height: "10rem", padding: "3rem", backgroundColor: "#333333", border: "1px solid #F25F5C", display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "center" }, 'padding', ".7rem"), text: "this profile :)", codeDemo: '<div> <a href="https://github.com/rekhers/portfolio_2017">code</a></div>' }
+				thisprofile: { title: "this profile", skills: ["react", "babel", "webpack", "css", "less", "html", "node"], src: "", description: "This single page app was built compositionally with react which allowed me to flexibly integrate this filter function class component with other pure component sections. Building this app effectively ended my love for inline styling with react. Don't get me wrong, they're great for dynamic components but a huge pain for custom content", style: _defineProperty({ width: "10rem", color: "#FFF", height: "10rem", padding: "3rem", backgroundColor: "#333333", border: "1px solid #F25F5C", display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "center" }, 'padding', ".7rem"), text: "this profile :)", codeDemo: '<div> <a href="https://github.com/rekhers/portfolio_2017">code</a></div>' }
 			}
 		};
 
@@ -21825,97 +21806,7 @@ var Tools = exports.Tools = function (_React$Component) {
 }(_react2.default.Component);
 
 /***/ }),
-/* 100 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(8);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// #14B97D
-exports.default = {
-
-  container: {
-    backgroundColor: "#333333",
-    color: "#FFF",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100%"
-  },
-
-  lilRow: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    flexWrap: "wrap"
-  },
-
-  tools: {
-    background: 'linear-gradient(145deg,#c3f0c8,#509bf5)'
-  },
-
-  bio: {
-    fontFamily: 'Montserrat',
-    letterSpacing: '.2rem',
-    fontSize: '1.1rem',
-    lineHeight: '2em',
-    width: "50%",
-    marginBottom: "auto",
-    color: "#fff",
-    padding: '3rem'
-  },
-
-  pointDownDiv: {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between"
-  },
-
-  text: {
-    fontFamily: 'Roboto',
-    fontSize: '1.3rem',
-    letterSpacing: '.3rem',
-    color: "#fff",
-    backgroundColor: "#F25F5C",
-    padding: '1rem'
-  },
-
-  pointDown: {
-    fontSize: "2.5rem",
-    paddingLeft: '1rem',
-    cursor: "pointer"
-  },
-
-  pic: {
-    borderRadius: "50%",
-    width: "10rem",
-    height: "10rem"
-  },
-
-  cont: {
-    width: "10rem",
-    height: "10rem",
-    padding: ".3rem",
-    background: '#F25F5C',
-    borderRadius: "50%",
-    marginRight: '5%'
-  }
-
-};
-
-/***/ }),
+/* 100 */,
 /* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 

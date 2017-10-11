@@ -1,11 +1,6 @@
 
 
-#projects{
-	display: flex;
-		flex-direction: row;
-		width: 100%;
-		height: 100%;
-}
+
 
 /*
 *
@@ -34,28 +29,10 @@
 		display: none;
 }
 
-.overlay{
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: black;
-	width: 100%;
-	height: 100%;
-	border: 2px solid transparent;
-	font-family: Space Mono;
-	opacity: 0;
-	line-height: 200%; 
-	font-size: .8em;
-	overflow-y: scroll;
 
-	&:hover{
-		opacity: .87;
-	}
-
-}
-
+//text that's visible if nothing is there
 .chooseText{
-	margin-left: 7%;
+	margin-left: 10%;
 	margin-top: 10%;
 }
 
@@ -70,20 +47,6 @@
 }
 
 
-.description{
-	// height: 13em;
-	// margin-left: 3rem;
-	margin-right: 1rem;
-	width: 25em;
-	padding: 1rem;
-	background-color: #FFF;
-	// border: 1px solid #F25F5C;
-	
-	  display: flex;
-	  justify-content: center;
-	  flex-direction: column;
-	  align-items: center;
-	  overflow: auto;
 
 
 	  .descText{
@@ -113,21 +76,12 @@
 
 	  }
 
-}
 
 
-.picHolder{
- 	// padding: 3rem;
- 	display: flex;
- 	flex-direction: column;
- 	align-items: flex-end;
- 	// border-bottom: 1px solid #F25F5C;
- 	padding: 2%;
- 		margin-right: 3rem;
 
- 	// margin-left: 3%;
 
- 	a{
+
+	a{
  		text-decoration: none;
  		border: 2px solid #FFF;
  		background-color: #FFF;
@@ -136,18 +90,12 @@
  			color: red;
  		}
  	}
-}
 
 .titleRow{
 	
 }
 
-.picRow{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: flex-start;
-}
+
 
 .picHolderMedium{
  	margin: 5%;
@@ -255,11 +203,55 @@
 }
 
 
+@media (min-width: 800px){
+	
+	#projects{
+	display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: 100%;
+	}
+
+	.picRow{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.picHolder{
+	 	display: flex;
+	 	flex-direction: column;
+	 	align-items: flex-end;
+	 	padding: 2%;
+	 	margin-right: 3rem;
+
+	 
+	}
+
+	.description{
+
+	margin-right: 1rem;
+	width: 25em;
+	padding: 1rem;
+	background-color: #FFF;
+	
+	  display: flex;
+	  justify-content: center;
+	  flex-direction: column;
+	  align-items: center;
+	  overflow: auto;
+	}
+
+}
 
 
 @media (max-width: 800px) {
+
 		#projects{
 			height: auto;
+			width:100%;
+			display: flex;
 				flex-direction: column;
 		}
 
@@ -267,5 +259,32 @@
 			width: 100%;
 			height: 20%;
 		}
+
+		.picRow{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			 	justify-content: center;
+			 margin-top: 1rem;
+		}
+
+			.picHolder{
+			 	display: flex;
+			 	flex-direction: column;
+			 	align-items: center;
+			 	justify-content: center;
+			 
+	 
+	}
+
+	.description{
+
+	 width: 100%;
+	 padding: 1rem;
+	  display: flex;
+	  justify-content: center;
+	  flex-direction: column;
+	  align-items: center;
+	}
 
 }
