@@ -3,6 +3,31 @@
 * HEADER -- Chevron styles / animation
 *
 */
+.headerContainer {
+  background-color: #333333;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.headerContainer .text {
+  color: #ffffff;
+  font-family: Montserrat;
+  line-height: 3rem;
+  font-size: 2.5rem;
+  width: auto;
+  border: 1px solid #ffffff;
+  padding: 3rem;
+}
+.headerContainer .name {
+  color: #f25f5c;
+}
+.headerContainer .titleBlock {
+  color: #ffffff;
+  line-height: 3rem;
+}
 #chevronHolder {
   height: auto;
   font-size: 100px;

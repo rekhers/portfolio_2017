@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import MediaQuery from 'react-responsive';
-import styles from '../stylesheets/header.css.js';
 
 export class Header extends React.Component{
     constructor(props){
@@ -17,15 +16,15 @@ export class Header extends React.Component{
 
 render(){
     return (
-    <div id="home" style={styles.container}>
+    <div id="home" className="headerContainer">
 
-      <div style={styles.text}>
+      <div className="text">
         
-      <div> hey, i'm <span style={styles.name}>rekha</span></div>
-      <div style={styles.titleBlock}>
-      <div style={styles.ling}> linguist,  </div> 
-      <div style={styles.dev}> developer, </div>
-      <div style={styles.dataVis}> data visualizer.</div> 
+      <div> hey, i'm <span className="name">rekha</span></div>
+      <div className="titleBlock">
+      <div> linguist,  </div> 
+      <div > developer, </div>
+      <div > data visualizer.</div> 
      </div>
         </div> 
 
