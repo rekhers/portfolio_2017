@@ -47,17 +47,7 @@
 }
 @media (max-width: 800px) {
   .pointDown {
-    font-size: 2.5rem;
-    padding-left: 1rem;
-    cursor: pointer;
-    -webkit-animation: bounce 2s infinite;
-    animation: bounce 2s infinite;
-  }
-  .pointDown:hover {
-    background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    display: none;
   }
   .aboutContainer {
     background-color: #333333;
@@ -79,13 +69,13 @@
   }
   .aboutContainer .pointDownDiv {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 2rem;
   }
   .aboutContainer .aboutNavText {
     font-family: Roboto;
-    font-size: 1.3rem;
+    font-size: 1rem;
     letter-spacing: 0.3rem;
     color: #ffffff;
     background-color: #f25f5c;
@@ -116,13 +106,13 @@
   }
   .pointDownDiv {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 2rem;
   }
   .aboutNavText {
     font-family: Roboto;
-    font-size: 1rem;
+    font-size: .8rem;
     letter-spacing: 0.2rem;
     color: #ffffff;
     background-color: #f25f5c;

@@ -26,14 +26,6 @@
   margin-left: 10%;
   margin-top: 10%;
 }
-.project-container .projectTitle {
-  font-size: 2rem;
-  padding: 1rem;
-  font-family: Roboto;
-  letter-spacing: .2rem;
-  background-color: #333333;
-  color: #fff;
-}
 .project-container .descText {
   line-height: 2rem;
   letter-spacing: .1rem;
@@ -97,22 +89,15 @@
   margin-bottom: .3rem;
   cursor: pointer;
 }
-.skillSection {
-  margin-bottom: 5rem;
-}
-.section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  flex-wrap: wrap;
-}
-.sectionTitle {
-  font-size: 1rem;
-  padding-bottom: 1rem;
-  text-align: center;
-}
 @media (min-width: 800px) {
+  .projectTitle {
+    font-size: 2rem;
+    padding: 1rem;
+    font-family: Roboto;
+    letter-spacing: .2rem;
+    background-color: #333333;
+    color: #fff;
+  }
   .toolContainer {
     height: auto;
     color: black;
@@ -127,6 +112,21 @@
     padding-top: 5%;
     padding-left: 3%;
     width: 20%;
+  }
+  .toolContainer .skillSection {
+    margin-bottom: 5rem;
+  }
+  .toolContainer .section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .toolContainer .sectionTitle {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
   }
   #projects {
     display: flex;
@@ -160,6 +160,15 @@
   }
 }
 @media (max-width: 800px) {
+  .projectTitle {
+    font-size: 1.5em;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    font-family: Roboto;
+    letter-spacing: .2rem;
+    background-color: #333333;
+    color: #fff;
+  }
   .toolContainer {
     padding: 2rem;
     height: auto;
@@ -167,10 +176,25 @@
     font-size: 1rem;
     background-color: #FFF;
     font-family: Montserrat;
-    white-space: nowrap;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
+  }
+  .toolContainer .skillSection {
+    padding-right: 3rem;
+    padding-bottom: .5rem;
+  }
+  .toolContainer .section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .toolContainer .sectionTitle {
+    font-size: 1rem;
+    text-align: center;
   }
   #projects {
     height: auto;
