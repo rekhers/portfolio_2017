@@ -9,6 +9,7 @@
   font-family: Montserrat;
   font-size: 1.3rem;
   overflow: scroll;
+  overflow-x: hidden;
   width: 100%;
 }
 .project-container .pic {
