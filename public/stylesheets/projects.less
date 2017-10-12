@@ -15,32 +15,17 @@
 		overflow: scroll;
 		width: 100%;
 
-  .pic{
+ 	 .pic{
 	  width: 16em;
 	    height: 12em;
 	    border: 2px solid black;
 	}
 
 
-.text{
-		font-family: Roboto;
-		line-height: 180%;
-		padding: 5%;
-		display: none;
-}
-
-
-//text that's visible if nothing is there
-.chooseText{
-	margin-left: 10%;
-	margin-top: 10%;
-}
 
 
 
-
-
-	  .descText{
+.descText{
 		line-height: 2rem;
 		letter-spacing: .1rem;
 		font-family: Montserrat;
@@ -50,6 +35,8 @@
 	  }
 
 
+
+//tags that go inside a project row description 
 	  .skillTags{
 	  		display: flex;
 	  		flex-direction: row;
@@ -65,10 +52,7 @@
 	  		margin: .5rem;
 	  	}
 
-	  }
-
-
-
+	 }
 
 
 
@@ -82,43 +66,16 @@
  		}
  	}
 
-.titleRow{
-	
-}
-
-
-
-.picHolderMedium{
- 	margin: 5%;
-    background-color: black;
-    position: relative;
-      width: 16em;
-   height: 10em;
-}
-
-.thinpic{
-  width: 10em;
-   height: 10em;
-   border: 2px solid black;
-
-}
-
-.mediumpic{
-  width: 16em;
-   height: 10em;
-   border: 2px solid black;
-
-}
 
 
 }
-
 
 .clicked{
 	background-color: #333333;
 	color:#fff;
 
 }
+
 
 
 		.skill{
@@ -146,7 +103,7 @@
 
 
 
-@media (min-width: 800px){
+@media (min-width: 1000px){
 .projectTitle{
 	font-size: 2rem;
 	padding: 1rem;
@@ -155,6 +112,12 @@
 	background-color: #333333;
 	color: #fff;
 
+}
+
+//text that's visible if nothing is there
+.chooseText{
+	margin-left: 10%;
+	margin-top: 10%;
 }
 
 
@@ -238,7 +201,12 @@
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
+
+	//text that's visible if nothing is there
+.chooseText{
+	padding: 5%;
+}
 
 	.projectTitle{
 	font-size: 1.5em;
@@ -264,7 +232,7 @@
 		flex-direction: row;
 		justify-content: center;
 				flex-wrap: wrap;
-
+ 			overflow:visible !important;
 
 	.skillSection{
 		padding-right: 3rem;
@@ -299,7 +267,7 @@
 
 		.toolContainer{
 			width: 100%;
-			height: 20%;
+			// height: 20%;
 		}
 
 		.picRow{

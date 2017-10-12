@@ -3,72 +3,145 @@
 * HEADER -- Chevron styles / animation
 *
 */
-.headerContainer {
-  background-color: #333333;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@media (min-width: 1000px) {
+  .headerContainer {
+    background-color: #333333;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .headerContainer .text {
+    color: #ffffff;
+    font-family: Montserrat;
+    line-height: 3rem;
+    font-size: 2.5rem;
+    width: auto;
+    border: 1px solid #ffffff;
+    padding: 3rem;
+  }
+  .headerContainer .name {
+    color: #f25f5c;
+  }
+  .headerContainer .titleBlock {
+    color: #ffffff;
+    line-height: 3rem;
+  }
+  #chevronHolder {
+    height: auto;
+    font-size: 100px;
+    width: auto;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 10%;
+  }
+  #chevronHolder:hover .chevron {
+    border-width: 0.1em 0.1em 0 0;
+    color: #FFF;
+  }
+  #chevronHolder:hover .blue {
+    color: #F25F5C;
+  }
+  #chevronHolder:hover .yellow {
+    color: #F25F5C;
+  }
+  #chevronHolder .chevron:before {
+    border-style: solid;
+    border-width: 0.02em 0.02em 0 0;
+    content: '';
+    display: inline-block;
+    height: 0.45em;
+    left: 0.15em;
+    position: relative;
+    transform: rotate(-45deg);
+    vertical-align: top;
+    width: 0.45em;
+    padding-top: -5em;
+    transform: rotate(135deg);
+  }
+  #chevronHolder .chevron {
+    margin-top: -40px;
+  }
+  #chevronHolder .blue {
+    color: #FFF;
+  }
+  #chevronHolder .red {
+    color: #F25F5C;
+  }
+  #chevronHolder .yellow {
+    color: #FFF;
+  }
 }
-.headerContainer .text {
-  color: #ffffff;
-  font-family: Montserrat;
-  line-height: 3rem;
-  font-size: 2.5rem;
-  width: auto;
-  border: 1px solid #ffffff;
-  padding: 3rem;
-}
-.headerContainer .name {
-  color: #f25f5c;
-}
-.headerContainer .titleBlock {
-  color: #ffffff;
-  line-height: 3rem;
-}
-#chevronHolder {
-  height: auto;
-  font-size: 100px;
-  width: auto;
-  text-align: center;
-  cursor: pointer;
-  padding-top: 10%;
-}
-#chevronHolder:hover .chevron {
-  border-width: 0.1em 0.1em 0 0;
-  color: #FFF;
-}
-#chevronHolder:hover .blue {
-  color: #F25F5C;
-}
-#chevronHolder:hover .yellow {
-  color: #F25F5C;
-}
-#chevronHolder .chevron:before {
-  border-style: solid;
-  border-width: 0.02em 0.02em 0 0;
-  content: '';
-  display: inline-block;
-  height: 0.45em;
-  left: 0.15em;
-  position: relative;
-  transform: rotate(-45deg);
-  vertical-align: top;
-  width: 0.45em;
-  padding-top: -5em;
-  transform: rotate(135deg);
-}
-#chevronHolder .chevron {
-  margin-top: -40px;
-}
-#chevronHolder .blue {
-  color: #FFF;
-}
-#chevronHolder .red {
-  color: #F25F5C;
-}
-#chevronHolder .yellow {
-  color: #FFF;
+@media (max-width: 1000px) {
+  .headerContainer {
+    background-color: #333333;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .headerContainer .text {
+    color: #ffffff;
+    font-family: Montserrat;
+    line-height: 3rem;
+    font-size: 2.5rem;
+    width: auto;
+    border: 1px solid #ffffff;
+    padding: 1rem;
+  }
+  .headerContainer .name {
+    color: #f25f5c;
+  }
+  .headerContainer .titleBlock {
+    color: #ffffff;
+    line-height: 3rem;
+  }
+  #chevronHolder {
+    height: auto;
+    font-size: 100px;
+    width: auto;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 10%;
+  }
+  #chevronHolder:hover .chevron {
+    border-width: 0.1em 0.1em 0 0;
+    color: #FFF;
+  }
+  #chevronHolder:hover .blue {
+    color: #F25F5C;
+  }
+  #chevronHolder:hover .yellow {
+    color: #F25F5C;
+  }
+  #chevronHolder .chevron:before {
+    border-style: solid;
+    border-width: 0.02em 0.02em 0 0;
+    content: '';
+    display: inline-block;
+    height: 0.45em;
+    left: 0.15em;
+    position: relative;
+    transform: rotate(-45deg);
+    vertical-align: top;
+    width: 0.45em;
+    padding-top: -5em;
+    transform: rotate(135deg);
+  }
+  #chevronHolder .chevron {
+    margin-top: -40px;
+  }
+  #chevronHolder .blue {
+    color: #FFF;
+  }
+  #chevronHolder .red {
+    color: #F25F5C;
+  }
+  #chevronHolder .yellow {
+    color: #FFF;
+  }
 }
