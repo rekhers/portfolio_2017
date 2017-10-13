@@ -43,7 +43,6 @@ class Container extends React.Component{
 
 	render(){
 		return(<div>
-			    <Favicon url="favicon.ico" />
 				<Navbar onClick={() => this.handleClick}/>
                 <Header onClick={() => this.handleClick}/>
                  <About onClick={() => this.handleClick}/>

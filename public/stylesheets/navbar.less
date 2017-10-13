@@ -28,6 +28,10 @@
   		 padding-left: 1rem;
        color: #333333;
 
+            font-family: 'Montserrat';
+              font-size: 1.2em;
+              cursor:pointer;
+
   	.navPic{
   		width: 2rem;
   		height: 2rem;
@@ -36,55 +40,96 @@
 	 }
 
 
-            font-family: 'Montserrat';
-              font-size: 1.2em;
-              cursor:pointer;
 
 
             }
 
-        	.nameSelect{
-				          color: #FFF;
-           			 background-color: #F25F5C;
 
-				}
+  .nameSelect{
+                  color: #FFF;
+                 background-color: #F25F5C;
 
+        }
 
-	.navlink{
-		color: #FFF;
-		font-family: 'Montserrat';
-		font-size: 1.2em;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-		padding-right: 5%;
-
-		.links{
-			// background: linear-gradient(95deg, #ff8a40, #fd5068, #dc4588);
-			// background-size: 200% 200%;              
-			// -webkit-background-clip: text;
-   //          -webkit-text-fill-color: transparent;
-   color: #333333;
-			padding: 1rem;
-
-			&:hover{
-				cursor: pointer;
-   				background: #F25F5C;
-            -webkit-text-fill-color: #FFF;
-
-
-
-
-			}
-		}
-
-		.selected{
-			background: #F25F5C;
-            -webkit-text-fill-color: #FFF;
-
-		}
-
-	}
+	
 
   }
+
+  
+        
+
+
+@media(min-width: 800px){
+
+  .navLink{
+    color: #FFF;
+    font-family: 'Montserrat';
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-right: 5%;
+
+    .contact{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
+    
+    .selected{
+      background: #F25F5C;
+            -webkit-text-fill-color: #FFF;
+
+    }
+
+  }
+
+
+  .hamburger{
+    display: none;
+
+  }
+
+  .big-links{
+    
+      color: #333333;
+      padding: 1rem;
+      &:hover{
+        cursor: pointer;
+          background: #F25F5C;
+            -webkit-text-fill-color: #FFF;
+
+
+
+
+      }
+    }
+
+}
+
+@media (max-width: 800px) {
+  .big-links{
+      display:none;
+    }
+
+ 
+  .hamburger{
+    font-size: 2rem;
+    background-color:#F25F5C;
+          color:#FFF;    cursor:pointer;
+    display: block;
+    padding:1rem;
+
+        &:hover{
+      
+        }
+
+  }
+
+  .nameTitle{
+    font-size: 1rem;
+}
+
+}
 

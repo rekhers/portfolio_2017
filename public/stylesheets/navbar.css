@@ -36,25 +36,51 @@
   color: #FFF;
   background-color: #F25F5C;
 }
-.navbar .navlink {
-  color: #FFF;
-  font-family: 'Montserrat';
-  font-size: 1.2em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding-right: 5%;
+@media (min-width: 800px) {
+  .navLink {
+    color: #FFF;
+    font-family: 'Montserrat';
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-right: 5%;
+  }
+  .navLink .contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .navLink .selected {
+    background: #F25F5C;
+    -webkit-text-fill-color: #FFF;
+  }
+  .hamburger {
+    display: none;
+  }
+  .big-links {
+    color: #333333;
+    padding: 1rem;
+  }
+  .big-links:hover {
+    cursor: pointer;
+    background: #F25F5C;
+    -webkit-text-fill-color: #FFF;
+  }
 }
-.navbar .navlink .links {
-  color: #333333;
-  padding: 1rem;
-}
-.navbar .navlink .links:hover {
-  cursor: pointer;
-  background: #F25F5C;
-  -webkit-text-fill-color: #FFF;
-}
-.navbar .navlink .selected {
-  background: #F25F5C;
-  -webkit-text-fill-color: #FFF;
+@media (max-width: 800px) {
+  .big-links {
+    display: none;
+  }
+  .hamburger {
+    font-size: 2rem;
+    background-color: #F25F5C;
+    color: #FFF;
+    cursor: pointer;
+    display: block;
+    padding: 1rem;
+  }
+  .nameTitle {
+    font-size: 1rem;
+  }
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import FontAwesome from 'react-fontawesome';
 
 
 /*
@@ -22,7 +23,9 @@ export class Navbar extends React.Component {
     scrollNavigation(){
         var that = this;
 
-        var d = $(".navLink").children();
+        var d = $(".big-links");
+
+        console.log(d);
         var divs = [d[0], d[1], d[2]];
 
         var elem = document.getElementsByClassName("nameTitle")[0];
@@ -56,7 +59,7 @@ export class Navbar extends React.Component {
 
             //  window.pageYOffset > $("#projects").position().top + $("#projects").height() / 3 ? $(that.refs.contact).addClass("selected") :$(that.refs.contact).removeClass("selected");
 
-            window.pageYOffset < $("#about").position().top - $("#about").position().top/5 ? $(".nameTitle").addClass("nameSelect") : $(".nameTitle").removeClass("nameSelect");
+            window.pageYOffset > $("#about").position().top - $("#about").height()/3 ? $(".nameTitle").addClass("nameSelect") : $(".nameTitle").removeClass("nameSelect");
                 }) 
 
 
@@ -69,9 +72,9 @@ export class Navbar extends React.Component {
 
     render(){
         return (<div id="navbar" className="navbar"> 
-            <div onClick={this.props.onClick()} ref="home" className="nameTitle">
-            
-            <img className="navPic" src='public/assets/circle_face.gif'/>
+                <div onClick={this.props.onClick()} ref="home" className="nameTitle">
+                
+                <img className="navPic" src='public/assets/circle_face.gif'/>
 
              <div className="nameText"> 
                 <div> rekha tenjarla </div>
@@ -79,8 +82,12 @@ export class Navbar extends React.Component {
              </div> 
              </div>
              <div className="navLink" onClick={this.props.onClick()}>
-                 <div className="links" ref="about" > about </div>
-                 <div className="links"> projects </div>
+                 <div className="links big-links" ref="about" > about </div>
+                 <div className="links big-links"> projects </div>
+
+
+               <div className="links hamburger"> ☰ </div>
+
              </div>
          </div>)
     }
