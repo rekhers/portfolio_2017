@@ -26,6 +26,10 @@
   font-size: 1.2em;
   cursor: pointer;
 }
+.navbar .nameTitle:hover {
+  color: #FFF;
+  background-color: #F25F5C;
+}
 .navbar .nameTitle .navPic {
   width: 2rem;
   height: 2rem;

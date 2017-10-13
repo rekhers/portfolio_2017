@@ -20716,15 +20716,11 @@ var Navbar = exports.Navbar = function (_React$Component) {
 
             var d = (0, _jquery2.default)(".big-links");
 
-            console.log(d);
-            var divs = [d[0], d[1], d[2]];
+            var divs = [d[0], d[1]];
 
             var elem = document.getElementsByClassName("nameTitle")[0];
 
             window.addEventListener("scroll", function (error) {
-
-                console.log(d);
-                console.log(divs);
 
                 /*
                 *
@@ -20733,20 +20729,10 @@ var Navbar = exports.Navbar = function (_React$Component) {
                 */
                 for (var id in divs) {
                     console.log(id);
-                    window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 3 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() / 4 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
+                    window.pageYOffset > (0, _jquery2.default)("#" + divs[id].innerText).position().top - (0, _jquery2.default)("#" + divs[id].innerText).height() / 10 && window.pageYOffset < (0, _jquery2.default)("#" + divs[id].innerText).position().top + (0, _jquery2.default)("#" + divs[id].innerText).height() - (0, _jquery2.default)("#" + divs[id].innerText).height() / 5 ? (0, _jquery2.default)(divs[id]).addClass("selected") : (0, _jquery2.default)(divs[id]).removeClass("selected");
                 }
 
-                /*
-                *
-                * Special cases handle the less than half page contact component and the highlighting of the name div  
-                * 
-                */
-
-                // window.pageYOffset > $("#about").position().top -  $("#about").height() && window.pageYOffset < $("#projects").position().top - $("#about").height()/3 ? $(that.refs.about).addClass("selected") : $(that.refs.about).removeClass("selected");
-
-                //  window.pageYOffset > $("#projects").position().top + $("#projects").height() / 3 ? $(that.refs.contact).addClass("selected") :$(that.refs.contact).removeClass("selected");
-
-                window.pageYOffset > (0, _jquery2.default)("#about").position().top - (0, _jquery2.default)("#about").height() / 3 ? (0, _jquery2.default)(".nameTitle").addClass("nameSelect") : (0, _jquery2.default)(".nameTitle").removeClass("nameSelect");
+                window.pageYOffset < (0, _jquery2.default)("#about").position().top - (0, _jquery2.default)("#about").height() / 10 ? (0, _jquery2.default)('.nameTitle').addClass("nameSelect") : (0, _jquery2.default)('.nameTitle').removeClass("nameSelect");
             });
         }
     }, {

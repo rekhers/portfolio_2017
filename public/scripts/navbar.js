@@ -25,8 +25,7 @@ export class Navbar extends React.Component {
 
         var d = $(".big-links");
 
-        console.log(d);
-        var divs = [d[0], d[1], d[2]];
+        var divs = [d[0], d[1]];
 
         var elem = document.getElementsByClassName("nameTitle")[0];
 
@@ -35,9 +34,6 @@ export class Navbar extends React.Component {
         window.addEventListener("scroll", function(error){
 
 
-            console.log(d);
-            console.log(divs);
-
             /*
             *
             * In a world where I had made the component sizes all the same this would have worked for all the cases. But alas.
@@ -45,21 +41,11 @@ export class Navbar extends React.Component {
             */
             for(var id in divs){   
                 console.log(id);
-                    window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height()/3 && window.pageYOffset < $("#" + divs[id].innerText).position().top + $("#" + divs[id].innerText).height()/4 ?  $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
+                    window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height() / 10 && window.pageYOffset < $("#" + divs[id].innerText).position().top +  $("#" + divs[id].innerText).height() - $("#" + divs[id].innerText).height() / 5? $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
                     }
 
 
-             /*
-            *
-            * Special cases handle the less than half page contact component and the highlighting of the name div  
-            * 
-            */
-
-            // window.pageYOffset > $("#about").position().top -  $("#about").height() && window.pageYOffset < $("#projects").position().top - $("#about").height()/3 ? $(that.refs.about).addClass("selected") : $(that.refs.about).removeClass("selected");
-
-            //  window.pageYOffset > $("#projects").position().top + $("#projects").height() / 3 ? $(that.refs.contact).addClass("selected") :$(that.refs.contact).removeClass("selected");
-
-            window.pageYOffset > $("#about").position().top - $("#about").height()/3 ? $(".nameTitle").addClass("nameSelect") : $(".nameTitle").removeClass("nameSelect");
+            window.pageYOffset < $("#about").position().top - $("#about").height()/10 ? $('.nameTitle').addClass("nameSelect") : $('.nameTitle').removeClass("nameSelect"); 
                 }) 
 
 
