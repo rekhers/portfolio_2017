@@ -3,6 +3,16 @@
 * NAVBAR 
 *
 */
+.navbarResp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.hide {
+  display: none !important;
+}
 .navbar {
   background-color: #FFF;
   width: 100%;
@@ -12,6 +22,22 @@
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+}
+.navbar .linksResp {
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+  color: #FFF;
+  font-family: 'Montserrat';
+  font-size: 1.2em;
+  background-color: #F25F5C;
+  cursor: pointer;
+}
+.navbar .linksResp:hover {
+  background-color: #333333;
+}
+.navbar .hamburgerResp {
+  width: 100vw;
 }
 .navbar .nameTitle {
   display: flex;

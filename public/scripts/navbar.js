@@ -16,6 +16,25 @@ export class Navbar extends React.Component {
         
         this.gradientTheme = 'linear-gradient(216deg, #ff8a40, #fd5068, #dc4588)';
 
+
+        /*
+        *
+        * this ensures that responsive classes are removed when resized back to a wide screen 
+        * without manually toggling the hamburger menu
+        *
+        */
+        $(window).resize(function(){
+                if($(window).width() > 800){
+                    console.log("bigger than 800>");
+                    $(".nameTitle").removeClass("hide");
+                    $(".big-links").removeClass("linksResp");
+                    $(".navbar").removeClass("navbarResp");
+                    $(".hamburger").removeClass("hamburgerResp")
+             }
+
+        })
+      
+
         }
 
 
@@ -40,7 +59,6 @@ export class Navbar extends React.Component {
             * 
             */
             for(var id in divs){   
-                console.log(id);
                     window.pageYOffset > $("#" + divs[id].innerText).position().top - $("#" + divs[id].innerText).height() / 10 && window.pageYOffset < $("#" + divs[id].innerText).position().top +  $("#" + divs[id].innerText).height() - $("#" + divs[id].innerText).height() / 5? $(divs[id]).addClass("selected") : $(divs[id]).removeClass("selected"); 
                     }
 
@@ -49,6 +67,16 @@ export class Navbar extends React.Component {
                 }) 
 
 
+    }
+
+
+
+    handleClick(){
+
+    $(".nameTitle").hasClass("hide") ? $(".nameTitle").removeClass("hide") : $(".nameTitle").addClass("hide");
+    $(".big-links").hasClass("linksResp") ? $(".big-links").removeClass("linksResp") : $(".big-links").addClass("linksResp");
+    $(".navbar").hasClass("navbarResp") ? $(".navbar").removeClass("navbarResp") : $(".navbar").addClass("navbarResp");
+    $(".hamburger").hasClass("hamburgerResp") ? $(".hamburger").removeClass("hamburgerResp") : $(".hamburger").addClass("hamburgerResp");
     }
 
     componentDidMount(){ 
@@ -68,11 +96,12 @@ export class Navbar extends React.Component {
              </div> 
              </div>
              <div className="navLink" onClick={this.props.onClick()}>
+                    <div className="links hamburger" onClick={this.handleClick}> ☰ </div>
+
                  <div className="links big-links" ref="about" > about </div>
                  <div className="links big-links"> projects </div>
 
 
-               <div className="links hamburger"> ☰ </div>
 
              </div>
          </div>)
