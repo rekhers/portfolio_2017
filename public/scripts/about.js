@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import FontAwesome from 'react-fontawesome';
 
 /*
 *
@@ -20,6 +21,14 @@ const Bio = () => {
     
 }
 
+const Buttons = () => {
+  return <div className="buttonContainer"> 
+            <a href="http://www.github.com/rekhers" className="button"> <FontAwesome className="icons" name='github'/> </a> 
+            <a href="https://www.linkedin.com/in/rekha-tenjarla-588a19112" className="button"> <FontAwesome className="icons" name='linkedin-square' /></a> 
+            <a href="mailto:rekha.tenjarla@gmail.com" className="button"><FontAwesome className="icons" name='envelope' /> </a> 
+        </div> 
+}
+
 
 
 
@@ -35,6 +44,7 @@ export class About extends React.Component{
     <div id="about" > 
       <div className="aboutContainer">
           <Bio /> 
+          <Buttons /> 
           <div className="pointDownDiv"> 
           <div className="aboutNavText"> download my resume and see my projects below </div> 
           <div onClick={this.props.onClick()} className="pointDown">☟</div> 

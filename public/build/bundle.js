@@ -20372,6 +20372,10 @@ var _jquery = __webpack_require__(24);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
+var _reactFontawesome = __webpack_require__(88);
+
+var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20394,6 +20398,32 @@ var Bio = function Bio() {
   );
 };
 
+var Buttons = function Buttons() {
+  return _react2.default.createElement(
+    'div',
+    { className: 'buttonContainer' },
+    _react2.default.createElement(
+      'a',
+      { href: 'http://www.github.com/rekhers', className: 'button' },
+      ' ',
+      _react2.default.createElement(_reactFontawesome2.default, { className: 'icons', name: 'github' }),
+      ' '
+    ),
+    _react2.default.createElement(
+      'a',
+      { href: 'https://www.linkedin.com/in/rekha-tenjarla-588a19112', className: 'button' },
+      ' ',
+      _react2.default.createElement(_reactFontawesome2.default, { className: 'icons', name: 'linkedin-square' })
+    ),
+    _react2.default.createElement(
+      'a',
+      { href: 'mailto:rekha.tenjarla@gmail.com', className: 'button' },
+      _react2.default.createElement(_reactFontawesome2.default, { className: 'icons', name: 'envelope' }),
+      ' '
+    )
+  );
+};
+
 var About = exports.About = function (_React$Component) {
   _inherits(About, _React$Component);
 
@@ -20413,6 +20443,7 @@ var About = exports.About = function (_React$Component) {
           'div',
           { className: 'aboutContainer' },
           _react2.default.createElement(Bio, null),
+          _react2.default.createElement(Buttons, null),
           _react2.default.createElement(
             'div',
             { className: 'pointDownDiv' },
