@@ -86,7 +86,7 @@ export class Navbar extends React.Component {
 
     render(){
         return (<div id="navbar" className="navbar"> 
-                <div onClick={this.props.onClick()} ref="home" className="nameTitle">
+                <div onClick={this.props.onClick()} ref="home" className="nameSelect nameTitle">
                 
                 <img className="navPic" src='public/assets/circle_face.gif'/>
 

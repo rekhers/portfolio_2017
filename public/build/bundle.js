@@ -20803,7 +20803,7 @@ var Navbar = exports.Navbar = function (_React$Component) {
                 { id: 'navbar', className: 'navbar' },
                 _react2.default.createElement(
                     'div',
-                    { onClick: this.props.onClick(), ref: 'home', className: 'nameTitle' },
+                    { onClick: this.props.onClick(), ref: 'home', className: 'nameSelect nameTitle' },
                     _react2.default.createElement('img', { className: 'navPic', src: 'public/assets/circle_face.gif' }),
                     _react2.default.createElement(
                         'div',
