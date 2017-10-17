@@ -38209,7 +38209,7 @@ var Container = function (_React$Component) {
 			if (event.target.innerText == "rekha tenjarla") {
 				document.querySelector("#home").scrollIntoView({ behavior: 'smooth' });
 			} else if (event.target.innerText == "about" || event.target.innerText == '') {
-				window.scroll({ top: 550, left: 0, behavior: 'smooth' });
+				document.getElementById("about").scrollIntoView({ behavior: 'smooth' });
 			} else if (event.target.innerText == "☝︎") {
 				document.getElementById("home").scrollIntoView({ behavior: 'smooth' });
 			} else if (event.target.innerText == "☟") {
