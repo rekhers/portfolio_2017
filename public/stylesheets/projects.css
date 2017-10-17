@@ -67,6 +67,31 @@
   cursor: pointer;
 }
 @media (min-width: 1000px) {
+  .dcIconHolder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .dcIconHolder .dcIconRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dcIconHolder .dcIconRow .demoIcons {
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #333333;
+    padding: .5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+  }
+  .dcIconHolder .dcIconRow .demoIcons:hover {
+    color: #FFF;
+    background-color: #F25F5C;
+  }
   .projectTitle {
     font-size: 2rem;
     padding: 1rem;
@@ -141,6 +166,32 @@
   }
 }
 @media (max-width: 1000px) {
+  .dcIconHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .dcIconHolder .dcIconRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .dcIconHolder .dcIconRow .demoIcons {
+    font-size: 1rem;
+    color: #fff;
+    background-color: #333333;
+    padding: .5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+  }
+  .dcIconHolder .dcIconRow .demoIcons:hover {
+    color: #FFF;
+    background-color: #F25F5C;
+  }
   .chooseText {
     padding: 5%;
   }
