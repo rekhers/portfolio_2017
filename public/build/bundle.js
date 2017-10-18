@@ -20909,19 +20909,23 @@ var ProjectDiv = function (_React$Component) {
 		var _this = _possibleConstructorReturn(this, (ProjectDiv.__proto__ || Object.getPrototypeOf(ProjectDiv)).call(this, props));
 
 		_this.state = { skills: _this.props.skills,
-			projects: { toptracks: { title: "top tracks", skills: ["javascript", "react", "babel", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication.", style: { height: '10rem', width: "12rem" }, code: '', demo: '', hasDemo: false },
+			projects: { toptracks: { title: "top tracks", skills: ["javascript", "react", "babel", "webpack", "html", "css"], src: "public/assets/toptracks.png", description: " Lists a user's top scrobbled tracks over different periods of time, built with React and the Last.fm API. In the process of adding authentication.", style: { height: '10rem', width: "12rem" }, code: '', demo: '', hasDemo: false, hasCode: true },
 
-				tweets: { title: "tweetmaps", skills: ["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "An ongoing series of related projects that use the Twitter API, Google Maps API, and the Natural Language Toolkit to visualize, filter, and analyze linguistic trends. This app was born out of a final project for a college computational linguistics course, in which I analyzed twitter corpora to compare whether the new england vernacular 'wicked' was being used as an adjective or adverb in any given context. 'That party was wicked' (adj) vs. 'She's wicked smart' (adv).", style: { width: "12em", height: "10rem" }, code: 'https://github.com/rekhers/d3_life_globe', demo: 'http://tweets-usa.herokuapp.com/', hasDemo: true },
+				tweets: { title: "tweetmaps", skills: ["javascript", "html", "css", "socketio"], src: "public/assets/tweets.png", description: "An ongoing series of related projects that use the Twitter API, Google Maps API, and the Natural Language Toolkit to visualize, filter, and analyze linguistic trends. This app was born out of a final project for a college computational linguistics course, in which I analyzed twitter corpora to compare whether the new england vernacular 'wicked' was being used as an adjective or adverb in any given context. 'That party was wicked' (adj) vs. 'She's wicked smart' (adv).", style: { width: "12em", height: "10rem" }, code: 'https://github.com/rekhers/d3_life_globe', demo: 'http://tweets-usa.herokuapp.com/', hasDemo: true, hasCode: true },
 
-				d3lifeglobe: { title: "d3 life globe", skills: ["javascript", "d3", "html", "css", "node", "grunt", "less"], src: "public/assets/d3lifeglobe.png", description: "An animated d3 globe that rotates to a given coordinate and projects a path between the places that I've lived.", style: { width: "13rem", height: "10rem" }, code: 'https://github.com/rekhers/d3_life_globe', demo: '', hasDemo: false },
+				d3lifeglobe: { title: "d3 life globe", skills: ["javascript", "d3", "html", "css", "node", "grunt", "less"], src: "public/assets/d3lifeglobe.png", description: "An animated d3 globe that rotates to a given coordinate and projects a path between the places that I've lived.", style: { width: "13rem", height: "10rem" }, code: 'https://github.com/rekhers/d3_life_globe', demo: '', hasDemo: false, hasCode: true },
 
-				previousprofile: { title: "my previous profile", skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png", description: "My previous profile -- I'm proud of some of the d3 data visualizations that I built for it and not so proud of the lack of responsiveness.", style: { width: "10rem", height: "10rem" }, code: 'https://github.com/rekhers/rekha_site', demo: 'http://rekha-site-316.herokuapp.com/', hasDemo: true },
+				previousprofile: { title: "my previous profile", skills: ["javascript", "d3", "grunt", "less", "css", "html", "node"], src: "public/assets/previousprofile.png", description: "My previous profile -- I'm proud of some of the d3 data visualizations that I built for it and not so proud of the lack of responsiveness.", style: { width: "10rem", height: "10rem" }, code: 'https://github.com/rekhers/rekha_site', demo: 'http://rekha-site-316.herokuapp.com/', hasDemo: true, hasCode: true },
 
-				weatherapp: { title: "weather app", skills: ["javascript", "react", "html", "node", "babel", "webpack", "css"], src: "", description: "Hopefully will one day be part of a chrome extension, this react app uses the browser's Navigator instance to retrieve location data and uses the DarkSky API and Google Maps geocoding/geolocation features to display the user's forecast and  location", style: { width: 'auto' }, code: 'https://github.com/rekhers/weather_dashboard', demo: '', hasDemo: false
+				weatherapp: { title: "weather app", skills: ["javascript", "react", "html", "node", "babel", "webpack", "css"], src: "", description: "This app was built with React and uses the browser's Navigator instance to retrieve location data along wiht the DarkSky API and Google Maps geocoding/geolocation features to display the user's forecast and location. Will eventually be integrated into a chrome extension.", style: { width: 'auto' }, code: 'https://github.com/rekhers/weather_dashboard', demo: '', hasDemo: false, hasCode: true
 				},
 
-				thisprofile: { title: "this profile", skills: ["react", "babel", "webpack", "css", "less", "html", "node"], src: "", description: "This single page app was built compositionally with react which allowed me to flexibly integrate this filter function class component with other pure component sections. Building this app effectively ended my love for inline styling with react. Don't get me wrong, they're great for dynamic components but a huge pain for custom content", style: _defineProperty({ width: "10rem", color: "#FFF", height: "10rem", padding: "3rem", backgroundColor: "#333333", border: "1px solid #F25F5C", display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "center" }, 'padding', ".7rem"), code: 'https://github.com/rekhers/portfolio_2017', demo: '', hasDemo: false
+				thisprofile: { title: "this profile", skills: ["react", "babel", "webpack", "css", "less", "html", "node"], src: "", description: "This responsive single page app was built with React which allowed me to compositionally integrate this filter function class with other pure component sections", style: _defineProperty({ width: "10rem", color: "#FFF", height: "10rem", padding: "3rem", backgroundColor: "#333333", border: "1px solid #F25F5C", display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "center" }, 'padding', ".7rem"), code: 'https://github.com/rekhers/portfolio_2017', demo: '', hasDemo: false, hasCode: true
+				},
+
+				toolkit: { title: "toolkit @ Atlas Project", skills: ["php", "wordpress", "mysql", "css", "less", "html", "node", "grunt"], src: "", description: "I lead front-end development for our toolkit, which serves as the institutional memory of the Democratic party, containing data visualizations and dashboards of previous election results, media and campaign spending, census and labor data, and political roadmaps. Our stack is built on PHP, Wordpress, and MySQL, and I have gained experience working on every part of it (after the ETL). I spearheaded the process of integrating React in order to move towards a headless CMS architecture. Unfortunately, our clients pay to access the toolkit so we currently have no free demo. ", style: _defineProperty({ width: "10rem", color: "#FFF", height: "10rem", padding: "3rem", backgroundColor: "#333333", border: "1px solid #F25F5C", display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "center" }, 'padding', ".7rem"), code: '', demo: '', hasDemo: false, hasCode: false
 				}
+
 			}
 		};
 
@@ -21006,7 +21010,7 @@ var ProjectDiv = function (_React$Component) {
 												{ className: 'dcIconRow' },
 												_react2.default.createElement(
 													'a',
-													{ href: projects[key].code },
+													{ href: projects[key].code, style: projects[key].hasCode ? { display: 'block' } : { display: 'none' } },
 													' ',
 													_react2.default.createElement(_reactFontawesome2.default, { className: 'demoIcons', name: 'github' }),
 													' '
@@ -21067,14 +21071,14 @@ var ProjectDiv = function (_React$Component) {
 												{ className: 'dcIconRow' },
 												_react2.default.createElement(
 													'a',
-													{ href: projects[key].code },
+													{ href: projects[key].code, style: projects[key].hasCode ? { display: 'block' } : { display: 'none' } },
 													' ',
 													_react2.default.createElement(_reactFontawesome2.default, { className: 'demoIcons', name: 'github' }),
 													' '
 												),
 												_react2.default.createElement(
 													'a',
-													{ href: projects[key].demo },
+													{ href: projects[key].demo, style: projects[key].hasDemo ? { display: 'block' } : { display: 'none' } },
 													' ',
 													_react2.default.createElement(_reactFontawesome2.default, { className: 'demoIcons', name: 'cog' }),
 													' '
