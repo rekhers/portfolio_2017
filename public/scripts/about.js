@@ -46,7 +46,7 @@ export class About extends React.Component{
           <Bio /> 
           <Buttons /> 
           <div className="pointDownDiv"> 
-          <div className="aboutNavText"> download my resume and see my projects below </div> 
+          <div className="aboutNavText"> download my<a className="resume" href="./public/assets/resumeOct2017.pdf" download="resume_RekhaTenjarla">resume</a>and see my projects below </div> 
           <div onClick={this.props.onClick()} className="pointDown">☟</div> 
       </div>
     </div> 
