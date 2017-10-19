@@ -3,7 +3,6 @@
     text-decoration: none;
     color: #333333;
     font-weight: bold;
-    padding: .5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
@@ -137,7 +136,6 @@
   .aboutContainer .aboutNavText {
     font-family: Roboto;
     font-size: 1rem;
-    letter-spacing: 0.3rem;
     color: #ffffff;
     background-color: #f25f5c;
     padding: 1rem;
@@ -190,7 +188,6 @@
   .aboutNavText {
     font-family: Roboto;
     font-size: .8rem;
-    letter-spacing: 0.2rem;
     color: #ffffff;
     background-color: #f25f5c;
     padding: 1rem;

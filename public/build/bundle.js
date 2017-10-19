@@ -20454,9 +20454,9 @@ var About = exports.About = function (_React$Component) {
               _react2.default.createElement(
                 'a',
                 { className: 'resume', href: './public/assets/resumeOct2017.pdf', download: 'resume_RekhaTenjarla' },
-                'resume'
+                ' resume '
               ),
-              'and see my projects below '
+              ' and see my projects below '
             ),
             _react2.default.createElement(
               'div',
