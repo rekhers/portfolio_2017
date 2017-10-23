@@ -40,7 +40,7 @@ export class Tools extends React.Component{
 
 					<div className="section">
 
-							<div onClick={this.props.onClick()} id="javascript" className="skill">   
+							<div onClick={this.props.onClick()} id="javascript" className="skill clicked">   
 								javascript 
 							</div> 
 
@@ -49,7 +49,7 @@ export class Tools extends React.Component{
 								</div>
 
 
-							<div onClick={this.props.onClick()} id="d3" className="skill clicked"> 
+							<div onClick={this.props.onClick()} id="d3" className="skill"> 
 								d3  
 								</div>
 

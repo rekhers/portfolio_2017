@@ -171,7 +171,7 @@ export class Projects extends React.Component{
 
 	constructor(){
 		super()
-		this.state = {skills: ["d3"]} 
+		this.state = {skills: ["javascript"]} 
 		this.handleClick = this.handleClick.bind(this);
 	}
 

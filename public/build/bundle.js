@@ -21158,7 +21158,7 @@ var Projects = exports.Projects = function (_React$Component2) {
 
 		var _this2 = _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this));
 
-		_this2.state = { skills: ["d3"] };
+		_this2.state = { skills: ["javascript"] };
 		_this2.handleClick = _this2.handleClick.bind(_this2);
 		return _this2;
 	}
@@ -21806,7 +21806,7 @@ var Tools = exports.Tools = function (_React$Component) {
 						{ className: 'section' },
 						_react2.default.createElement(
 							'div',
-							{ onClick: this.props.onClick(), id: 'javascript', className: 'skill' },
+							{ onClick: this.props.onClick(), id: 'javascript', className: 'skill clicked' },
 							'javascript'
 						),
 						_react2.default.createElement(
@@ -21816,7 +21816,7 @@ var Tools = exports.Tools = function (_React$Component) {
 						),
 						_react2.default.createElement(
 							'div',
-							{ onClick: this.props.onClick(), id: 'd3', className: 'skill clicked' },
+							{ onClick: this.props.onClick(), id: 'd3', className: 'skill' },
 							'd3'
 						),
 						_react2.default.createElement(
